@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #22E58A;
+  --color-secondary: #7AF2C6;
+  --color-accent: #E6C79C;
+  --color-text-primary: #E6F1EC;
+  --color-text-secondary: #9BB8AB;
+  --color-surface: #121816;
+  --color-border-sutil: rgba(255, 255, 255, 0.08);
+  --color-glow: rgba(34, 229, 138, 0.25);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0B0F0E;
+  color: #E6F1EC;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.animated-gradient {
+  background: linear-gradient(270deg, #22E58A, #7AF2C6, #22E58A);
+  background-size: 600% 600%;
+  animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
