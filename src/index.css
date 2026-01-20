@@ -1,13 +1,28 @@
 @import "tailwindcss";
 
 @theme {
+  /* Brand */
   --color-primary: #22E58A;
-  --color-secondary: #7AF2C6;
+  --color-primary-strong: #18C572;
+  --color-primary-soft: rgba(34, 229, 138, 0.15);
+
+  /* Accent (usar poco) */
   --color-accent: #E6C79C;
+
+  /* Text */
   --color-text-primary: #E6F1EC;
   --color-text-secondary: #9BB8AB;
+  --color-text-muted: rgba(155, 184, 171, 0.6);
+
+  /* Surfaces */
   --color-surface: #121816;
-  --color-border-sutil: rgba(255, 255, 255, 0.08);
+  --color-surface-elevated: #1F2B23;
+  --color-surface-glass: rgba(18, 24, 22, 0.6);
+
+  /* Borders & lines */
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+
+  /* Glow / FX */
   --color-glow: rgba(34, 229, 138, 0.25);
 }
 
