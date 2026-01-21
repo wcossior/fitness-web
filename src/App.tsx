@@ -6,7 +6,7 @@ import { Hero } from "./components/Hero/Hero"
 import { Methodology } from "./components/Methodology"
 import { Plans } from "./components/Plans"
 import { Process } from "./components/Process"
-import { Results } from "./components/Results"
+import { Results } from "./components/Results/Results"
 import { UserProblem } from "./components/UserProblem"
 
 function App() {
