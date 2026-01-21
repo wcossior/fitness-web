@@ -24,13 +24,14 @@
 
   /* Glow / FX */
   --color-glow: rgba(34, 229, 138, 0.25);
+  --font-heading: "Playfair", sans-serif;
+  --font-body: "Inter", sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #0B0F0E;
   color: #E6F1EC;
+  background-color: #0B0F0E;
 }
 
 *,
@@ -52,16 +53,4 @@ ol {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-
-.animated-gradient {
-  background: linear-gradient(270deg, #22E58A, #7AF2C6, #22E58A);
-  background-size: 600% 600%;
-  animation: gradientShift 6s ease infinite;
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
