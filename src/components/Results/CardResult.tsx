@@ -28,7 +28,7 @@ export const CardResult = ({ value, suffix, label, index }: CardResultProps) => 
         snap: { innerText: 1 },
         scrollTrigger: {
           trigger: numberRef.current,
-          start: "top 80%",
+          start: "top 90%",
           once: true,
         },
       }

@@ -14,7 +14,7 @@ export const Results = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-black via-[#0E1412] to-surface px-6 md:px-20 py-8 md:py-20 flex flex-col items-center relative">
+    <section className="bg-gradient-to-b from-black via-[#0E1412] to-surface px-6 md:px-12 py-12 flex flex-col items-center relative">
       <motion.div
         initial="hidden"
         whileInView="visible"

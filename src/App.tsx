@@ -8,11 +8,13 @@ import { Plans } from "./components/Plans"
 import { Process } from "./components/Process"
 import { Results } from "./components/Results/Results"
 import { UserProblem } from "./components/UserProblem"
+import { Navbar } from "./components/Navbar/Navbar"
 
 function App() {
 
   return (
-    <div className="">
+    <div className="relative">
+      <Navbar></Navbar>
       <Hero></Hero>
       <Results></Results>
       <UserProblem></UserProblem>
