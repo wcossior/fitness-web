@@ -7,7 +7,7 @@ import { Methodology } from "./components/Methodology"
 import { Plans } from "./components/Plans"
 import { Process } from "./components/Process"
 import { Results } from "./components/Results/Results"
-import { UserProblem } from "./components/UserProblem"
+import { UserProblem } from "./components/UserProblem/UserProblem"
 import { Navbar } from "./components/Navbar/Navbar"
 
 function App() {
