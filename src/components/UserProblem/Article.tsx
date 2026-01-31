@@ -44,9 +44,25 @@ export const Article = ({ title, description, position, index }: articleProps) =
             viewport={{ once: true, amount: 0.3 }}
             variants={cardVariants}
         >
+
+
+            <div className="
+                absolute top-0 right-6
+                w-12
+                h-14
+                bg-primary/15
+                text-2xl font-body font-bold text-text-secondary
+                flex items-center justify-center
+                "
+                style={{
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%)"
+                }}
+            >
+                0{index + 1}
+            </div>
             <h3 className="font-heading text-2xl tracking-wide uppercase text-text-primary relative z-10">
-                <span className="font-medium text-text-secondary">No</span>{" "}
-                <span className="font-black text-primary/90">{title}</span>
+                <span className="font-bold text-text-primary">No</span>{" "}
+                <span className="font-black text-primary/90 mr-12 md:mr-0">{title}</span>
             </h3>
             <div className="h-px w-full bg-primary/30 my-4" />
             <p className="font-body text-sm text-text-secondary mt-2 leading-relaxed relative z-10 max-w-sm">
