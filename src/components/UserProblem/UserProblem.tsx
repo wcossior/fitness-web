@@ -1,20 +1,25 @@
 import bg from "../../assets/gymdumbell.jpg"
 import woman from "../../assets/woman.png"
-import { Article } from "./Article"
+import { ProblemCard } from "./ProblemCard"
 import { motion } from "framer-motion"
 
 export const UserProblem = () => {
+    type problemCardsData = {
+        side: "left" | "right"
+        title: string
+        description: string
+    }
 
-    const articles = [
-        { position: "sm:translate-x-0", title: "structure", description: "Random workouts, random results. No clear plan, no direction." },
-        { position: "sm:translate-x-6", title: "consistency", description: "Motivation fades fast when progress isn’t visible." },
-        { position: "sm:translate-x-0", title: "accountability", description: "When no one is tracking your progress, it’s easy to quit." }
+    const problemCards: problemCardsData[] = [
+        { side: "left", title: "structure", description: "Random workouts, random results. No clear plan, no direction." },
+        { side: "right", title: "consistency", description: "Motivation fades fast when progress isn’t visible." },
+        { side: "left", title: "accountability", description: "When no one is tracking your progress, it’s easy to quit." }
     ]
 
     return (
         <section className='relative md:px-12 py-12 overflow-hidden'>
             <img className="absolute m-0 p-0 top-0 left-0 -z-3 opacity-10 object-cover w-full h-full" src={bg} alt="bg-user-problem" />
-            <img className="absolute hidden sm:block -right-1/5 md:-right-1/6 lg:right-0 top-0 lg:-top-1/3 bottom-0 -z-2 h-[800px] lg:h-[1000px] object-cover pointer-events-none opacity-90 " src={woman} alt="woman-user-problem" />
+            <img className="absolute hidden sm:block -right-1/5 md:-right-1/6 lg:right-0 top-0 lg:-top-1/5 bottom-0 -z-2 h-[800px] lg:h-[1000px] object-cover pointer-events-none opacity-90 " src={woman} alt="woman-user-problem" />
             <div className="absolute bottom-0 left-0 w-full h-60 
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"
@@ -48,8 +53,8 @@ export const UserProblem = () => {
                     }}
                 >
                     {
-                        articles.map((art, i) => (
-                            <Article key={art.title} index={i} title={art.title} description={art.description} position={art.position}></Article>
+                        problemCards.map((art, i) => (
+                            <ProblemCard title={art.title} description={art.description} side={art.side} index={i+1} />
                         ))
                     }
                 </motion.div>
