@@ -1,6 +1,10 @@
 import bg from "../../assets/backman.jpg"
 import bg2 from "../../assets/manlifting.jpg"
 import { CardMethology } from "./CardMethology"
+import { Scan } from "./icons/Scan"
+import { CheckList } from "./icons/CheckList"
+import { Up } from "./icons/Up"
+
 
 export const Methodology = () => {
 
@@ -8,12 +12,13 @@ export const Methodology = () => {
         title: string,
         description: string,
         isCore: boolean
+        icon: React.ElementType
     }
 
     const steps: StepsData[] = [
-        { title: "ASSESSMENT", description: "We analyze your level, posture, and limits before training begins.", isCore: false },
-        { title: "PROGRAMMING", description: "Your workouts follow a structured progression, not random routines", isCore: true },
-        { title: "PROGRESSION", description: "Loads, volume, and intensity evolve based on real performance data.", isCore: false }
+        { title: "ASSESSMENT", description: "We analyze your level, posture, and limits before training begins.", isCore: false,  icon: Scan},
+        { title: "PROGRAMMING", description: "Your workouts follow a structured progression, not random routines", isCore: true , icon: CheckList},
+        { title: "PROGRESSION", description: "Loads, volume, and intensity evolve based on real performance data.", isCore: false, icon: Up}
     ]
 
     return (
@@ -33,7 +38,7 @@ export const Methodology = () => {
                 {
                     steps.map((step, index) => (
 
-                        <CardMethology numberStep={index + 1} title={step.title} description={step.description} isCore={step.isCore}></CardMethology>
+                        <CardMethology numberStep={index + 1} title={step.title} description={step.description} isCore={step.isCore} icon={step.icon}></CardMethology>
 
                     ))
                 }
