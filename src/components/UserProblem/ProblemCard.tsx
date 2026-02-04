@@ -18,56 +18,60 @@ const cardVariants: Variants = {
 type articleProps = {
     title: string,
     description: string,
-    side: "left" | "right",
     index: number,
+    side: "left" | "right",
 }
 
-export const ProblemCard = ({ title, description, side, index }: articleProps) => {
-
+export const ProblemCard = ({ title, description, index, side }: articleProps) => {
     const sideStyles =
         side === "right"
-            ? "sm:translate-x-6"
-            : "sm:translate-x-0"
+            ? "sm:place-self-end sm:translate-y-30"
+            : "sm:place-self-start"
 
     return (
-        <motion.article className={`
-            bg-surface-glass
-            border border-border-subtle
-            py-6 px-6
-            backdrop-blur-md
-            ${sideStyles}
-            shadow-card
-            hover:shadow-card-hover
-            transition-all duration-300
-            hover:-translate-y-1
+        <motion.div className={`
             relative
-            before:absolute before:left-0 before:top-0 before:h-full before:w-[3px]
-            before:bg-primary-strong/90
-            before:content-['']
-            max-w-[400px]
-            `}
+            max-w-[320px]
+            py-7 px-7
+            ${sideStyles}
+            bg-surface-glass
+            border border-white/10
+            backdrop-blur-lg
+
+            shadow-card
+            transition-all duration-400
+            hover:border-primary/40
+            space-y-4
+            
+            border-b-primary/40
+            border-l-primary/40
+            border
+            rounded-bl-[24px]
+        `}
             custom={side}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={cardVariants}
         >
-            <div
-                className="absolute top-0 right-6 w-12 h-14 bg-primary/15 text-2xl font-body font-bold text-text-secondary flex items-center justify-center z-1"
-                style={{
-                    clipPath: "polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%)"
-                }}
-            >
-                0{index}
+
+
+            <div className="absolute top-0 right-0 font-bold font-body text-3xl text-text-primary bg-primary/40 p-2 text-center rounded-bl-xl">
+                0{index}<p className="text-xs text-text-secondary uppercase">Problem</p>
             </div>
-            <h3 className="font-heading text-2xl tracking-wide uppercase text-text-primary block sm:inline">
-                <span className="font-bold text-text-primary block sm:inline">No</span>{" "}
-                <span className="font-black text-primary/90 block sm:inline">{title}</span>
+
+            <h3 className="font-heading uppercase text-xl md:text-2xl text-primary font-black mt-4">
+                <p>No</p>
+                <p>
+                    {title}
+                </p>
             </h3>
-            <div className="h-px w-full bg-primary/30 my-4" />
-            <p className="font-body text-sm text-text-secondary mt-2 leading-relaxed">
+            <div className="h-px bg-text-secondary w-12" />
+
+            <p className="font-body text-sm text-text-secondary leading-relaxed">
                 {description}
             </p>
-        </motion.article>
+
+        </motion.div>
     )
 }

@@ -19,7 +19,7 @@ export const UserProblem = () => {
     return (
         <section className='relative md:px-12 py-12 overflow-hidden'>
             <img className="absolute m-0 p-0 top-0 left-0 -z-3 opacity-10 object-cover w-full h-full" src={bg} alt="bg-user-problem" />
-            <img className="absolute hidden sm:block -right-1/5 md:-right-1/6 lg:right-0 top-0 lg:-top-1/5 bottom-0 -z-2 h-[800px] lg:h-[1000px] object-cover pointer-events-none opacity-90 " src={woman} alt="woman-user-problem" />
+            <img className="absolute hidden lg:block left-1/3 -top-1/4 -z-2 h-[900px] object-cover pointer-events-none opacity-90 " src={woman} alt="woman-user-problem" />
             <div className="absolute bottom-0 left-0 w-full h-60 
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"
@@ -39,7 +39,7 @@ export const UserProblem = () => {
                     </p>
                 </motion.header>
                 <motion.div
-                    className='relative z-10 grid gap-8 mt-12 place-content-center sm:place-content-start'
+                    className='relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-12 mt-12 place-items-center'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
@@ -54,7 +54,7 @@ export const UserProblem = () => {
                 >
                     {
                         problemCards.map((art, i) => (
-                            <ProblemCard title={art.title} description={art.description} side={art.side} index={i+1} />
+                            <ProblemCard title={art.title} description={art.description} index={i+1} side={art.side} />
                         ))
                     }
                 </motion.div>

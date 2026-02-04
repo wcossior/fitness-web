@@ -18,6 +18,9 @@ export const CardMethology = ({ numberStep, title, description, isCore }: cardMe
                     relative
                     shadow-card
                     ${isCore ? "md:scale-112 md:border-primary/30" : ""}
+                    hover:border-primary/40
+                    hover:bg-surface-elevated/90
+                    transition-all duration-300
                 `}>
             <span className="text-primary text-xs font-bold tracking-[0.2em]">STEP 0{numberStep}</span>
             <h3 className="font-heading text-xl uppercase text-text-primary">{title}</h3>
