@@ -32,11 +32,9 @@ export const Methodology = () => {
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-24 justify-items-center sm:justify-items-start'>
                 {
                     steps.map((step, index) => (
-                        <div className="relative flex justify-center">
-                           
 
-                            <CardMethology numberStep={index + 1} title={step.title} description={step.description} isCore={step.isCore}></CardMethology>
-                        </div>
+                        <CardMethology numberStep={index + 1} title={step.title} description={step.description} isCore={step.isCore}></CardMethology>
+
                     ))
                 }
 

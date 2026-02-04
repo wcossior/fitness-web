@@ -56,7 +56,7 @@ export const ProblemCard = ({ title, description, index, side }: articleProps) =
         >
 
 
-            <div className="absolute top-0 right-0 font-bold font-body text-3xl text-text-primary bg-primary/40 p-2 text-center rounded-bl-xl">
+            <div className="absolute top-0 right-0 font-bold font-body text-3xl text-text-primary bg-primary/40 p-2 text-center rounded-bl-lg">
                 0{index}<p className="text-xs text-text-secondary uppercase">Problem</p>
             </div>
 
