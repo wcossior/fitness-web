@@ -1,5 +1,8 @@
 import bg from "../../assets/gymdumbell.jpg"
 import woman from "../../assets/woman.png"
+import { Eye } from "./icons/Eye"
+import { Random } from "./icons/Random"
+import { Discouraged } from "./icons/Discouraged"
 import { ProblemCard } from "./ProblemCard"
 import { motion } from "framer-motion"
 
@@ -8,18 +11,19 @@ export const UserProblem = () => {
         side: "left" | "right"
         title: string
         description: string
+        icon:React.ElementType
     }
 
     const problemCards: problemCardsData[] = [
-        { side: "left", title: "structure", description: "Random workouts, random results. No clear plan, no direction." },
-        { side: "right", title: "consistency", description: "Motivation fades fast when progress isn’t visible." },
-        { side: "left", title: "accountability", description: "When no one is tracking your progress, it’s easy to quit." }
+        { side: "left", title: "structure", description: "Random workouts, random results. No clear plan, no direction." ,icon: Random},
+        { side: "right", title: "consistency", description: "Motivation fades fast when progress isn’t visible." ,icon: Discouraged},
+        { side: "left", title: "accountability", description: "When no one is tracking your progress, it’s easy to quit.",icon: Eye}
     ]
 
     return (
         <section className='relative md:px-12 py-12 overflow-hidden'>
             <img className="absolute m-0 p-0 top-0 left-0 -z-3 opacity-10 object-cover w-full h-full" src={bg} alt="bg-user-problem" />
-            <img className="absolute hidden lg:block left-1/3 -top-1/4 -z-2 h-[900px] object-cover pointer-events-none opacity-90 " src={woman} alt="woman-user-problem" />
+            <img className="absolute hidden lg:block left-1/3 -top-1/14 -z-2 h-[900px] object-cover pointer-events-none opacity-90 " src={woman} alt="woman-user-problem" />
             <div className="absolute bottom-0 left-0 w-full h-60 
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"
@@ -39,7 +43,7 @@ export const UserProblem = () => {
                     </p>
                 </motion.header>
                 <motion.div
-                    className='relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-12 mt-12 place-items-center'
+                    className='relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-12 mt-12 place-items-center items-stretch'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
@@ -54,7 +58,9 @@ export const UserProblem = () => {
                 >
                     {
                         problemCards.map((art, i) => (
-                            <ProblemCard title={art.title} description={art.description} index={i+1} side={art.side} />
+                            <div className="flex">
+                                <ProblemCard title={art.title} description={art.description} index={i+1} side={art.side} icon={art.icon}/>
+                            </div>
                         ))
                     }
                 </motion.div>

@@ -17,7 +17,7 @@ export const Methodology = () => {
     ]
 
     return (
-        <section className=' lg:min-h-[680px] px-6 md:px-12 py-12 relative overflow-hidden'>
+        <section className='min-h-[680px] px-6 md:px-12 py-12 relative overflow-hidden'>
             <div className='space-y-4 text-center sm:text-end flex flex-col items-center sm:items-end'>
                 <h2 className="font-bold text-text-primary text-4xl font-heading uppercase">A System Built for <span className="font-black text-primary/90">Progress.</span></h2>
                 <p className='max-w-md sm:w-full font-body text-text-secondary'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolor soluta! Architecto</p>

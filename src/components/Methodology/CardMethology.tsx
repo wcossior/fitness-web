@@ -33,9 +33,6 @@ export const CardMethology = ({ numberStep, title, description, isCore }: cardMe
                     {description}
                 </p>
             </div>
-            {numberStep !== 3 &&
-                < img className={`hidden lg:block absolute opacity-40 h-24 ${numberStep===2?"-right-[22%]":"-right-[16%]"} z-10`} src={arrow} alt="" />
-            }
         </div>
     )
 }
