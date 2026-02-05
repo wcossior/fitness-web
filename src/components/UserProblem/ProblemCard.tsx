@@ -55,7 +55,7 @@ export const ProblemCard = ({ title, description, index, side, icon: IconCompone
         >
             <div className="space-y-4 items-stretch">
                 <div className="flex justify-center">
-                    <IconComponent className="h-12 md:h-16 text-primary" />
+                    <IconComponent className="h-12 md:h-14 text-primary" />
                 </div>
                 <span className="text-primary text-xs font-bold tracking-[0.2em]">PROBLEM 0{index}</span>
                 <h3 className="font-heading uppercase text-xl md:text-2xl text-text-primary">

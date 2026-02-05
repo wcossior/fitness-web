@@ -38,7 +38,7 @@ export const Methodology = () => {
                 {
                     steps.map((step, index) => (
 
-                        <CardMethology numberStep={index + 1} title={step.title} description={step.description} isCore={step.isCore} icon={step.icon}></CardMethology>
+                        <CardMethology className={index === 2 ? "sm:translate-x-[55%] md:translate-x-0" : ""} numberStep={index + 1} title={step.title} description={step.description} isCore={step.isCore} icon={step.icon}></CardMethology>
 
                     ))
                 }
