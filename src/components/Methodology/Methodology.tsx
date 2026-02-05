@@ -5,7 +5,6 @@ import { Scan } from "./icons/Scan"
 import { CheckList } from "./icons/CheckList"
 import { Up } from "./icons/Up"
 
-
 export const Methodology = () => {
 
     type StepsData = {
@@ -16,9 +15,9 @@ export const Methodology = () => {
     }
 
     const steps: StepsData[] = [
-        { title: "ASSESSMENT", description: "We analyze your level, posture, and limits before training begins.", isCore: false,  icon: Scan},
-        { title: "PROGRAMMING", description: "Your workouts follow a structured progression, not random routines", isCore: true , icon: CheckList},
-        { title: "PROGRESSION", description: "Loads, volume, and intensity evolve based on real performance data.", isCore: false, icon: Up}
+        { title: "ASSESSMENT", description: "We analyze your level, posture, and limits before training begins.", isCore: false, icon: Scan },
+        { title: "PROGRAMMING", description: "Your workouts follow a structured progression, not random routines", isCore: true, icon: CheckList },
+        { title: "PROGRESSION", description: "Loads, volume, and intensity evolve based on real performance data.", isCore: false, icon: Up }
     ]
 
     return (
@@ -34,7 +33,7 @@ export const Methodology = () => {
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"
             />
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-24 justify-items-center sm:justify-items-start'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-24 justify-items-center'>
                 {
                     steps.map((step, index) => (
 

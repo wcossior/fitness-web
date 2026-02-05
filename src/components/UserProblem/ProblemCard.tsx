@@ -5,14 +5,15 @@ const cardVariants: Variants = {
         opacity: 0,
         x: -120,
     },
-    visible: {
+    visible: (i: number) => ({
         opacity: 1,
         x: 0,
         transition: {
-            duration: 0.4,
-            ease: "easeOut"
+            delay: i * 0.35,
+            duration: 0.3,
+            ease: [0.22, 1, 0.36, 1] // easeOutExpo feeling
         }
-    }
+    })
 }
 
 type articleProps = {
@@ -48,11 +49,11 @@ export const ProblemCard = ({ title, description, index, side, icon: IconCompone
 
             overflow-hidden
         `}
-            custom={side}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={cardVariants}
+            custom={index}
         >
             <div className="space-y-4 items-stretch">
                 <div className="flex justify-center">

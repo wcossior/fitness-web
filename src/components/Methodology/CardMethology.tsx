@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion, type Variants } from "framer-motion"
 
 type cardMethologyProps = {
     numberStep: number,
@@ -9,11 +10,37 @@ type cardMethologyProps = {
     className?: string
 }
 
+const cardVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        y: 40,
+        filter: "blur(4px)"
+    },
+    visible: (i: number) => ({
+        opacity: 1,
+        y: 0,
+        filter: "blur(0px)",
+        transition: {
+            delay: i * 0.35,
+            duration: 0.7,
+            ease: [0.22, 1, 0.36, 1] // easeOutExpo feeling
+        }
+    })
+}
+
 export const CardMethology = ({ numberStep, title, description, isCore, icon: IconComponent, className }: cardMethologyProps) => {
+
+
     return (
 
-        <div className={`
-            ${className}
+        <motion.div
+            custom={numberStep}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.4 }}
+            variants={cardVariants}
+            className={`
+                        ${className}
                         w-full max-w-[340px]
                         p-7
                         space-y-4
@@ -47,10 +74,14 @@ export const CardMethology = ({ numberStep, title, description, isCore, icon: Ic
                 </p>
             </div>
             <div className='flex items-center ml-2'>
-                <div className="hidden lg:flex items-center justify-center w-13 h-13 rounded-lg bg-primary/10 border border-primary/20">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: numberStep * 0.65 + 0.2, duration: 0.7 }}
+                    className="hidden lg:flex items-center justify-center w-13 h-13 rounded-lg bg-primary/10 border border-primary/20">
                     <IconComponent className="w-7 h-7 text-primary" />
-                </div>
+                </motion.div>
             </div>
-        </div>
+        </motion.div>
     )
 }
