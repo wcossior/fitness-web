@@ -51,13 +51,13 @@ export const CardResult = ({ value, suffix, label, index }: CardResultProps) => 
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
       variants={cardVariants}
-      className="flex flex-col items-center justify-center p-10 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)] font-body"
+      className="flex flex-col items-center justify-center p-6 sm:p-10 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)] font-body"
     >
       <div className="flex items-end">
-        <span ref={numberRef} className="text-5xl font-bold tracking-tight">
+        <span ref={numberRef} className="text-4xl sm:text-5xl font-bold tracking-tight">
           0
         </span>
-        <span className="text-3xl font-bold">{suffix}</span>
+        <span className="text-2xl sm:text-3xl font-bold">{suffix}</span>
       </div>
       <span className="mt-3 text-xs uppercase tracking-widest text-text-secondary/80">
         {label}

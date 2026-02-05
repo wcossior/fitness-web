@@ -23,8 +23,8 @@ export const Methodology = () => {
     return (
         <section className='min-h-[680px] px-6 md:px-12 py-12 relative overflow-hidden'>
             <div className='space-y-4 text-center sm:text-end flex flex-col items-center sm:items-end'>
-                <h2 className="font-bold text-text-primary text-4xl font-heading uppercase">A System Built for <span className="font-black text-primary/90">Progress.</span></h2>
-                <p className='max-w-md sm:w-full font-body text-text-secondary'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolor soluta! Architecto</p>
+                <h2 className="font-bold text-text-primary text-3xl sm:text-4xl font-heading uppercase">A System Built for <span className="font-black text-primary/90">Progress.</span></h2>
+                <p className='max-w-md sm:w-full font-body text-text-secondary'>We’ve engineered a foolproof blueprint to take you from where you are to where you belong.</p>
             </div>
             <img className="hidden sm:block absolute top-0 left-0 -z-3 opacity-40 object-cover w-full h-full object-top" src={bg} alt="bg-gym" />
             <img className="sm:hidden block absolute top-0 left-0 -z-3 opacity-40 object-cover w-full h-full" src={bg2} alt="bg-gym" />

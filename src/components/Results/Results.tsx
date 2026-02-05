@@ -23,8 +23,8 @@ export const Results = () => {
         className="flex flex-col items-center"
       >
         <h2 className="font-heading uppercase text-center tracking-widest">
-          <span className="text-4xl font-semibold">Results You Can</span>{" "}
-          <span className="text-4xl font-black text-primary/90">Measure</span>
+          <span className="text-3xl sm:text-4xl font-semibold">Results You Can</span>{" "}
+          <span className="text-3xl sm:text-4xl font-black text-primary/90">Measure</span>
         </h2>
         <p className="max-w-2xl mt-4 text-center text-text-secondary font-body">
           Track your progress, see your gains, and measure your transformation with clear metrics.

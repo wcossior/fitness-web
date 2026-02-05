@@ -23,7 +23,7 @@ export const Content = ({eyebrow,headline,suportText}:contentProps) => {
             <span className="inline-block text-sm uppercase tracking-widest text-primary/80 font-body">
                 {eyebrow}
             </span>
-            <h1 className="text-5xl uppercase md:text-7xl font-black leading-tight md:tracking-wide text-text-primary font-heading drop-shadow-[0_0_16px_rgba(34,229,138,0.35)] whitespace-pre-line">
+            <h1 className="text-4xl sm:text-5xl uppercase md:text-7xl font-black leading-tight md:tracking-wide text-text-primary font-heading drop-shadow-[0_0_16px_rgba(34,229,138,0.35)] whitespace-pre-line">
                 {headline}
             </h1>
             <p className="text-lg md:text-xl text-text-secondary font-body">
