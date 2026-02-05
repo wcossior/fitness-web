@@ -8,23 +8,23 @@ import { motion } from "framer-motion"
 
 export const UserProblem = () => {
     type problemCardsData = {
-        side: "left" | "right"
+        side: "top" | "bottom"
         title: string
         description: string
         icon:React.ElementType
     }
 
     const problemCards: problemCardsData[] = [
-        { side: "left", title: "structure", description: "Random workouts, random results. No clear plan, no direction." ,icon: Random},
-        { side: "right", title: "consistency", description: "Motivation fades fast when progress isn’t visible." ,icon: Discouraged},
-        { side: "left", title: "accountability", description: "When no one is tracking your progress, it’s easy to quit.",icon: Eye}
+        { side: "top", title: "structure", description: "Random workouts, random results. No clear plan, no direction." ,icon: Random},
+        { side: "bottom", title: "consistency", description: "Motivation fades fast when progress isn’t visible." ,icon: Discouraged},
+        { side: "top", title: "accountability", description: "When no one is tracking your progress, it’s easy to quit.",icon: Eye}
     ]
 
     return (
-        <section className='relative md:px-12 py-12 overflow-hidden'>
+        <section className='relative min-h-[680px] md:px-12 py-12 lg:pb-24 overflow-hidden'>
             <img className="absolute m-0 p-0 top-0 left-0 -z-3 opacity-10 object-cover w-full h-full" src={bg} alt="bg-user-problem" />
-            <img className="absolute hidden lg:block left-1/3 -top-1/14 -z-2 h-[900px] object-cover pointer-events-none opacity-90 " src={woman} alt="woman-user-problem" />
-            <div className="absolute bottom-0 left-0 w-full h-60 
+            <img className="absolute hidden lg:block left-1/2 -top-90 -z-2 h-[1300px] object-cover pointer-events-none opacity-75 " src={woman} alt="woman-user-problem" />
+            <div className="absolute bottom-0 left-0 w-full h-100 
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"
             />
@@ -43,7 +43,7 @@ export const UserProblem = () => {
                     </p>
                 </motion.header>
                 <motion.div
-                    className='relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-12 mt-12 place-items-center items-stretch'
+                    className='relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 place-items-center lg:place-items-start w-full lg:w-[42rem]'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}

@@ -1,13 +1,13 @@
 import { motion, type Variants } from "framer-motion"
 
 const cardVariants: Variants = {
-    hidden: (side: "left" | "right") => ({
+    hidden: {
         opacity: 0,
-        x: side === "left" ? -120 : 120,
-    }),
+        y: 120,
+    },
     visible: {
         opacity: 1,
-        x: 0,
+        y: 0,
         transition: {
             duration: 0.4,
             ease: "easeOut"
@@ -19,19 +19,20 @@ type articleProps = {
     title: string,
     description: string,
     index: number,
-    side: "left" | "right",
+    side: "top" | "bottom",
     icon: React.ElementType
 }
 
 export const ProblemCard = ({ title, description, index, side, icon: IconComponent }: articleProps) => {
     const sideStyles =
-        side === "right"
-            ? "sm:place-self-end sm:translate-y-30"
-            : "sm:place-self-start"
+        side === "bottom"
+            ? "lg:translate-y-40"
+            : ""
 
     return (
         <motion.div className={`
             relative
+            w-full
             max-w-[320px]
             h-full
             py-7 px-7
@@ -58,7 +59,7 @@ export const ProblemCard = ({ title, description, index, side, icon: IconCompone
                     <IconComponent className="h-12 md:h-14 text-primary" />
                 </div>
                 <span className="text-primary text-xs font-bold tracking-[0.2em]">PROBLEM 0{index}</span>
-                <h3 className="font-heading uppercase text-xl md:text-2xl text-text-primary">
+                <h3 className="font-heading uppercase text-xl text-text-primary">
                     <span>No </span>
                     <span>
                         {title}
