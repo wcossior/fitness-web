@@ -21,7 +21,7 @@ export const UserProblem = () => {
     ]
 
     return (
-        <section className='relative min-h-[680px] md:px-12 py-12 lg:pb-24 overflow-hidden'>
+        <section className='relative min-h-[680px] md:px-12 py-12 overflow-hidden'>
             <img className="absolute m-0 p-0 top-0 left-0 -z-3 opacity-10 object-cover w-full h-full" src={bg} alt="bg-user-problem" />
             <img className="absolute hidden lg:block left-1/2 -top-90 -z-2 h-[1300px] object-cover pointer-events-none opacity-75 " src={woman} alt="woman-user-problem" />
             <div className="absolute bottom-0 left-0 w-full h-100 

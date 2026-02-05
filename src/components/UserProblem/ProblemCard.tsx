@@ -3,11 +3,11 @@ import { motion, type Variants } from "framer-motion"
 const cardVariants: Variants = {
     hidden: {
         opacity: 0,
-        y: 120,
+        x: -120,
     },
     visible: {
         opacity: 1,
-        y: 0,
+        x: 0,
         transition: {
             duration: 0.4,
             ease: "easeOut"
