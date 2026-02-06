@@ -23,7 +23,7 @@ export const UserProblem = () => {
     return (
         <section className='relative min-h-[680px] px-6 md:px-12 py-12 overflow-hidden'>
             <img className="absolute m-0 p-0 top-0 left-0 -z-3 opacity-10 object-cover w-full h-full" src={bg} alt="bg-user-problem" />
-            <img className="absolute hidden lg:block left-1/2 -top-90 -z-2 h-[1300px] object-cover pointer-events-none opacity-75 " src={woman} alt="woman-user-problem" />
+            <img className="absolute hidden lg:block left-1/2 -top-70 -z-2 h-[1300px] object-cover pointer-events-none opacity-75 " src={woman} alt="woman-user-problem" />
             <div className="absolute bottom-0 left-0 w-full h-100 
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"
@@ -45,28 +45,30 @@ export const UserProblem = () => {
                     that comes after.
                 </p>
             </motion.header>
-            <motion.div
-                className='relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 place-items-center lg:place-items-start w-full lg:w-[42rem]'
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={{
-                    hidden: {},
-                    visible: {
-                        transition: {
-                            staggerChildren: 0.15
+            <div className="flex justify-center lg:justify-start">
+                <motion.div
+                    className='relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12 w-fit'
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={{
+                        hidden: {},
+                        visible: {
+                            transition: {
+                                staggerChildren: 0.15
+                            }
                         }
+                    }}
+                >
+                    {
+                        problemCards.map((art, i) => (
+                            <div className="flex">
+                                <ProblemCard title={art.title} description={art.description} index={i + 1} side={art.side} icon={art.icon} />
+                            </div>
+                        ))
                     }
-                }}
-            >
-                {
-                    problemCards.map((art, i) => (
-                        <div className="flex">
-                            <ProblemCard title={art.title} description={art.description} index={i + 1} side={art.side} icon={art.icon} />
-                        </div>
-                    ))
-                }
-            </motion.div>
+                </motion.div>
+            </div>
 
             <div className="flex justify-center lg:justify-end mt-12 font-body">
                 <p className="text-text-secondary lg:text-xl max-w-2xl text-center lg:text-end">

@@ -56,8 +56,10 @@ export const ProblemCard = ({ title, description, index, side, icon: IconCompone
             custom={index}
         >
             <div className="space-y-4 items-stretch">
-                <div className="flex justify-center">
-                    <IconComponent className="h-12 md:h-14 text-primary" />
+                 <div className="flex justify-start">
+                    <div className="flex justify-center items-center w-22 h-22 bg-surface-elevated/50 shadow-card [clip-path:polygon(30%_0%,70%_0%,100%_30%,100%_70%,70%_100%,30%_100%,0%_70%,0%_30%)] border border-white/5 shadow-card">
+                        <IconComponent className="h-13 text-primary"></IconComponent>
+                    </div>
                 </div>
                 <span className="text-primary text-xs font-bold tracking-[0.2em]">PROBLEM 0{index}</span>
                 <h3 className="font-heading uppercase text-xl text-text-primary">
