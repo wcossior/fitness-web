@@ -79,7 +79,7 @@ export const Plans = () => {
                     }
                 </div>
             </div>
-            <div className="lg:hidden overflow-x-auto snap-x snap-mandatory no-scrollbar mt-12 scroll-px-6">
+            <div className="block lg:hidden overflow-x-auto snap-x snap-mandatory no-scrollbar mt-12 scroll-px-6">
                 <div className="flex gap-8 w-max items-stretch px-6 md:px-12 cursor-grab active:cursor-grabbing h-[500px]">
                     {plans.map((plan, i) => (
 

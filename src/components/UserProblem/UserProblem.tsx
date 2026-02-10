@@ -21,7 +21,7 @@ export const UserProblem = () => {
     ]
 
     return (
-        <section className='relative min-h-[680px] px-6 md:px-12 py-12 overflow-hidden'>
+        <section className='relative min-h-[680px] py-12 overflow-hidden'>
             <img className="absolute m-0 p-0 top-0 left-0 -z-3 opacity-10 object-cover w-full h-full" src={bg} alt="bg-user-problem" />
             <img className="absolute hidden lg:block left-1/2 -top-70 -z-2 h-[1300px] object-cover pointer-events-none opacity-75 " src={woman} alt="woman-user-problem" />
             <div className="absolute bottom-0 left-0 w-full h-100 
@@ -30,7 +30,7 @@ export const UserProblem = () => {
             />
 
             <motion.header
-                className='space-y-4 text-center sm:text-start'
+                className='space-y-4 text-center sm:text-start px-6 md:px-12'
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.6 }}
@@ -45,9 +45,9 @@ export const UserProblem = () => {
                     that comes after.
                 </p>
             </motion.header>
-            <div className="flex justify-center lg:justify-start">
+            <div className="hidden lg:flex justify-center lg:justify-start px-6 md:px-12">
                 <motion.div
-                    className='relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12 w-fit'
+                    className='relative z-10 grid grid-cols-2 gap-8 mt-12 w-fit'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
@@ -70,7 +70,19 @@ export const UserProblem = () => {
                 </motion.div>
             </div>
 
-            <div className="flex justify-center lg:justify-end mt-12 font-body">
+            <div className="lg:hidden block overflow-x-auto snap-x snap-mandatory no-scrollbar mt-12 scroll-px-6">
+                <div className="flex gap-8 w-max items-stretch px-6 md:px-12 cursor-grab active:cursor-grabbing h-[290px]">
+                    {
+                        problemCards.map((art, i) => (
+                            <div className="flex">
+                                <ProblemCard title={art.title} description={art.description} index={i + 1} side={art.side} icon={art.icon} />
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+
+            <div className="flex justify-center lg:justify-end mt-12 font-body px-6 md:px-12">
                 <p className="text-text-secondary lg:text-xl max-w-2xl text-center lg:text-end">
                     "Sound familiar? It’s not your fault. Commercial fitness taught you how to sweat, but not how to  <span className="text-primary font-bold uppercase">progress</span>."
                 </p>

@@ -37,23 +37,33 @@ const benefits: BenefitData[] = [
 
 export const Benefits = () => {
     return (
-        <section className='relative min-h-[680px py-12 px-6 md:px-12'>
+        <section className='relative min-h-[680px py-12'>
             <img className="absolute m-0 p-0 top-0 left-0 -z-3 opacity-40 object-cover w-full h-full" src={bg} alt="bg-user-problem" />
             <div className="absolute bottom-0 left-0 w-full h-100 
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"
             />
-             <div className="absolute top-0 left-0 w-full h-100 
+            <div className="absolute top-0 left-0 w-full h-100 
                 bg-gradient-to-b from-black to-transparent 
                 pointer-events-none -z-1"
             />
-            <header className='space-y-4 text-center flex flex-col items-center'>
+            <header className='space-y-4 text-center flex flex-col items-center px-6 md:px-12'>
                 <h2 className="font-bold text-3xl sm:text-4xl font-heading uppercase max-w-xl">A new level of <span className="font-black text-primary/90">authority</span> over your body and mind.</h2>
                 <p className='font-body max-w-md text-text-secondary'>Your investment translates into tangible, life-changing results.</p>
             </header>
 
-            <div className="flex justify-center items-center mt-12 relative">
-                <div className="grid sm:grid-cols-2 w-fit gap-8">
+            <div className="hidden lg:flex justify-center items-center mt-12 relative">
+                <div className="hidden md:grid md:grid-cols-2 w-fit gap-8 px-12">
+                    {
+                        benefits.map((benefit, index) => (
+                            <BenefitCard title={benefit.title} description={benefit.description} icon={benefit.icon} index={index + 1}></BenefitCard>
+                        ))
+                    }
+                </div>
+            </div>
+
+            <div className="lg:hidden overflow-x-auto snap-x snap-mandatory no-scrollbar mt-12 scroll-px-6">
+                <div className="flex gap-8 w-max items-stretch px-6 md:px-12 cursor-grab active:cursor-grabbing h-[310px]">
                     {
                         benefits.map((benefit, index) => (
                             <BenefitCard title={benefit.title} description={benefit.description} icon={benefit.icon} index={index + 1}></BenefitCard>

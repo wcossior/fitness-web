@@ -16,13 +16,13 @@ export const Methodology = () => {
 
     const steps: StepsData[] = [
         { title: "ASSESSMENT", description: "We analyze your level, posture, and limits before training begins.", isCore: false, icon: Scan },
-        { title: "PROGRAMMING", description: "Your workouts follow a structured progression, not random routines", isCore: true, icon: CheckList },
+        { title: "PROGRAMMING", description: "Your workouts follow a structured progression, not random routines.", isCore: true, icon: CheckList },
         { title: "PROGRESSION", description: "Loads, volume, and intensity evolve based on real performance data.", isCore: false, icon: Up }
     ]
 
     return (
-        <section className='min-h-[680px] px-6 md:px-12 py-12 relative overflow-hidden'>
-            <div className='space-y-4 text-center sm:text-end flex flex-col items-center sm:items-end'>
+        <section className='min-h-[500px] lg:min-h-[680px] py-12 relative overflow-hidden'>
+            <div className='space-y-4 text-center sm:text-end flex flex-col items-center sm:items-end px-6 md:px-12'>
                 <h2 className="font-bold text-text-primary text-3xl sm:text-4xl font-heading uppercase">A System Built for <span className="font-black text-primary/90">Progress.</span></h2>
                 <p className='max-w-md sm:w-full font-body text-text-secondary'>We’ve engineered a foolproof blueprint to take you from where you are to where you belong.</p>
             </div>
@@ -33,15 +33,26 @@ export const Methodology = () => {
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"
             />
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-24 justify-items-center'>
-                {
-                    steps.map((step, index) => (
+            <div className="flex justify-center">
+                <div className='hidden lg:flex gap-8 mt-24 px-12 w-fit h-[250px]'>
+                    {
+                        steps.map((step, index) => (
+                            <CardMethology numberStep={index + 1} title={step.title} description={step.description} isCore={step.isCore} icon={step.icon}></CardMethology>
+                        ))
+                    }
+                </div>
+            </div>
 
-                        <CardMethology className={index === 2 ? "sm:translate-x-[55%] md:translate-x-0" : ""} numberStep={index + 1} title={step.title} description={step.description} isCore={step.isCore} icon={step.icon}></CardMethology>
+            <div className="lg:hidden block overflow-x-auto snap-x snap-mandatory no-scrollbar mt-12 scroll-px-6">
+                <div className="flex gap-8 w-max items-stretch px-6 md:px-12 cursor-grab active:cursor-grabbing h-[235px]">
+                    {
+                        steps.map((step, index) => (
 
-                    ))
-                }
+                            <CardMethology numberStep={index + 1} title={step.title} description={step.description} isCore={step.isCore} icon={step.icon}></CardMethology>
 
+                        ))
+                    }
+                </div>
             </div>
         </section>
     )

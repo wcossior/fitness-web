@@ -10,6 +10,7 @@ type BenefitCardProps = {
 export const BenefitCard = ({ title, description, icon: IconComponent, index }: BenefitCardProps) => {
     return (
         <div className={`
+                        h-full
                         w-full max-w-[340px]
                         p-7
                         space-y-4
