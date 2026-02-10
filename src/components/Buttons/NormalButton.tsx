@@ -3,11 +3,15 @@ import { motion } from "framer-motion"
 type normalBtnProps = {
     title: string,
     icon?: boolean
+    className?: string
 }
 
-export const NormalButton = ({ title, icon }: normalBtnProps) => {
+export const NormalButton = ({ title, icon, className }: normalBtnProps) => {
     return (
-        <button className="flex justify-center items-center gap-2 bg-primary text-surface font-semibold px-6 py-3 rounded-lg hover:scale-105 transition-transform duration-200">
+        <button className={`
+        flex justify-center items-center gap-2 bg-primary text-surface font-semibold px-6 py-3 rounded-lg hover:scale-105 transition-transform duration-200
+        ${className}
+        `}>
             <span>{title}</span>
             {
                 icon &&
