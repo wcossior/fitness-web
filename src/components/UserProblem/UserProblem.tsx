@@ -63,7 +63,7 @@ export const UserProblem = () => {
                     {
                         problemCards.map((art, i) => (
                             <div className="flex">
-                                <ProblemCard title={art.title} description={art.description} index={i + 1} side={art.side} icon={art.icon} />
+                                <ProblemCard key={i} title={art.title} description={art.description} index={i + 1} side={art.side} icon={art.icon} />
                             </div>
                         ))
                     }

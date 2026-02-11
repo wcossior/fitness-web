@@ -28,7 +28,7 @@ export const Hero = () => {
                 headline={"Build.\nPower.\nDiscipline."}
                 suportText="A structured fitness system built on discipline, progression, and measurable results."
             />
-
+            
             <Scrollindicator />
         </section>
 
