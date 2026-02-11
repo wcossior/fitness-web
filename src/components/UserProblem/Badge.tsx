@@ -1,7 +1,7 @@
 import React from 'react'
 
 type badgeProps = {
-    index: number
+    index: number,
 }
 
 export const Badge = ({ index }: badgeProps) => {
