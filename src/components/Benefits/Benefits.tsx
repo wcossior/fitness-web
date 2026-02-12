@@ -52,8 +52,8 @@ export const Benefits = () => {
                 <p className='font-body max-w-md text-text-secondary'>Your investment translates into tangible, life-changing results.</p>
             </header>
 
-            <div className="hidden lg:flex justify-center items-center mt-12 relative">
-                <div className="hidden md:grid md:grid-cols-2 w-fit gap-8 px-12">
+            <div className="flex justify-center items-center mt-12 relative px-6 md:px-12">
+                <div className="grid md:grid-cols-2 w-fit gap-8">
                     {
                         benefits.map((benefit, index) => (
                             <BenefitCard title={benefit.title} description={benefit.description} icon={benefit.icon} index={index + 1}></BenefitCard>
@@ -62,15 +62,7 @@ export const Benefits = () => {
                 </div>
             </div>
 
-            <div className="lg:hidden overflow-x-auto snap-x snap-mandatory no-scrollbar mt-12 scroll-px-6">
-                <div className="flex gap-8 w-max items-stretch px-6 md:px-12 cursor-grab active:cursor-grabbing h-[310px]">
-                    {
-                        benefits.map((benefit, index) => (
-                            <BenefitCard title={benefit.title} description={benefit.description} icon={benefit.icon} index={index + 1}></BenefitCard>
-                        ))
-                    }
-                </div>
-            </div>
+            
 
         </section>
     )
