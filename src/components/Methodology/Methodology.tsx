@@ -21,8 +21,8 @@ export const Methodology = () => {
     ]
 
     return (
-        <section className='min-h-[500px] lg:min-h-[680px] py-12 relative overflow-hidden'>
-            <div className='space-y-4 text-center sm:text-end flex flex-col items-center sm:items-end px-6 md:px-12'>
+        <section className='lg:min-h-[680px] py-12 relative px-6 md:px-12'>
+            <div className='space-y-4 text-center sm:text-end flex flex-col items-center sm:items-end'>
                 <h2 className="font-bold text-text-primary text-3xl sm:text-4xl font-heading uppercase">A System Built for <span className="font-black text-primary/90">Progress.</span></h2>
                 <p className='max-w-md sm:w-full font-body text-text-secondary'>We’ve engineered a foolproof blueprint to take you from where you are to where you belong.</p>
             </div>
@@ -33,23 +33,11 @@ export const Methodology = () => {
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"
             />
-            <div className="flex justify-center">
-                <div className='hidden lg:flex gap-8 mt-24 px-12 w-fit h-[250px]'>
+            <div className="flex justify-center h-full">
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 mt-24 w-fit'>
                     {
                         steps.map((step, index) => (
                             <CardMethology numberStep={index + 1} title={step.title} description={step.description} isCore={step.isCore} icon={step.icon}></CardMethology>
-                        ))
-                    }
-                </div>
-            </div>
-
-            <div className="lg:hidden block overflow-x-auto snap-x snap-mandatory no-scrollbar mt-12 scroll-px-6">
-                <div className="flex gap-8 w-max items-stretch px-6 md:px-12 cursor-grab active:cursor-grabbing h-[235px]">
-                    {
-                        steps.map((step, index) => (
-
-                            <CardMethology numberStep={index + 1} title={step.title} description={step.description} isCore={step.isCore} icon={step.icon}></CardMethology>
-
                         ))
                     }
                 </div>

@@ -1,6 +1,7 @@
 import { PlanCard } from "./PlanCard";
 import bg from "../../assets/lifting.jpg"
 import bg2 from "../../assets/lifting2.jpg"
+import { motion } from "framer-motion"
 
 type PlansData = {
     title: string,
@@ -70,6 +71,20 @@ export const Plans = () => {
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"
             />
+            <div className="flex lg:hidden justify-end pr-6 text-primary mt-8">
+                <motion.svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-10 h-10"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}
+                >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </motion.svg>
+            </div>
+
             <div className="hidden lg:flex justify-center mt-12">
                 <div className='grid lg:grid-cols-3 gap-8 w-fit lg:px-12'>
                     {
@@ -79,7 +94,7 @@ export const Plans = () => {
                     }
                 </div>
             </div>
-            <div className="block lg:hidden overflow-x-auto snap-x snap-mandatory no-scrollbar mt-12 scroll-px-6">
+            <div className="block lg:hidden overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-px-6 mt-8">
                 <div className="flex gap-8 w-max items-stretch px-6 md:px-12 cursor-grab active:cursor-grabbing h-[500px]">
                     {plans.map((plan, i) => (
 
@@ -88,7 +103,7 @@ export const Plans = () => {
                     ))}
                 </div>
             </div>
-            <p className='text-center font-body text-text-secondary mt-8 lg:mt-12'>
+            <p className='text-center font-body text-text-secondary mt-8 lg:mt-12 px-6 md:px-12'>
                 🔒 Secure checkout • Cancel anytime • No hidden fees
             </p>
         </section>

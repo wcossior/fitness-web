@@ -54,23 +54,23 @@ export const CardMethology = ({ numberStep, title, description, isCore, icon: Ic
                         transition-all duration-300
                         rounded-xl
                         flex
-                        [clip-path:polygon(0%_0%,_calc(100%_-_2rem)_0%,_100%_50%,_calc(100%_-_2rem)_100%,_0%_100%,_2rem_50%)]
+                        lg:[clip-path:polygon(0%_0%,_calc(100%_-_2rem)_0%,_100%_50%,_calc(100%_-_2rem)_100%,_0%_100%,_2rem_50%)]
                         before:absolute before:inset-0 before:rounded-xl
                         before:bg-[radial-gradient(circle_at_20%_15%,rgba(255,255,255,0.10),transparent_60%)]
                         before:pointer-events-none
                         hover:shadow-card-hover
                         hover:-translate-y-1
                     `}>
-            <div className='space-y-4 ml-7'>
+            <div className='space-y-4 lg:ml-7'>
                 <div className="flex items-center gap-3">
                     <div className="w-9 h-9 rounded-md bg-primary/10 border border-primary/20 flex items-center justify-center text-xs font-bold text-primary">
                         0{numberStep}
                     </div>
                     <span className="text-[10px] tracking-[0.25em] text-text-muted">STEP</span>
                 </div>
-                <h3 className="font-heading text-xl uppercase text-text-primary">{title}</h3>
+                <h3 className="font-heading text-lg sm:text-xl uppercase text-text-primary">{title}</h3>
                 <div className="h-px bg-primary/25 w-12" />
-                <p className="text-text-secondary text-sm leading-relaxed">
+                <p className="text-text-secondary text-xs sm:text-sm leading-relaxed">
                     {description}
                 </p>
             </div>
