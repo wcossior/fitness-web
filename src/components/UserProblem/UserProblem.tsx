@@ -23,19 +23,7 @@ export const UserProblem = () => {
     return (
         <section className='relative py-12 overflow-hidden'>
             <img className="absolute m-0 p-0 top-0 left-0 -z-3 opacity-10 object-cover w-full h-full" src={bg} alt="bg-user-problem" />
-            {/* <img className="absolute hidden lg:block left-1/2 -top-70 -z-2 h-[1300px] object-cover pointer-events-none opacity-75 " src={woman} alt="woman-user-problem" /> */}
-            {/* <div className="
-    absolute
-    left-1/2
-    top-[20%]
-    -translate-x-1/7
-    w-[1300px]
-    h-[1300px]
-    bg-[radial-gradient(circle,var(--color-primary)_0%,transparent_70%)]
-    opacity-30
-    blur-3xl
-    -z-3
-  " /> */}
+          
             <div className="absolute bottom-0 left-0 w-full h-100 
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"

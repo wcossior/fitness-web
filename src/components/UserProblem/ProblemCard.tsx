@@ -14,7 +14,7 @@ type articleProps = {
 export const ProblemCard = ({ title, description, index, position }: articleProps) => {
     return (
         <>
-            <div className={`hidden lg:flex relative justify-center ${position === "right" ? "left-[8.2rem]" : "-left-[8.2rem]"}`}>
+            <div className={`hidden lg:flex relative ${position === "right" ? "left-[8.2rem]" : "-left-[8.2rem]"}`}>
                 {position === "right" ?
                     <>
                         <Badge index={index}></Badge>
