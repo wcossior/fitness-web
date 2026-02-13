@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 @theme {
+  --color-body-bg: #0B0F0E;
+
   /* Brand */
   --color-primary: #22E58A;
   --color-primary-strong: #18C572;
@@ -25,8 +27,8 @@
 
   /* Glow / FX */
   --color-glow: rgba(34, 229, 138, 0.25);
-  --font-heading: "Playfair", sans-serif;
-  --font-body: "Inter", sans-serif;
+  --font-heading: "Michroma", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
 
   --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.4);
   --shadow-card-hover: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 25px var(--color-glow);

@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 export const Scrollindicator = () => {
     return (
         <motion.div
-            className="flex justify-center mt-2"
+            className="flex justify-center mt-2 relative z-20"
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 1.2 }}
         >

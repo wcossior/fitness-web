@@ -1,4 +1,4 @@
-import { NormalButton } from '../Buttons/NormalButton'
+import { Button } from '../Buttons/NormalButton'
 import { Check } from './icons/Check'
 
 type PlanCardProps = {
@@ -76,7 +76,7 @@ export const PlanCard = ({ title, price, duration, description, characteristics,
                         ))
                     }
                 </div>
-                <NormalButton className="mt-auto" icon={true} title="Join now"></NormalButton>
+                <Button className="mt-auto" icon={true} title="Join now"></Button>
             </div>
 
         </div>

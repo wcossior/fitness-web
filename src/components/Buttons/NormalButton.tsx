@@ -1,20 +1,46 @@
 import { motion } from "framer-motion"
 
-type normalBtnProps = {
-    title: string,
+type NormalButtonProps = {
+    title: string
     icon?: boolean
     className?: string
+    onClick?: () => void
+    type?: "button" | "submit" | "reset"
+    disabled?: boolean
+    variant?: "primary" | "outline" | "ghost"
+}
+const baseStyles = "relative overflow-hidden flex justify-center items-center gap-3 font-body font-bold uppercase tracking-widest transition-all duration-300 active:scale-95 disabled:opacity-50";
+
+const variants = {
+    primary: "bg-primary text-surface px-10 py-4 hover:bg-primary-strong hover:shadow-[0_0_25px_rgba(34,229,138,0.4)]",
+    outline: "border border-white/20 text-text-primary px-10 py-4 hover:bg-white/5 hover:border-primary/50",
+    ghost: "text-text-secondary hover:text-primary px-4 py-2"
 }
 
-export const NormalButton = ({ title, icon, className }: normalBtnProps) => {
+export const Button = ({
+    title,
+    icon,
+    className = "",
+    onClick,
+    type = "button",
+    disabled = false,
+    variant = "primary",
+}: NormalButtonProps) => {
+
     return (
-        <button className={`
-        flex justify-center items-center gap-2 bg-primary text-surface font-semibold px-6 py-3 rounded-lg hover:scale-105 transition-transform duration-200
-        ${className}
-        `}>
+        <button
+            type={type}
+            onClick={onClick}
+            disabled={disabled}
+            className={`
+                ${baseStyles}
+                ${variants[variant]}
+                ${className}
+            `}
+        >
             <span>{title}</span>
-            {
-                icon &&
+
+            {icon && (
                 <motion.svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-5 h-5"
@@ -24,9 +50,14 @@ export const NormalButton = ({ title, icon, className }: normalBtnProps) => {
                     animate={{ x: [0, 4, 0] }}
                     transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}
                 >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
                 </motion.svg>
-            }
+            )}
         </button>
     )
 }
