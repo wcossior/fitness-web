@@ -1,4 +1,3 @@
-import bg from "../../assets/gymdumbell.jpg"
 import image1 from "../../assets2/writingProgress.png"
 import image2 from "../../assets2/smartwatch.png"
 import image3 from "../../assets2/adjustingWeight.jpg"
@@ -31,8 +30,6 @@ export const UserProblem = () => {
                 </p>
             </header>
 
-
-
             <div className='relative z-10 grid sm:grid-cols-2 md:grid-cols-3 gap-2 mt-8'>
                 {
                     problemCards.map((art, i) => (
@@ -40,6 +37,7 @@ export const UserProblem = () => {
                     ))
                 }
             </div>
+
             <p className="text-center mt-12 font-body px-6 text-text-primary">
                 "Effort without <span className="text-primary font-bold">structure </span>always leads to plateaus."
             </p>
