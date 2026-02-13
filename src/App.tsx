@@ -15,7 +15,7 @@ function App() {
     <div className="relative">
       <Navbar></Navbar>
       <Hero></Hero>
-      <Results></Results>
+      {/* <Results></Results> */}
       <UserProblem></UserProblem>
       <Methodology></Methodology>
       <Benefits></Benefits>
