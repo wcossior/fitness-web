@@ -6,50 +6,29 @@ import { Info } from "./Info"
 type articleProps = {
     title: string,
     description: string,
-    index: number,
-    position: "left" | "right"
-    image: string
+    image: string,
+    className?: string
 }
 
-export const ProblemCard = ({ title, description, index, position, image }: articleProps) => {
+export const ProblemCard = ({ title, description, image, className }: articleProps) => {
     return (
         <>
-            <div className={`hidden lg:flex relative ${position === "right" ? "left-[8.2rem]" : "-left-[8.2rem]"}`}>
-                {position === "right" ?
-                    <>
-                        <Badge index={index}></Badge>
-                        <TimeLine className="mx-12"></TimeLine>
-                        <Info title={title} img={image} description={description} position={position}></Info>
-                    </>
-                    :
-                    <>
-                        <Info title={title} img={image} description={description} position={position}></Info>
-                        <TimeLine className="mx-12"></TimeLine>
-                        <Badge index={index}></Badge>
-                    </>
-                }
-            </div>
-            
-            <div className={`hidden md:flex lg:hidden w-full relative justify-center`}>
-                <Badge index={index}></Badge>
-                <TimeLine className="mx-12"></TimeLine>
-                <Info title={title} img={image} description={description} position={"right"}></Info>
-            </div>
-
-            <div className={`md:hidden w-full relative flex`}>
-                <div className="bg-white/10 px-6 [clip-path:polygon(25%_0%,_100%_0%,_100%_100%,_100%_100%,_0%_100%,_0%_25%)] flex flex-col items-center justify-center font-heading uppercase mr-4 text-xs font-bold italic">
-                    <p className="text-2xl text-primary">0{index}</p>
-                    <p>Problem</p>
+            <div className={`${className} space-y-4 group`}>
+                <div className="overflow-hidden">
+                    <img
+                        className="saturate-[0.5] contrast-125 brightness-90 hue-rotate-[5deg] h-70 w-300 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        src={image}
+                        alt={title}
+                    />
                 </div>
-                <div className="drop-shadow-2xl max-w-xs">
-                    <div className="bg-primary-strong p-4 [clip-path:polygon(8%_0%,_100%_0%,_100%_70%,_92%_100%,_0%_100%,_0%_0%)]">
-                        <h3 className={`font-heading uppercase text-sm text-text-primary mb-2`}>
-                            <span className="font-black">No {title}</span>
-                        </h3>
-                        <p className="font-body italic font-light text-sm text-text-primary leading-tight">
-                            "{description}"
-                        </p>
-                    </div>
+                <div className="p-6 lg:p-10">
+                    <h3 className={`font-heading uppercase tracking-widest text-sm sm:text-base text-text-primary mb-2`}>
+                        <span className="text-primary">No </span>
+                        <span className="text-text-primary">{title}</span>
+                    </h3>
+                    <p className="font-body font-light text-sm sm:text-base text-text-primary leading-tight">
+                        "{description}"
+                    </p>
                 </div>
             </div>
         </>
