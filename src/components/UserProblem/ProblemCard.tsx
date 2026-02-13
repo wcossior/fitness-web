@@ -1,5 +1,4 @@
 import { motion, type Variants } from "framer-motion"
-import img from "../../assets/dumbells5.jpg"
 import { Badge } from "./Badge"
 import { TimeLine } from "./TimeLine"
 import { Info } from "./Info"
@@ -9,9 +8,10 @@ type articleProps = {
     description: string,
     index: number,
     position: "left" | "right"
+    image: string
 }
 
-export const ProblemCard = ({ title, description, index, position }: articleProps) => {
+export const ProblemCard = ({ title, description, index, position, image }: articleProps) => {
     return (
         <>
             <div className={`hidden lg:flex relative ${position === "right" ? "left-[8.2rem]" : "-left-[8.2rem]"}`}>
@@ -19,11 +19,11 @@ export const ProblemCard = ({ title, description, index, position }: articleProp
                     <>
                         <Badge index={index}></Badge>
                         <TimeLine className="mx-12"></TimeLine>
-                        <Info title={title} img={img} description={description} position={position}></Info>
+                        <Info title={title} img={image} description={description} position={position}></Info>
                     </>
                     :
                     <>
-                        <Info title={title} img={img} description={description} position={position}></Info>
+                        <Info title={title} img={image} description={description} position={position}></Info>
                         <TimeLine className="mx-12"></TimeLine>
                         <Badge index={index}></Badge>
                     </>
@@ -33,7 +33,7 @@ export const ProblemCard = ({ title, description, index, position }: articleProp
             <div className={`hidden md:flex lg:hidden w-full relative justify-center`}>
                 <Badge index={index}></Badge>
                 <TimeLine className="mx-12"></TimeLine>
-                <Info title={title} img={img} description={description} position={"right"}></Info>
+                <Info title={title} img={image} description={description} position={"right"}></Info>
             </div>
 
             <div className={`md:hidden w-full relative flex`}>

@@ -1,4 +1,4 @@
-import { About } from "./components/About"
+import { About } from "./components/About/About"
 import { CallToAction } from "./components/CallToAction"
 import { Footer } from "./components/Footer"
 import { Hero } from "./components/Hero/Hero"

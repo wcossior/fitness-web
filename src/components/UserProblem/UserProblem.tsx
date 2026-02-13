@@ -1,8 +1,7 @@
 import bg from "../../assets/gymdumbell.jpg"
-import woman from "../../assets/woman.png"
-import { Eye } from "./icons/Eye"
-import { Random } from "./icons/Random"
-import { Discouraged } from "./icons/Discouraged"
+import image1 from "../../assets/gymbackache2.webp"
+import image2 from "../../assets/gymwoman2.png"
+import image3 from "../../assets/womantired.jpg"
 import { ProblemCard } from "./ProblemCard"
 import { motion } from "framer-motion"
 
@@ -10,14 +9,14 @@ export const UserProblem = () => {
     type problemCardsData = {
         title: string
         description: string
-        icon: React.ElementType,
-        position: "left" | "right"
+        position: "left" | "right",
+        image: string
     }
 
     const problemCards: problemCardsData[] = [
-        { title: "structure", description: "Random workouts, random results. No clear plan, no direction.", icon: Random, position: "right" },
-        { title: "consistency", description: "Motivation fades fast when progress isn’t visible.", icon: Discouraged, position: "left" },
-        { title: "accountability", description: "When no one is tracking your progress, it’s easy to quit.", icon: Eye, position: "right" },
+        { title: "structure", description: "Random workouts, random results. No clear plan, no direction.", image: image1, position: "right" },
+        { title: "consistency", description: "Motivation fades fast when progress isn’t visible.", image: image2, position: "left" },
+        { title: "accountability", description: "When no one is tracking your progress, it’s easy to quit.", image: image3, position: "right" },
     ]
 
     return (
