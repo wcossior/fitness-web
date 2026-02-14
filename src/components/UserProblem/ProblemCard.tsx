@@ -19,7 +19,7 @@ export const ProblemCard = ({ title, description, image, className }: articlePro
             </div>
             <div className="p-6 lg:p-10">
                 <h3 className={`font-heading uppercase tracking-widest text-sm sm:text-base text-text-primary mb-2`}>
-                    <span className="text-primary">No </span>
+                    <span className="text-text-primary/65">No </span>
                     <span className="text-text-primary">{title}</span>
                 </h3>
                 <p className="font-body font-light text-sm sm:text-base text-text-primary leading-tight">
