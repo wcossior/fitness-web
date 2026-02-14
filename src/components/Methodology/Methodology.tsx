@@ -16,28 +16,28 @@ export const Methodology = () => {
 
     const steps: StepsData[] = [
         { title: "ASSESSMENT", description: "We analyze your level, posture, and limits before training begins.", isCore: false, icon: Scan },
-        { title: "PROGRAMMING", description: "Your workouts follow a structured progression, not random routines.", isCore: true, icon: CheckList },
+        { title: "PROGRAMMING", description: "Your workouts follow a structured progression, not random routines.", isCore: true, icon: CheckList, },
         { title: "PROGRESSION", description: "Loads, volume, and intensity evolve based on real performance data.", isCore: false, icon: Up }
     ]
 
     return (
-        <section className='lg:min-h-[680px] py-12 relative px-6 md:px-12'>
+        <section className='lg:min-h-[680px] py-12 relative px-6 md:px-12 lg:px-20 py-16 lg:py-32'>
             <div className='space-y-4 text-center sm:text-end flex flex-col items-center sm:items-end'>
-                <h2 className="font-bold text-text-primary text-3xl sm:text-4xl font-heading uppercase">A System Built for <span className="font-black text-primary/90">Progress.</span></h2>
-                <p className='max-w-md sm:w-full font-body text-text-secondary'>We’ve engineered a foolproof blueprint to take you from where you are to where you belong.</p>
+                <h2 className="font-bold text-text-primary text-3xl sm:text-4xl font-heading uppercase max-w-3xl">The Structured Performance <span className="font-black text-primary/90">System.</span></h2>
+                <p className='max-w-md sm:w-full font-body text-text-secondary'>A structured methodology designed to eliminate guesswork and drive measurable progress.</p>
             </div>
-            <img className="hidden sm:block absolute top-0 left-0 -z-3 opacity-40 object-cover w-full h-full object-top" src={bg} alt="bg-gym" />
-            <img className="sm:hidden block absolute top-0 left-0 -z-3 opacity-40 object-cover w-full h-full" src={bg2} alt="bg-gym" />
+            <img className="hidden sm:block absolute top-0 left-0 -z-3 opacity-20 object-cover w-full h-full object-top" src={bg} alt="bg-gym" />
+            <img className="sm:hidden block absolute top-0 left-0 -z-3 opacity-20 object-cover w-full h-full" src={bg2} alt="bg-gym" />
 
             <div className="absolute bottom-0 left-0 w-full h-60 
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"
             />
             <div className="flex justify-center h-full">
-                <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 mt-24 w-fit'>
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8 w-fit'>
                     {
                         steps.map((step, index) => (
-                            <CardMethology numberStep={index + 1} title={step.title} description={step.description} isCore={step.isCore} icon={step.icon}></CardMethology>
+                            <CardMethology numberStep={index + 1} {...step}></CardMethology>
                         ))
                     }
                 </div>

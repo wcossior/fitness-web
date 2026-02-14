@@ -10,79 +10,38 @@ type cardMethologyProps = {
     className?: string
 }
 
-const cardVariants: Variants = {
-    hidden: {
-        opacity: 0,
-        y: 40,
-        filter: "blur(4px)"
-    },
-    visible: (i: number) => ({
-        opacity: 1,
-        y: 0,
-        filter: "blur(0px)",
-        transition: {
-            delay: i * 0.35,
-            duration: 0.7,
-            ease: [0.22, 1, 0.36, 1] // easeOutExpo feeling
-        }
-    })
-}
-
-export const CardMethology = ({ numberStep, title, description, isCore, icon: IconComponent, className }: cardMethologyProps) => {
+export const CardMethology = ({ numberStep, title, description, icon: IconComponent, className, isCore }: cardMethologyProps) => {
 
 
     return (
-
-        <motion.div
-            custom={numberStep}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.4 }}
-            variants={cardVariants}
-            className={`
-                        ${className}
-                        w-full max-w-[340px]
-                        h-full
-                        p-7
-                        space-y-4
-                        bg-surface-elevated/70
-                        relative
-                        shadow-card
-                        ${isCore ? "lg:scale-110 " : ""}
-                        hover:border-primary/40
-                        hover:bg-surface-elevated/90
-                        transition-all duration-300
-                        rounded-xl
-                        flex
-                        lg:[clip-path:polygon(0%_0%,_calc(100%_-_2rem)_0%,_100%_50%,_calc(100%_-_2rem)_100%,_0%_100%,_2rem_50%)]
-                        before:absolute before:inset-0 before:rounded-xl
-                        before:bg-[radial-gradient(circle_at_20%_15%,rgba(255,255,255,0.10),transparent_60%)]
-                        before:pointer-events-none
-                        hover:shadow-card-hover
-                        hover:-translate-y-1
-                    `}>
-            <div className='space-y-4 lg:ml-7'>
-                <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-md bg-primary/10 border border-primary/20 flex items-center justify-center text-xs font-bold text-primary">
-                        0{numberStep}
+        <div className={`lg:flex items-stretch ${className}`}>
+            <div className='max-w-[340px]'>
+                <div className='space-y-4 w-full'>
+                    <div className="flex font-heading gap-3">
+                        <div className="w-9 h-9 rounded-md bg-primary/10 border border-primary/20 flex items-center justify-center text-xs font-bold text-primary">
+                            0{numberStep}
+                        </div>
+                        <span className="text-xs tracking-[0.25em] text-text-muted self-center">STEP</span>
+                        <div className='ml-auto'>
+                            <IconComponent className="w-7 h-7 text-primary/60 ml-auto" />
+                        </div>
                     </div>
-                    <span className="text-[10px] tracking-[0.25em] text-text-muted">STEP</span>
+                    <h3
+                        className={`font-heading uppercase text-text-primary 
+                        ${isCore ? "text-sm sm:text-lg" : "text-xs sm:text-sm"}`}
+                    >{title}</h3>
+                    <div className={`h-px ${isCore ? 'w-28 bg-primary/50' : 'w-12 bg-primary/30'}`} />
+                    <p className="text-text-secondary text-xs sm:text-sm leading-relaxed font-body">
+                        {description}
+                    </p>
                 </div>
-                <h3 className="font-heading text-lg sm:text-xl uppercase text-text-primary">{title}</h3>
-                <div className="h-px bg-primary/25 w-12" />
-                <p className="text-text-secondary text-xs sm:text-sm leading-relaxed">
-                    {description}
-                </p>
             </div>
-            <div className='flex items-center ml-2'>
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: numberStep * 0.65 + 0.2, duration: 0.7 }}
-                    className="flex items-center justify-center w-13 h-13 rounded-lg bg-primary/10 border border-primary/20">
-                    <IconComponent className="w-7 h-7 text-primary" />
-                </motion.div>
-            </div>
-        </motion.div>
+            {numberStep !== 3 &&
+                <>
+                    <div className="lg:hidden w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent mt-6" />
+                    <div className="hidden lg:block w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent ml-6" />
+                </>
+            }
+        </div>
     )
 }
