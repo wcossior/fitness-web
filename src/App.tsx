@@ -15,10 +15,10 @@ function App() {
     <div className="relative">
       <Navbar></Navbar>
       <Hero></Hero>
-      {/* <Results></Results> */}
       <UserProblem></UserProblem>
       <Methodology></Methodology>
-      <Benefits></Benefits>
+      <Results></Results>
+      {/* <Benefits></Benefits> */}
       <Plans></Plans>
       <About></About>
       <CallToAction></CallToAction>

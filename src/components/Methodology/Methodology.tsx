@@ -15,9 +15,24 @@ export const Methodology = () => {
     }
 
     const steps: StepsData[] = [
-        { title: "ASSESSMENT", description: "We analyze your level, posture, and limits before training begins.", isCore: false, icon: Scan },
-        { title: "PROGRAMMING", description: "Your workouts follow a structured progression, not random routines.", isCore: true, icon: CheckList, },
-        { title: "PROGRESSION", description: "Loads, volume, and intensity evolve based on real performance data.", isCore: false, icon: Up }
+        {
+            title: "ASSESSMENT",
+            description: "We analyze your level, posture, and limits before training begins — so every decision is precise, not guesswork.",
+            isCore: false,
+            icon: Scan
+        },
+        {
+            title: "PROGRAMMING",
+            description: "Your workouts follow a structured progression designed to build visible strength and muscle over time.",
+            isCore: true,
+            icon: CheckList
+        },
+        {
+            title: "PROGRESSION",
+            description: "Loads, volume, and intensity evolve using performance data — keeping energy high and progress consistent.",
+            isCore: false,
+            icon: Up
+        }
     ]
 
     return (

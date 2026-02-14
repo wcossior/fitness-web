@@ -61,9 +61,6 @@ export const Benefits = () => {
                     }
                 </div>
             </div>
-
-            
-
         </section>
     )
 }
