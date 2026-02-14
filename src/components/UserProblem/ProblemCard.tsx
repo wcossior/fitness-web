@@ -9,7 +9,7 @@ type articleProps = {
 
 export const ProblemCard = ({ title, description, image, className }: articleProps) => {
     return (
-        <div className={`${className} space-y-4 group`}>
+        <div className={`${className} group`}>
             <div className="overflow-hidden">
                 <img
                     className="saturate-[0.5] contrast-125 brightness-90 hue-rotate-[5deg] h-70 w-300 object-cover transform group-hover:scale-105 transition-transform duration-500"
@@ -17,7 +17,7 @@ export const ProblemCard = ({ title, description, image, className }: articlePro
                     alt={title}
                 />
             </div>
-            <div className="p-6 lg:p-10">
+            <div className="p-6 space-y-4">
                 <h3 className={`font-heading uppercase tracking-widest text-sm sm:text-base text-text-primary mb-2`}>
                     <span className="text-text-primary/65">No </span>
                     <span className="text-text-primary">{title}</span>

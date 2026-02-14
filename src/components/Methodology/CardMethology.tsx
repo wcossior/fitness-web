@@ -39,7 +39,7 @@ export const CardMethology = ({ numberStep, title, description, icon: IconCompon
             {numberStep !== 3 &&
                 <>
                     <div className="lg:hidden w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent mt-6" />
-                    <div className="hidden lg:block w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent ml-6" />
+                    <div className="hidden lg:block w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent ml-8" />
                 </>
             }
         </div>
