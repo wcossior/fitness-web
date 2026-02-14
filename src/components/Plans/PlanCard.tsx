@@ -59,7 +59,7 @@ export const PlanCard = ({ title, price, duration, description, characteristics,
                 </p>
             </div>
 
-            <div className='flex flex-col flex-1'>
+            <div className='flex flex-col flex-grow'>
                 <p className="font-body text-sm text-text-secondary text-center mb-4">
                     {description}
                 </p>

@@ -89,7 +89,7 @@ export const Plans = () => {
                 <div className='grid lg:grid-cols-3 gap-8 w-fit lg:px-12'>
                     {
                         plans.map((plan, index) => (
-                            <PlanCard title={plan.title} price={plan.price} key={index} duration={plan.duration} description={plan.description} characteristics={plan.characteristics} highlight={plan.highlight}></PlanCard>
+                            <PlanCard {...plan} key={index} ></PlanCard>
                         ))
                     }
                 </div>
