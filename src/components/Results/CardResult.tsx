@@ -10,7 +10,7 @@ export const CardResult = ({ value, suffix, label, icon: IconComponent }: CardRe
 
   return (
     <div className="flex items-center min-w-[280px] py-4 px-12">
-      <IconComponent className="h-10 mr-3 text-text-primary"></IconComponent>
+      <IconComponent className="h-8 mr-4 text-text-primary/80"></IconComponent>
       <div className="font-body flex items-center">
         <span className="text-4xl sm:text-5xl font-bold">
           {value}

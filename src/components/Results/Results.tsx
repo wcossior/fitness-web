@@ -3,9 +3,17 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { Clock } from "./icons/Clock"
-import { Experience } from "./icons/Experience"
+import { Experience as Medal } from "./icons/Experience"
 import { ShieldCheck } from "./icons/ShiledCheck"
 import { Users } from "./icons/Users"
+import manBefore from "../../assets2/ManBefore.png"
+import manAfter from "../../assets2/ManAfter.png"
+import womanBefore from "../../assets2/BeforeWoman1.png"
+import womanAfter from "../../assets2/AfterWoman1.png"
+import woman2Before from "../../assets2/Woman2Before.png"
+import woman2After from "../../assets2/Woman2After.png"
+import { Testimonial } from "./Testimonial";
+import { TestimonialSlider } from "./TestimonialSlider";
 
 
 export const Results = () => {
@@ -19,11 +27,11 @@ export const Results = () => {
     icon: React.ElementType;
   };
 
-  const cards:CardData[] = [
-    { value: "6000", suffix: "+", label: "Coaching Hours", icon: Clock},
-    { value: "90", suffix: "%", label: "Client Retention", icon: ShieldCheck},
-    { value: "800", suffix: "+", label: "Clients Couched", icon: Users},
-    { value: "7", suffix: "+", label: "Years Experience", icon: Experience},
+  const cards: CardData[] = [
+    { value: "6000", suffix: "+", label: "Coaching Hours", icon: Clock },
+    { value: "90", suffix: "%", label: "Client Retention", icon: ShieldCheck },
+    { value: "800", suffix: "+", label: "Clients Coached", icon: Users },
+    { value: "7", suffix: "+", label: "Years Experience", icon: Medal },
   ];
 
   useGSAP(() => {
@@ -41,23 +49,78 @@ export const Results = () => {
   }, []);
 
 
+  type TestimonialData = {
+    name: string;
+    quote: string;
+    duration: string;
+    metrics: string[];
+    photoBefore: string;
+    photoAfter: string;
+  };
+
+  const testimonials: TestimonialData[] = [
+    {
+      name: "Daniel Rivero",
+      duration: "16 Week Transformation",
+      metrics: ["-8kg Fat Loss", "+60kg Deadlift"],
+      quote:
+        "I had trained before, but never with real structure. In 16 weeks I lost 8kg, increased my deadlift by 60kg, and stopped feeling exhausted every afternoon. The biggest change wasn’t just physical — it was the discipline I built.",
+      photoBefore: manBefore,
+      photoAfter: manAfter,
+    },
+    {
+      name: "Sofia Molina",
+      duration: "20 Week Transformation",
+      metrics: ["-6% Body Fat", "Visible Muscle Tone"],
+      quote:
+        "I used to feel intimidated in the gym. Now I walk in knowing exactly what I’m doing. I dropped 6% body fat and built visible strength without extreme dieting. The guidance made the difference.",
+      photoBefore: womanBefore,
+      photoAfter: womanAfter,
+    },
+    {
+      name: "Natalia Sahonero",
+      duration: "5 Month Progression",
+      metrics: ["+25kg Hip Thrust", "-5% Body Fat"],
+      quote:
+        "I had been training for years but without real direction. The structured progression completely changed how I approach the gym. In 5 months I increased my hip thrust by 25kg, reduced 5% body fat, and finally saw definition I had never achieved before — without extreme dieting.",
+      photoBefore: woman2Before,
+      photoAfter: woman2After,
+    }
+  ];
+
   return (
-    <section className="bg-primary-strong py-16 lg:py-32 overflow-hidden">
-      <div className="text-center mb-12 px-6 md:px-12 lg:px-20">
-        <h2 className="font-heading text-2xl sm:text-4xl uppercase">
-          Real Results. Measurable Progress.
-        </h2>
-        <p className="max-w-md mx-auto text-text-primary mt-4">
-          This isn’t theory. It’s data-backed transformation.
-        </p>
-      </div>
-      <div className="fade-edges">
-        <div ref={trackRef} className="flex w-max bg-surface">
-          {[...cards, ...cards].map((card, i) => (
-            <CardResult key={i} {...card} />
-          ))}
+    <section className="bg-primary-strong overflow-hidden relative">
+
+      <div className="py-16 lg:py-32">
+        <header className="text-center mb-12 px-6 md:px-12 lg:px-20">
+          <h2 className="font-heading text-2xl sm:text-4xl uppercase">
+            Real Results. Measurable Progress.
+          </h2>
+          <p className="max-w-md mx-auto text-text-primary mt-4">
+            This isn’t theory. It’s data-backed transformation.
+          </p>
+        </header>
+
+        <div className="bg-surface mx-6 md:mx-12 lg:mx-20 p-6 md:p-12 lg:p-20">
+          <h3 className="font-heading text-2xl mb-20"> <span className="text-primary">See their</span> transformation</h3>
+
+          {
+            <TestimonialSlider>
+              {testimonials.map((testim, index) => (
+                <Testimonial key={index} {...testim} />
+              ))}
+            </TestimonialSlider>
+          }
+
         </div>
       </div>
+
+      <div ref={trackRef} className="flex w-max bg-surface">
+        {[...cards, ...cards].map((card, i) => (
+          <CardResult key={i} {...card} />
+        ))}
+      </div>
+
     </section>
 
   );

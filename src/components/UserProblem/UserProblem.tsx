@@ -33,7 +33,7 @@ export const UserProblem = () => {
             </header>
 
             <div className="flex justify-center">
-                <div className='relative z-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 sm:mt-12 w-fit'>
+                <div className='relative z-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 sm:mt-20 w-fit'>
                     {
                         problemCards.map((art, i) => (
                             <ProblemCard key={i} index={i} {...art} />

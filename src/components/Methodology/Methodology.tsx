@@ -49,7 +49,7 @@ export const Methodology = () => {
                 pointer-events-none -z-1"
             />
             <div className="flex justify-center h-full">
-                <div className='grid grid-cols-1 lg:grid-cols-3 lg:gap-8 gap-6 mt-8 sm:mt-12 w-fit'>
+                <div className='grid grid-cols-1 lg:grid-cols-3 lg:gap-8 gap-6 mt-12 sm:mt-20 w-fit'>
                     {
                         steps.map((step, index) => (
                             <CardMethology numberStep={index + 1} {...step}></CardMethology>
