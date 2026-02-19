@@ -59,7 +59,7 @@ const plans: PlansData[] = [
 
 export const Plans = () => {
     return (
-        <section className='relative py-12'>
+        <section className='relative py-12 z-5'>
             <header className='space-y-4 text-center px-6 md:px-12'>
                 <h2 className="font-bold text-3xl sm:text-4xl font-heading uppercase"><span className="font-black text-primary/90">Simple Plans.</span> Real Progress.</h2>
                 <p className='text-text-secondary font-body'>No contracts. No hidden fees. Upgrade or cancel anytime.</p>

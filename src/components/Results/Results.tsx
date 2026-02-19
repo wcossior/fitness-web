@@ -12,8 +12,10 @@ import womanBefore from "../../assets2/BeforeWoman1.png"
 import womanAfter from "../../assets2/AfterWoman1.png"
 import woman2Before from "../../assets2/Woman2Before.png"
 import woman2After from "../../assets2/Woman2After.png"
+// import ctaimage from "../../assets2/.png"
 import { Testimonial } from "./Testimonial";
 import { TestimonialSlider } from "./TestimonialSlider";
+import { Button } from "../Buttons/NormalButton";
 
 
 export const Results = () => {
@@ -89,38 +91,36 @@ export const Results = () => {
   ];
 
   return (
-    <section className="bg-primary-strong overflow-hidden relative">
+    <section className="bg-[#0B0F0E]
+bg-[radial-gradient(circle_at_50%_0%,rgba(34,229,138,0.06)_0%,rgba(11,15,14,0.95)_55%,#0B0F0E_100%)] overflow-hidden relative py-16 lg:py-32">
+      <header className="text-center mb-12 sm:mb-20 px-6 md:px-12 lg:px-20">
+        <h2 className="font-heading text-2xl sm:text-4xl uppercase">
+          Real <span className="text-primary">Results</span>. Measurable <span className="text-primary">Progress</span>.
+        </h2>
+        <p className="max-w-md mx-auto text-text-primary mt-4">
+          This isn’t theory. It’s data-backed transformation.
+        </p>
+      </header>
 
-      <div className="py-16 lg:py-32">
-        <header className="text-center mb-12 px-6 md:px-12 lg:px-20">
-          <h2 className="font-heading text-2xl sm:text-4xl uppercase">
-            Real Results. Measurable Progress.
-          </h2>
-          <p className="max-w-md mx-auto text-text-primary mt-4">
-            This isn’t theory. It’s data-backed transformation.
-          </p>
-        </header>
+      <div className="bg-surface mx-6 md:mx-12 lg:mx-20 p-6 md:p-12 lg:p-20">
+        <p className="text-sm uppercase tracking-widest text-primary/60 mb-12 font-heading">
+          Client Case Studies
+        </p>
 
-        <div className="bg-surface mx-6 md:mx-12 lg:mx-20 p-6 md:p-12 lg:p-20">
-          <h3 className="font-heading text-2xl mb-20"> <span className="text-primary">See their</span> transformation</h3>
-
-          {
-            <TestimonialSlider>
-              {testimonials.map((testim, index) => (
-                <Testimonial key={index} {...testim} />
-              ))}
-            </TestimonialSlider>
-          }
-
-        </div>
+        {
+          <TestimonialSlider>
+            {testimonials.map((testim, index) => (
+              <Testimonial key={index} {...testim} />
+            ))}
+          </TestimonialSlider>
+        }
       </div>
 
-      <div ref={trackRef} className="flex w-max bg-surface">
-        {[...cards, ...cards].map((card, i) => (
+      <div className="bg-white/5 backdrop-blur-sm p-8 grid lg:grid-cols-4 sm:grid-cols-2 w-fit gap-3 mt-8 border border-white/10">
+        {cards.map((card, i) => (
           <CardResult key={i} {...card} />
         ))}
       </div>
-
     </section>
 
   );
