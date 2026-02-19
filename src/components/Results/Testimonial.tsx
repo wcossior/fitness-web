@@ -15,9 +15,9 @@ export const Testimonial = ({ photoBefore, photoAfter, name, quote, duration, me
             <div className="hidden lg:grid grid-cols-7">
                 <div className="col-span-3 place-self-end">
                     <div className="relative overflow-hidden h-100 w-70 self-end">
-                        <div className="absolute h-full w-full rotate-25 bg-gradient-to-b from-primary/25 to-transparent [clip-path:polygon(50%_0%,_0%_100%,_100%_100%)] z-1 top-0"></div>
-                        <div className="absolute h-full w-full rotate-25 bg-gradient-to-b from-primary/25 to-transparent [clip-path:polygon(50%_0%,_0%_100%,_100%_100%)] z-1 top-6 left-10"></div>
-                        <div className="absolute h-full w-full rotate-180 bg-gradient-to-b from-primary/25 to-transparent [clip-path:polygon(50%_0%,_0%_100%,_100%_100%)] z-1 inset-0"></div>
+                        <div className="absolute h-full w-full rotate-25 bg-gradient-to-b from-text-primary/15 to-transparent [clip-path:polygon(50%_0%,_0%_100%,_100%_100%)] z-1 top-0"></div>
+                        <div className="absolute h-full w-full rotate-25 bg-gradient-to-b from-text-primary/15 to-transparent [clip-path:polygon(50%_0%,_0%_100%,_100%_100%)] z-1 top-6 left-10"></div>
+                        <div className="absolute h-full w-full rotate-180 bg-gradient-to-b from-text-primary/15 to-transparent [clip-path:polygon(50%_0%,_0%_100%,_100%_100%)] z-1 inset-0"></div>
                         <img className="relative flex-2 h-100 object-contain z-2" src={photoBefore} alt="" />
                         <div className="absolute bottom-0 left-0 w-full h-60 
                 bg-gradient-to-t from-surface to-transparent 
@@ -27,14 +27,14 @@ export const Testimonial = ({ photoBefore, photoAfter, name, quote, duration, me
                 </div>
 
                 <div className="col-span-1 place-content-end justify-items-center">
-                    <p className="font-body opacity-40 text-[200px]">"</p>
+                    <p className="font-body text-primary/30 text-[200px]">"</p>
                 </div>
 
                 <div className="col-span-3">
                     <div className="relative overflow-hidden h-100 w-70 self-end">
-                        <div className="absolute h-full w-full rotate-25 bg-gradient-to-b from-primary/25 to-transparent [clip-path:polygon(50%_0%,_0%_100%,_100%_100%)] z-1 top-0"></div>
-                        <div className="absolute h-full w-full rotate-25 bg-gradient-to-b from-primary/25 to-transparent [clip-path:polygon(50%_0%,_0%_100%,_100%_100%)] z-1 top-6 left-10"></div>
-                        <div className="absolute h-full w-full rotate-180 bg-gradient-to-b from-primary/25 to-transparent [clip-path:polygon(50%_0%,_0%_100%,_100%_100%)] z-1 inset-0"></div>
+                        <div className="absolute h-full w-full rotate-25 bg-gradient-to-b from-primary/40 to-transparent [clip-path:polygon(50%_0%,_0%_100%,_100%_100%)] z-1 top-0"></div>
+                        <div className="absolute h-full w-full rotate-25 bg-gradient-to-b from-primary/40 to-transparent [clip-path:polygon(50%_0%,_0%_100%,_100%_100%)] z-1 top-6 left-10"></div>
+                        <div className="absolute h-full w-full rotate-180 bg-gradient-to-b from-primary/40 to-transparent [clip-path:polygon(50%_0%,_0%_100%,_100%_100%)] z-1 inset-0"></div>
                         <img className="relative flex-2 h-100 object-contain z-2" src={photoAfter} alt="" />
                         <div className="absolute bottom-0 left-0 w-full h-60 
                 bg-gradient-to-t from-surface to-transparent 
@@ -75,7 +75,7 @@ export const Testimonial = ({ photoBefore, photoAfter, name, quote, duration, me
 
             <div className="lg:hidden space-y-4 flex flex-col">
                 <div className="flex justify-between items-center">
-                    <p className="font-body opacity-40 text-9xl sm:text-[200px]">"</p>
+                    <p className="font-body text-primary/30 text-9xl sm:text-[200px]">"</p>
                     <div className="w-28 h-28 sm:w-40 sm:h-40">
                         <div className="rounded-full overflow-hidden w-full h-full border border-primary/30">
                             <img
