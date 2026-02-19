@@ -3,7 +3,6 @@ interface CardResultProps {
   value: string;
   suffix: string;
   label: string;
-  icon: React.ElementType;
 }
 
 export const CardResult = ({ value, suffix, label }: CardResultProps) => {

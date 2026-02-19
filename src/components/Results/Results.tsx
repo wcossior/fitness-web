@@ -2,20 +2,14 @@ import { CardResult } from "./CardResult";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { Clock } from "./icons/Clock"
-import { Experience as Medal } from "./icons/Experience"
-import { ShieldCheck } from "./icons/ShiledCheck"
-import { Users } from "./icons/Users"
 import manBefore from "../../assets2/ManBefore.png"
 import manAfter from "../../assets2/ManAfter.png"
 import womanBefore from "../../assets2/BeforeWoman1.png"
 import womanAfter from "../../assets2/AfterWoman1.png"
 import woman2Before from "../../assets2/Woman2Before.png"
 import woman2After from "../../assets2/Woman2After.png"
-// import ctaimage from "../../assets2/.png"
 import { Testimonial } from "./Testimonial";
 import { TestimonialSlider } from "./TestimonialSlider";
-import { Button } from "../Buttons/NormalButton";
 
 
 export const Results = () => {
@@ -26,14 +20,13 @@ export const Results = () => {
     value: string;
     suffix: string;
     label: string;
-    icon: React.ElementType;
   };
 
   const cards: CardData[] = [
-    { value: "6000", suffix: "+", label: "Coaching Hours", icon: Clock },
-    { value: "90", suffix: "%", label: "Client Retention", icon: ShieldCheck },
-    { value: "800", suffix: "+", label: "Clients Coached", icon: Users },
-    { value: "7", suffix: "+", label: "Years Experience", icon: Medal },
+    { value: "6000", suffix: "+", label: "Coaching Hours", },
+    { value: "90", suffix: "%", label: "Client Retention", },
+    { value: "800", suffix: "+", label: "Clients Coached", },
+    { value: "7", suffix: "+", label: "Years Experience", },
   ];
 
   useGSAP(() => {
