@@ -31,7 +31,7 @@ export const CardMethology = ({ numberStep, title, description, icon: IconCompon
                         ${isCore ? "text-sm sm:text-lg" : "text-xs sm:text-sm"}`}
                     >{title}</h3>
                     <div className={`h-px ${isCore ? 'w-28 bg-primary/50' : 'w-12 bg-primary/30'}`} />
-                    <p className="text-text-secondary text-xs sm:text-sm leading-relaxed font-body">
+                    <p className="text-text-secondary text-xs sm:text-sm leading-relaxed font-body mt-6">
                         {description}
                     </p>
                 </div>

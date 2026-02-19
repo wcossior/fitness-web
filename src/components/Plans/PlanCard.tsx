@@ -39,7 +39,7 @@ export const PlanCard = ({ title, price, duration, description, characteristics,
             <div className="font-heading font-bold relative">
 
                 {highlight && (
-                    <div className="absolute top-0 right-0 text-[10px] uppercase tracking-widest text-primary font-semibold">
+                    <div className="absolute top-0 right-0 text-[10px] uppercase tracking-widest text-primary font-semibold italic">
                         Most Popular
                     </div>
                 )}
@@ -54,7 +54,7 @@ export const PlanCard = ({ title, price, duration, description, characteristics,
                 </h3>
 
                 {highlight && (
-                    <p className="text-xs font-body text-primary font-medium mt-3">
+                    <p className="text-xs font-body text-primary font-medium mt-3 italic">
                         Ideal for consistent transformation
                     </p>
                 )}
@@ -70,7 +70,7 @@ export const PlanCard = ({ title, price, duration, description, characteristics,
 
             <div className="flex flex-col flex-grow text-text-muted">
 
-                <div className="h-[2px] bg-primary/25 w-1/4 mb-6" />
+                <div className="h-px bg-primary/30 w-12 mb-6" />
 
                 <div className="space-y-3 mb-8">
                     {characteristics.map((charac, i) => (

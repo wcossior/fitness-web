@@ -23,13 +23,13 @@ export const ProblemCard = ({ title, description, image, className, index = 0 }:
                 />
                 <span className="absolute font-heading text-5xl tracking-widest -left-25 top-25 -rotate-90 text-transparent [-webkit-text-stroke:1px_white] opacity-16">Problem</span>
             </div>
-            <div className="p-6 space-y-4 bg-text-primary/10 flex-grow">
-                <h3 className={`font-heading uppercase tracking-widest text-xs sm:text-sm text-text-primary`}>
+            <div className="p-6 bg-text-primary/10 flex-grow">
+                <h3 className={`font-heading uppercase tracking-widest text-xs sm:text-sm text-text-primary mb-4`}>
                     <span className="text-text-primary/65">No </span>
                     <span className="text-text-primary">{title}</span>
                 </h3>
                 <div className={`h-px w-12 bg-primary/30`} />
-                <p className="font-body font-light text-xs sm:text-sm text-text-primary leading-tight">
+                <p className="font-body font-light text-xs sm:text-sm text-text-primary leading-tight mt-6">
                     "{description}"
                 </p>
             </div>

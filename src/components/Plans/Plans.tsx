@@ -49,7 +49,7 @@ const plans: PlansData[] = [
 
 export const Plans = () => {
     return (
-        <section className='relative py-16 lg:py-32 z-5 px-6 md:px-12 lg:px-20'>
+        <section className='relative py-16 lg:py-32 px-6 md:px-12 lg:px-20'>
             <img className="hidden md:block absolute top-0 left-0 -z-3 opacity-40 object-cover w-full h-full object-top" src={bg} alt="bg-gym" />
             <img className="md:hidden block absolute top-0 left-0 -z-3 opacity-50 object-cover w-full h-full" src={bg2} alt="bg-gym" />
 
@@ -57,12 +57,16 @@ export const Plans = () => {
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"
             />
-            
-            <header className='space-y-4 text-center'>
-                <h2 className="font-bold text-3xl sm:text-4xl font-heading uppercase"><span className="font-black text-primary/90">Simple Plans.</span> Real Progress.</h2>
-                <p className='text-text-secondary font-body'>No contracts. No hidden fees. Upgrade or cancel anytime.</p>
+
+            <header className="space-y-4 text-center">
+                <h2 className="font-bold text-2xl sm:text-4xl font-heading uppercase">
+                    <span className="font-black text-primary">Simple Pricing.</span> Serious Results.
+                </h2>
+                <p className="text-text-secondary font-body max-w-md mx-auto">
+                    No contracts. No hidden fees. Full control at all times.
+                </p>
             </header>
-            
+
             <div className="flex justify-center mt-12 sm:mt-20">
                 <div className='grid md:grid-cols-2 w-fit'>
                     {

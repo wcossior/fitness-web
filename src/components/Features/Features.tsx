@@ -1,5 +1,6 @@
-import { Energy } from "./icons/Energy"
+import { Adjustment } from "./icons/Adjustment"
 import { Compass } from "./icons/Compass"
+import { Energy } from "./icons/Energy"
 import { Dumbell } from "./icons/Dumbell"
 import { Cutlery } from "./icons/Cutlery"
 import { FeatureCard } from "./FeatureCard"
@@ -11,34 +12,35 @@ type FeatureData = {
     icon: React.ElementType
 }
 
+
 const features: FeatureData[] = [
     {
-        title: "Structured Training Framework",
-        description: "A progression-based program engineered to build measurable strength and muscle over time.",
+        title: "Periodized Training Architecture",
+        description: "Long-term strength and hypertrophy planning structured in performance-driven phases.",
         icon: Dumbell
     },
     {
-        title: "Performance Tracking System",
-        description: "Volume, intensity, and recovery metrics monitored to eliminate guesswork and ensure steady progress.",
-        icon: Energy
+        title: "Data-Driven Load Optimization",
+        description: "Training variables adjusted through measurable performance indicators.",
+        icon: Adjustment
     },
     {
-        title: "Nutrition Alignment Strategy",
-        description: "Calorie targets and macro guidance structured around your performance and body composition goals.",
+        title: "Nutritional Performance Alignment",
+        description: "Energy intake calibrated to match training demands and recovery cycles.",
         icon: Cutlery
     },
     {
-        title: "Accountability & Adjustment Protocol",
-        description: "Built-in review checkpoints and structured updates to keep progress consistent and optimized.",
-        icon: Compass
+        title: "Recovery & Fatigue Regulation",
+        description: "Structured management of workload and recovery to prevent plateaus and burnout.",
+        icon: Energy
     }
 ]
 
 
 export const Features = () => {
     return (
-        <section className='relative min-h-[680px py-12'>
-            <img className="absolute m-0 p-0 top-0 left-0 -z-3 opacity-40 object-cover w-full h-full" src={bg} alt="bg-user-problem" />
+        <section className='relative py-16 lg:py-32 px-6 md:px-12 lg:px-20'>
+            <img className="absolute m-0 p-0 top-0 left-0 -z-3 opacity-20 object-cover w-full h-full" src={bg} alt="bg-user-problem" />
             <div className="absolute bottom-0 left-0 w-full h-100 
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"
@@ -47,12 +49,16 @@ export const Features = () => {
                 bg-gradient-to-b from-black to-transparent 
                 pointer-events-none -z-1"
             />
-            <header className='space-y-4 text-center flex flex-col items-center px-6 md:px-12'>
-                <h2 className="font-bold text-3xl sm:text-4xl font-heading uppercase max-w-xl">A new level of <span className="font-black text-primary/90">authority</span> over your body and mind.</h2>
-                <p className='font-body max-w-md text-text-secondary'>Your investment translates into tangible, life-changing results.</p>
+            <header className="space-y-4 text-center flex flex-col items-center px-6 md:px-12">
+                <h2 className="font-bold text-2xl sm:text-4xl font-heading uppercase max-w-xl">
+                    Inside the <span className="font-black text-primary">System</span>
+                </h2>
+                <p className="font-body max-w-md text-text-secondary">
+                    Engineered components designed to eliminate <span className="text-primary">guesswork</span> and maximize measurable progress.
+                </p>
             </header>
 
-            <div className="flex justify-center items-center mt-12 relative px-6 md:px-12">
+            <div className="flex justify-center items-center mt-12 sm:mt-20 relative px-6 md:px-12">
                 <div className="grid md:grid-cols-2 w-fit gap-8">
                     {
                         features.map((benefit, index) => (

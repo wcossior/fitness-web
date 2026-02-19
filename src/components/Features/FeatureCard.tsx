@@ -9,42 +9,45 @@ type featureCardProps = {
 
 export const FeatureCard = ({ title, description, icon: IconComponent, index }: featureCardProps) => {
     return (
-        <div className={`
-                        h-full
-                        w-full max-w-[340px]
-                        p-7
-                        space-y-4
-                        bg-surface-elevated/70
-                        relative
-                        shadow-card
-                        hover:border-primary/40
-                        hover:bg-surface-elevated/90
-                        transition-all duration-300
-                        before:absolute before:inset-0 before:rounded-xl
-                        before:bg-[radial-gradient(circle_at_20%_15%,rgba(255,255,255,0.10),transparent_60%)]
-                        before:pointer-events-none
-                        hover:shadow-card-hover
-                        hover:-translate-y-1
-                        rounded-xl
-                    `}
-        >
-            <div className="space-y-4 items-stretch">
+        <div
+            className={`
+    group
+    w-full
+    max-w-[380px]
+    h-full
+    py-10
+    px-6 sm:px-8
+    flex flex-col
+    relative
+    border
+    bg-surface/75
+    border-white/5
+    transition-all duration-500 ease-out
 
-                <div className="flex justify-start">
-                    <div className="flex justify-center items-center w-18 h-18 sm:w-22 sm:h-22 bg-surface-elevated/50 shadow-card [clip-path:polygon(30%_0%,70%_0%,100%_30%,100%_70%,70%_100%,30%_100%,0%_70%,0%_30%)] border border-white/5 shadow-card">
-                        <IconComponent className="h-10 sm:h-14 text-primary -rotate-15"></IconComponent>
+    hover:-translate-y-1
+    hover:bg-surface/90
+    hover:border-primary/60
+    hover:shadow-[0_10px_40px_rgba(0,0,0,0.35)]
+  `}
+        >
+            <div className="flex flex-col flex-grow">
+
+                <div className="mb-6">
+                    <div className="flex items-center justify-center w-16 h-16 bg-surface/90 border border-white/5">
+                        <IconComponent className="-rotate-15 h-8 text-primary" />
                     </div>
                 </div>
-                <span className="text-primary text-xs font-bold tracking-[0.2em]">BENEFIT 0{index}</span>
-                <h3 className="font-heading uppercase text-lg sm:text-xl text-text-primary">
-                    <span>
-                        {title}
-                    </span>
+
+                <h3 className="font-heading uppercase text-sm tracking-wide text-text-primary mb-4">
+                    {title}
                 </h3>
-                <div className="h-px bg-primary/25 w-12" />
-                <p className="font-body text-xs sm:text-sm text-text-secondary leading-relaxed">
+
+                <div className="h-px bg-primary/30 w-12 mb-6" />
+
+                <p className="font-body text-sm text-text-secondary leading-relaxed">
                     {description}
                 </p>
+
             </div>
         </div>
     )
