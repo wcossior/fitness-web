@@ -4,7 +4,7 @@ import { Footer } from "./components/Footer"
 import { Hero } from "./components/Hero/Hero"
 import { Methodology } from "./components/Methodology/Methodology"
 import { Plans } from "./components/Plans/Plans"
-import { Benefits } from "./components/Benefits/Benefits"
+import { Features } from "./components/Features/Features"
 import { Results } from "./components/Results/Results"
 import { UserProblem } from "./components/UserProblem/UserProblem"
 import { Navbar } from "./components/Navbar/Navbar"
@@ -18,7 +18,7 @@ function App() {
       <UserProblem></UserProblem>
       <Methodology></Methodology>
       <Results></Results>
-      {/* <Benefits></Benefits> */}
+      <Features></Features>
       <Plans></Plans>
       <About></About>
       <CallToAction></CallToAction>

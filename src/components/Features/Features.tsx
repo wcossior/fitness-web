@@ -2,40 +2,40 @@ import { Energy } from "./icons/Energy"
 import { Compass } from "./icons/Compass"
 import { Dumbell } from "./icons/Dumbell"
 import { Cutlery } from "./icons/Cutlery"
-import { BenefitCard } from "./BenefitCard"
+import { FeatureCard } from "./FeatureCard"
 import bg from "../../assets/dumbells5.jpg"
 
-type BenefitData = {
+type FeatureData = {
     title: string,
     description: string,
     icon: React.ElementType
 }
 
-const benefits: BenefitData[] = [
+const features: FeatureData[] = [
     {
-        title: "A Strong, Defined Body",
-        description: "Build visible muscle and lose fat through a structured approach that actually works long-term.",
+        title: "Structured Training Framework",
+        description: "A progression-based program engineered to build measurable strength and muscle over time.",
         icon: Dumbell
     },
     {
-        title: "Clear Mind, High Energy",
-        description: "Wake up focused, think sharper, and stop dragging through the day feeling drained.",
+        title: "Performance Tracking System",
+        description: "Volume, intensity, and recovery metrics monitored to eliminate guesswork and ensure steady progress.",
         icon: Energy
     },
     {
-        title: "Food Without Guilt",
-        description: "Understand how to eat for performance without extreme diets or losing control.",
+        title: "Nutrition Alignment Strategy",
+        description: "Calorie targets and macro guidance structured around your performance and body composition goals.",
         icon: Cutlery
     },
     {
-        title: "Guidance at Every Step",
-        description: "You’re supported, corrected, and guided so progress never stalls or derails.",
+        title: "Accountability & Adjustment Protocol",
+        description: "Built-in review checkpoints and structured updates to keep progress consistent and optimized.",
         icon: Compass
     }
 ]
 
 
-export const Benefits = () => {
+export const Features = () => {
     return (
         <section className='relative min-h-[680px py-12'>
             <img className="absolute m-0 p-0 top-0 left-0 -z-3 opacity-40 object-cover w-full h-full" src={bg} alt="bg-user-problem" />
@@ -55,8 +55,8 @@ export const Benefits = () => {
             <div className="flex justify-center items-center mt-12 relative px-6 md:px-12">
                 <div className="grid md:grid-cols-2 w-fit gap-8">
                     {
-                        benefits.map((benefit, index) => (
-                            <BenefitCard title={benefit.title} description={benefit.description} icon={benefit.icon} index={index + 1}></BenefitCard>
+                        features.map((benefit, index) => (
+                            <FeatureCard title={benefit.title} description={benefit.description} icon={benefit.icon} index={index + 1}></FeatureCard>
                         ))
                     }
                 </div>

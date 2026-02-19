@@ -1,13 +1,13 @@
 import React from 'react'
 
-type BenefitCardProps = {
+type featureCardProps = {
     title: string,
     description: string,
     icon: React.ElementType
     index: number
 }
 
-export const BenefitCard = ({ title, description, icon: IconComponent, index }: BenefitCardProps) => {
+export const FeatureCard = ({ title, description, icon: IconComponent, index }: featureCardProps) => {
     return (
         <div className={`
                         h-full

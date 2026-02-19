@@ -13,72 +13,82 @@ type PlanCardProps = {
 
 export const PlanCard = ({ title, price, duration, description, characteristics, highlight }: PlanCardProps) => {
     return (
-        <div className={`
-                        w-full max-w-[340px]
-                        h-full
-                        p-7
-                        bg-surface-elevated/70
-                        flex flex-col
-                        relative
-                        shadow-card
-                        hover:bg-surface-elevated/90
-                        transition-all duration-300
-                        before:absolute before:inset-0 before:rounded-xl
-                        before:bg-[radial-gradient(circle_at_20%_15%,rgba(255,255,255,0.10),transparent_60%)]
-                        before:pointer-events-none
-                        hover:shadow-card-hover
-                        hover:-translate-y-1
-                        rounded-xl                                
-                        overflow-hidden
-                        ${highlight ? "lg:scale-105 lg:border-2 lg:border-primary" : ""}
-                    `}
-        >
-            <div className="h-[150px] w-full"></div>
+        <div
+            className={`
+            group
+            min-w-[310px]
+            max-w-[400px]
+            h-full
+            py-12
+            px-6 sm:px-8
+            flex flex-col
+            relative
+            border
+            transition-all duration-500 ease-out
+            hover:-translate-y-1
+            hover:bg-surface/90
+            hover:border-primary/60
+            hover:shadow-[0_10px_40px_rgba(0,0,0,0.35)]
 
-            <div className={`
-                                        absolute -top-25 left-1/2 -translate-x-1/2
-                                        flex flex-col justify-end items-center
-                                        w-100 h-100 
-                                        shadow-card 
-                                        [clip-path:polygon(30%_0%,70%_0%,100%_30%,100%_70%,70%_100%,30%_100%,0%_70%,0%_30%)] shadow-card
-                                        before:pointer-events-none
-                                        bg-gradient-to-t from-subtle to-primary-strong
-                                        font-black
-                                        `}
-            >
-                <span className="relative -top-25 text-text-primary text-sm font-body uppercase mb-6">{title}</span>
-                <h3 className="font-heading relative uppercase text-5xl text-text-primary -top-25">
-                    <span className='text-3xl absolute font-bold -top-3 -left-6'>$</span>
-                    <span>
-                        {price}
-                    </span>
+            ${highlight
+                            ? "bg-surface/95 border-primary/60 shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
+                            : "bg-surface/75 border-white/5 opacity-95"
+                        }
+        `}
+        >
+            <div className="font-heading font-bold relative">
+
+                {highlight && (
+                    <div className="absolute top-0 right-0 text-[10px] uppercase tracking-widest text-primary font-semibold">
+                        Most Popular
+                    </div>
+                )}
+
+                <p className="text-text-primary text-sm uppercase mb-5 tracking-widest">
+                    {title}
+                </p>
+
+                <h3 className="font-heading uppercase text-4xl text-text-primary leading-none">
+                    <span className="text-xl font-bold mr-2 relative -top-4">$</span>
+                    {price}
                 </h3>
 
-                <p className="relative -top-25 font-body text-sm text-text-primary font-medium text-center mx-12 mb-12 mt-2">
+                {highlight && (
+                    <p className="text-xs font-body text-primary font-medium mt-3">
+                        Ideal for consistent transformation
+                    </p>
+                )}
+
+                <p className="text-xs text-text-primary font-medium mt-3 mb-6">
                     per {duration}
                 </p>
-            </div>
 
-            <div className='flex flex-col flex-grow'>
-                <p className="font-body text-sm text-text-secondary text-center mb-4">
+                <p className="font-body font-light text-sm mb-6 text-text-secondary">
                     {description}
                 </p>
-                <div className="h-[2px] bg-primary/25 w-1/4 relative left-1/2 -translate-x-1/2" />
-                <div className='space-y-3 mt-4 mb-8'>
-                    {
-                        characteristics.map((charac) => (
-                            <div className="flex flex-row">
-                                <Check className="text-primary h-5 mr-4"></Check>
-                                <p className="font-body text-sm text-text-secondary">
-                                    {charac}
-                                </p>
-                            </div>
-                        ))
-                    }
-                </div>
-                <Button className="mt-auto" icon={true} title="Join now"></Button>
             </div>
 
+            <div className="flex flex-col flex-grow text-text-muted">
+
+                <div className="h-[2px] bg-primary/25 w-1/4 mb-6" />
+
+                <div className="space-y-3 mb-8">
+                    {characteristics.map((charac, i) => (
+                        <div key={i} className="flex items-start">
+                            <Check className="text-primary h-5 mr-4 shrink-0" />
+                            <p className="font-body text-sm leading-relaxed">
+                                {charac}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+
+                <Button
+                    className="mt-auto text-xs sm:text-sm"
+                    icon={true}
+                    title="Join now"
+                />
+            </div>
         </div>
     )
 }

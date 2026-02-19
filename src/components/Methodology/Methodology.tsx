@@ -36,7 +36,7 @@ export const Methodology = () => {
     ]
 
     return (
-        <section className='lg:min-h-[680px] py-12 relative px-6 md:px-12 lg:px-20 py-16 lg:py-32'>
+        <section className='lg:min-h-[680px] relative px-6 md:px-12 lg:px-20 py-16 lg:py-32'>
             <div className='space-y-4 text-center sm:text-end flex flex-col items-center sm:items-end'>
                 <h2 className="font-bold text-text-primary text-2xl sm:text-4xl font-heading uppercase max-w-3xl">The Structured Performance <span className="font-black text-primary/90">System.</span></h2>
                 <p className='max-w-md sm:w-full font-body text-text-secondary'>A structured methodology designed to eliminate guesswork and drive measurable progress.</p>
