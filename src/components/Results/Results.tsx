@@ -14,8 +14,6 @@ import { TestimonialSlider } from "./TestimonialSlider";
 
 export const Results = () => {
 
-  const trackRef = useRef<HTMLDivElement>(null);
-
   type CardData = {
     value: string;
     suffix: string;
@@ -28,20 +26,6 @@ export const Results = () => {
     { value: "800", suffix: "+", label: "Clients Coached", },
     { value: "7", suffix: "+", label: "Years Experience", },
   ];
-
-  useGSAP(() => {
-    if (!trackRef.current) return;
-
-    const el = trackRef.current;
-    const totalWidth = el.scrollWidth / 2;
-
-    gsap.to(el, {
-      x: -totalWidth,
-      duration: 35,
-      ease: "none",
-      repeat: -1,
-    });
-  }, []);
 
 
   type TestimonialData = {
@@ -110,11 +94,11 @@ bg-[radial-gradient(circle_at_50%_0%,rgba(34,229,138,0.06)_0%,rgba(11,15,14,0.95
         }
       </div>
 
-      <div className="bg-white/5 backdrop-blur-sm p-8 grid lg:grid-cols-4 sm:grid-cols-2 w-fit gap-3 mt-8 border border-white/10">
+      {/* <div className="bg-white/5 backdrop-blur-sm p-8 grid lg:grid-cols-4 sm:grid-cols-2 w-fit gap-3 mt-8 border border-white/10">
         {cards.map((card, i) => (
           <CardResult key={i} {...card} />
         ))}
-      </div>
+      </div> */}
     </section>
 
   );
