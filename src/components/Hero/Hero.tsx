@@ -1,63 +1,26 @@
 import { motion } from "framer-motion"
 import { Content } from "./Content"
-import heroBg from "../../assets2/hero2.png"
-import { Scrollindicator } from "./Scrollindicator"
-import { Graph } from "./icons/Graph"
+import heroBg from "../../assets/couple.png"
+import { Button } from "../Buttons/NormalButton"
+import { Background } from "./Background"
 
 export const Hero = () => {
     return (
         <section className="relative lg:min-h-[768px] overflow-hidden px-6 md:px-12 lg:px-20 py-32 pb-16 lg:py-32">
-
-            <Graph className="absolute inset-0 h-100 w-100 -z-10"></Graph>
-
-            <div className="absolute top-0 left-0 w-full h-20 
-                bg-gradient-to-b from-[#0B0F0E] via-[#0B0F0E]/60 to-transparent 
-                pointer-events-none -z-9"
-            />
-
-            <div className="absolute top-0 right-0 w-30 h-full 
-                bg-gradient-to-l from-[#0B0F0E] via-[#0B0F0E]/60 to-transparent 
-                pointer-events-none -z-9"
-            />
-
-            <div
-                className="absolute -z-8 -top-[5%] -right-[45%] w-[100%] h-[100%] rounded-full opacity-40 pointer-events-none"
-                style={{
-                    background: 'radial-gradient(circle, #22E58A 0%, transparent 70%)',
-                    filter: 'blur(80px)'
-                }}
-            />
-
-            <div className="absolute inset-0 pointer-events-none -z-8
-            bg-[radial-gradient(ellipse_70%_50%_at_38%_42%,_var(--color-body-bg)_0%,_var(--color-body-bg)_25%,_transparent_70%)]"
-            />
-
-
-            <div className="hidden md:block absolute h-full top-15 md:-right-30 lg:-right-40 -z-6">
-                <img className="lg:h-[930px] md:h-[630px] object-cover" src={heroBg} alt="elite-img" />
-            </div>
-
-
-            <div className="absolute bottom-0 left-0 w-full h-80 
-                bg-gradient-to-t from-[#0B0F0E] via-[#0B0F0E]/60 to-transparent 
-                pointer-events-none -z-5"
-            />
-
-            <div
-                className="absolute -z-4 -bottom-[32%] -left-[20%] w-[60%] h-[60%] rounded-full opacity-15 pointer-events-none"
-                style={{
-                    background: 'radial-gradient(circle, #E6F1EC 0%, transparent 70%)',
-                    filter: 'blur(100px)'
-                }}
-            />
-
+            <Background></Background>
             <Content
-                eyebrow="Elite Body Transformation Coaching"
-                headline={"Build a Physique That Commands Respect."}
-                suportText={"Structured training. Progressive overload. Real performance metrics. No random workouts. No wasted effort."}
+                eyebrow="Online Performance Coaching for Intermediate Lifters"
+                headline={<>Build a <span className="text-primary">Physique</span> That Commands Respect.</>}
+                suportText={"Personalized programming. Data-driven progression.Build visible muscle and real strength — with a system designed to evolve as you do."}
             />
 
-            <Scrollindicator />
+            <div className="lg:hidden flex justify-center relative h-[220px] sm:h-[480px]">
+                <img className="max-h-[430px] max-w-[430px] sm:max-h-[630px] sm:max-w-[630px] object-contain absolute -bottom-55 sm:-bottom-35 -z-6" src={heroBg} alt="elite-img" />
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 font-body relative z-1 sm:justify-center lg:justify-start sm:relative absolute -bottom-12 sm:bottom-0 -z-12">
+                <Button title="View Coaching Options" icon className="text-sm lg:text-lg" />
+                <Button title="Explore the Method" className="text-sm lg:text-lg" variant="ghost"></Button>
+            </div>
         </section>
 
     )
