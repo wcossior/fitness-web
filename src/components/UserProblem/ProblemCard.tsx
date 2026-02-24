@@ -25,8 +25,7 @@ export const ProblemCard = ({ title, description, image, className, index = 0 }:
             </div>
             <div className="p-6 bg-text-primary/10 flex-grow">
                 <h3 className={`font-heading uppercase tracking-widest text-xs sm:text-sm text-text-primary mb-4`}>
-                    <span className="text-text-primary/65">No </span>
-                    <span className="text-text-primary">{title}</span>
+                    <span className="text-text-primary font-bold">{title}</span>
                 </h3>
                 <div className={`h-px w-12 bg-primary/30`} />
                 <p className="font-body font-light text-xs sm:text-sm text-text-primary leading-tight mt-6">

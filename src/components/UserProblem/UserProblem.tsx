@@ -1,6 +1,6 @@
-import image1 from "../../assets2/writingProgress.png"
-import image2 from "../../assets2/smartwatch.png"
-import image3 from "../../assets2/adjustingWeight.jpg"
+import image1 from "../../assets/nochange.png"
+import image2 from "../../assets/stagnant.png"
+import image3 from "../../assets/random.png"
 import { ProblemCard } from "./ProblemCard"
 import { motion } from "framer-motion"
 
@@ -13,26 +13,27 @@ export const UserProblem = () => {
     }
 
     const problemCards: problemCardsData[] = [
-        { title: "Clear Progression", description: "You train hard. But you’re not building toward anything measurable.", image: image1, },
-        { title: "Performance Tracking", description: "If you don’t measure volume, intensity, and recovery… progress becomes guesswork.", image: image2, },
-        { title: "Adaptive Strategy", description: "Your body adapts. Your program doesn’t.", image: image3, },
+        { title: "No Visible Change", description: "You've been training for months — but the mirror barely reflects the effort.", image: image1, },
+        { title: "Stagnant Strength", description: "Your lifts plateau. The numbers don’t move. Motivation starts to fade.", image: image2, },
+        { title: "Random Programming", description: "Workouts feel intense… but disconnected. No long-term progression. No clear direction.", image: image3, },
     ]
 
     return (
-        <section className='relative py-16 lg:py-32 px-6 md:px-12 lg:px-20 overflow-hidden  bg-[#0B0F0E] 
+        <section className='relative py-16 lg:py-32 px-6 md:px-12 lg:px-20 overflow-hidden bg-[#0B0F0E] 
   bg-[radial-gradient(circle_at_70%_30%,rgba(34,229,138,0.08)_0%,rgba(34,229,138,0.04)_25%,rgba(11,15,14,0.95)_60%,#0B0F0E_100%)]'>
 
-            <header className='space-y-4 text-center sm:text-start font-heading'>
-                <p className="text-primary font-medium tracking-widest uppercase text-xs sm:text-sm italic">
+            <header className='space-y-4 sm:text-center text-start font-heading sm:flex flex-col items-center'>
+                <span className="text-primary font-medium tracking-widest uppercase text-xs sm:text-sm italic">
                     The Uncomfortable Truth
-                </p>
-                <h2 className='text-2xl sm:text-4xl uppercase font-bold max-w-3xl'>You’re Not Stuck. You’re Just<span className="font-black text-primary/90"> Unstructured. </span></h2>
-                <p className='text-text-secondary font-body max-w-lg sm:w-full mx-auto sm:mx-0'>
-                    You don’t lack effort. You lack a progression system.
-                </p>
+                </span>
+                <h2 className='text-2xl sm:text-4xl uppercase font-bold max-w-3xl'>You’re Not Stuck. You're Just<span className="font-black text-primary/90"> Unstructured. </span></h2>
+                <span className='text-text-secondary font-body max-w-lg sm:w-full mx-auto sm:mx-0'>
+                    You train hard. You show up consistently.
+                    But your body has nothing structured to respond to.
+                </span>
             </header>
 
-            <div className="flex justify-center">
+            <div className="flex sm:justify-center ml-3 sm:ml-0">
                 <div className='relative z-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 sm:mt-20 w-fit'>
                     {
                         problemCards.map((art, i) => (
@@ -42,7 +43,7 @@ export const UserProblem = () => {
                 </div>
             </div>
 
-            <p className="text-center mt-12 font-body text-xl px-6 text-text-primary">
+            <p className="sm:text-center mt-12 font-body text-xl text-text-primary">
                 "Effort without <span className="text-primary font-bold">structure </span>always leads to plateaus."
             </p>
 
