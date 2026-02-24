@@ -72,7 +72,7 @@ export const Results = () => {
 bg-[radial-gradient(circle_at_50%_0%,rgba(34,229,138,0.06)_0%,rgba(11,15,14,0.95)_55%,#0B0F0E_100%)] overflow-hidden relative py-16 lg:py-32">
       <header className="text-center mb-12 sm:mb-20 px-6 md:px-12 lg:px-20">
         <h2 className="font-heading text-2xl sm:text-4xl uppercase">
-          Real <span className="text-primary">Results</span>. Measurable <span className="text-primary">Progress</span>.
+          Real <span className="text-primary">Results</span>. Measurable Progress.
         </h2>
         <p className="max-w-md mx-auto text-text-secondary font-body mt-4">
           This isn’t theory. It’s data-backed transformation.

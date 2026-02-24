@@ -21,7 +21,7 @@ export const Content = ({eyebrow,headline,suportText, className}:contentProps) =
             }}
             className={`space-y-3 flex flex-col justify-center h-full ${className}`}
         >
-            <span className="inline-block text-xs sm:text-base uppercase tracking-widest text-primary/80 font-body">
+            <span className="inline-block text-xs sm:text-sm uppercase tracking-widest text-primary/80 font-heading">
                 {eyebrow}
             </span>
             <h1 className="uppercase text-[9.4vw] sm:text-5xl lg:text-6xl leading-tight md:tracking-wide text-text-primary font-heading drop-shadow-[0_0_16px_rgba(34,229,138,0.35)] max-w-xl lg:max-w-3xl relative -z-7">

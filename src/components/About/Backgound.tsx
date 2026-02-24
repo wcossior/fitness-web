@@ -1,0 +1,45 @@
+import { Graph } from '../Hero/icons/Graph';
+
+export const Background = () => {
+    return (
+        <>
+            <Graph className="absolute inset-0 h-100 w-100 -z-10"></Graph>
+
+            <div className="absolute top-0 left-0 w-full h-20 
+                bg-gradient-to-b from-[#0B0F0E] via-[#0B0F0E]/60 to-transparent 
+                pointer-events-none -z-9"
+            />
+
+            <div className="absolute top-0 right-0 w-30 h-full 
+                bg-gradient-to-l from-[#0B0F0E] via-[#0B0F0E]/60 to-transparent 
+                pointer-events-none -z-9"
+            />
+
+            <div
+                className="absolute -z-8 -top-[5%] -left-[45%] w-[100%] h-[100%] rounded-full opacity-40 pointer-events-none"
+                style={{
+                    background: 'radial-gradient(circle, #22E58A 0%, transparent 70%)',
+                    filter: 'blur(80px)'
+                }}
+            />
+
+
+            <div className="absolute inset-0 pointer-events-none -z-8
+            bg-[radial-gradient(ellipse_70%_50%_at_38%_42%,_var(--color-body-bg)_0%,_var(--color-body-bg)_25%,_transparent_70%)]"
+            />
+
+            <div className="absolute bottom-0 left-0 w-full h-80 
+                bg-gradient-to-t from-[#0B0F0E] via-[#0B0F0E]/60 to-transparent 
+                pointer-events-none -z-5"
+            />
+
+            <div
+                className="absolute -z-4 -bottom-[32%] -right-[20%] w-[60%] h-[60%] rounded-full opacity-15 pointer-events-none"
+                style={{
+                    background: 'radial-gradient(circle, #E6F1EC 0%, transparent 70%)',
+                    filter: 'blur(100px)'
+                }}
+            />
+        </>
+    )
+}

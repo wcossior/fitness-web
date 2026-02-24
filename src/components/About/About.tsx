@@ -1,6 +1,6 @@
-import img from '../../assets/couch2.png'
-import { Triangles } from '../Hero/icons/Triangles'
+import img from '../../assets/couch4.png'
 import { CardResult } from '../Results/CardResult'
+import { Background } from './Backgound';
 
 
 export const About = () => {
@@ -18,38 +18,73 @@ export const About = () => {
     ];
 
     return (
-        <section className='py-16 lg:py-32 px-6 md:px-12 lg:px-20 overflow-hidden min-h-[768px] relative'>
-                <div className='h-180 lg:h-250 absolute z-2 -left-20 -top-10'>
-                    <img src={img} className='object-cover h-full' alt="img" />
-                </div>
-                <div className="absolute top-1/2 -translate-y-1/2 -left-1/4 -z-5
-                                bg-[radial-gradient(circle,_var(--color-primary-strong)_0%,_transparent_70%)]
-                                w-[100%] h-[100%] opacity-20 lg:opacity-30 pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-full h-30
-                    bg-gradient-to-t from-[#0B0F0E] via-[#0B0F0E]/60 to-transparent
-                    pointer-events-none z-2"
-                />
-                <div className='w-[70rem] bg-surface border border-white/5 lg:p-20 p-12 absolute right-0 z-1'>
-                    <header className="space-y-4">
-                        <h2 className="font-bold text-2xl sm:text-4xl font-heading uppercase">
-                            <span className="font-black text-primary">The Mind </span> Behind the Method.
-                        </h2>
-                        <p className="text-text-secondary font-body">
-                            Most people don’t fail because they lack effort.
-                            They fail because their effort isn’t structured.
-                            After years of coaching and analyzing performance patterns, one truth became obvious:
-                            progress isn’t random — it’s engineered.
-                            This method was built to eliminate guesswork, remove emotional decision-making, and replace chaos with measurable progression.
-                            This isn’t motivation.
-                            It’s architecture.
-                        </p>
-                    </header>
-                </div>
+        <section className="relative py-16 lg:py-32 px-6 md:px-12 lg:px-20 h-full overflow-hidden">
 
-            <div className="bg-white/5 backdrop-blur-sm p-8 grid lg:grid-cols-4 sm:grid-cols-2 w-fit gap-3 mt-8 border border-white/10 absolute z-6 bottom-0 right-0">
-                {cards.map((card, i) => (
-                    <CardResult key={i} {...card} />
-                ))}
+            <Background />
+            <div className="flex justify-center">
+                <h2 className="font-bold text-2xl sm:text-4xl font-heading uppercase leading-tight relative text-center">The <span className="font-black text-primary">Mind </span>
+                    Behind the Method.
+                </h2>
+            </div>
+
+            <div className='flex justify-center'>
+                <div className="grid lg:grid-cols-3 gap-8 mt-12 max-w-7xl">
+                    <div className="lg:col-span-1 lg:row-span-2 relative flex items-center">
+
+                        <img
+                            src={img}
+                            className="w-full h-full object-cover max-h-[630px] grayscale contrast-110"
+                            alt="img"
+                        />
+
+                    </div>
+
+                    <div className="lg:col-span-2 lg:row-span-2 bg-surface border border-white/10 p-8 md:p-12">
+
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl tracking-tight font-heading font-semibold mt-4">
+                            Adrian Vale
+                        </h3>
+
+                        <p className="text-sm text-primary/60 mt-1 mb-8 italic">
+                            Performance Strategist
+                        </p>
+
+                        <div className="space-y-7 text-text-secondary leading-relaxed md:leading-loose max-w-[52ch]">
+
+                            <p>
+                                Adrian never believed progress was a matter of intensity.
+                                He believed it was a matter of structure.
+                            </p>
+
+                            <p>
+                                While others focused on louder motivation,
+                                he focused on quieter variables —
+                                recovery patterns, progression models,
+                                behavioral consistency.
+                            </p>
+
+                            <p>
+                                To him, performance was never emotional.
+                                It was architectural.
+                            </p>
+
+                            <p>
+                                The system didn’t begin as a product.
+                                It began as an obsession with predictability.
+                            </p>
+
+                        </div>
+
+                        <p className="mt-12 text-sm sm:text-xl font-heading font-semibold tracking-tight">
+                            Precision over noise.
+                        </p>
+                    </div>
+                    <div className="lg:col-span-3 border border-white/10 bg-surface p-8 grid w-fit sm:w-full sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {cards.map((card, i) => (
+                            <CardResult key={i} {...card} />
+                        ))}
+                    </div>
+                </div>
             </div>
 
         </section>

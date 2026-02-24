@@ -59,8 +59,7 @@ export const Plans = () => {
             />
 
             <header className="space-y-4 text-center">
-                <h2 className="font-bold text-2xl sm:text-4xl font-heading uppercase">
-                    <span className="font-black text-primary">Simple Pricing.</span> Serious Results.
+                <h2 className="font-bold text-2xl sm:text-4xl font-heading uppercase">Simple <span className="font-black text-primary">Pricing.</span> Serious Results.
                 </h2>
                 <p className="text-text-secondary font-body max-w-md mx-auto">
                     No contracts. No hidden fees. Full control at all times.
