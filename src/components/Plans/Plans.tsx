@@ -13,34 +13,35 @@ type PlansData = {
 
 const plans: PlansData[] = [
     {
-        title: "Self-Guided",
+        title: "The Blueprint",
         price: "49",
         duration: "month",
         highlight: false,
         description:
-            "Structured training system for those ready to stay consistent and build real strength.",
+            "The complete architectural framework. Engineered for disciplined lifters who need the exact map to execute independently.",
         characteristics: [
-            "Structured training program",
-            "Exercise technique library",
-            "Nutrition guidelines",
-            "Progress tracking system",
-            "Community access",
+            "Full Performance System access",
+            "Phased progression protocols",
+            "Exercise execution library",
+            "Data-driven nutrition templates",
+            "Systemic progress tracking",
+            "Community network access",
         ],
     },
     {
-        title: "Coached",
+        title: "Direct Oversight",
         price: "119",
         duration: "month",
         highlight: true,
         description:
-            "Personalized guidance, accountability, and adjustments to maximize your results.",
+            "High-level performance engineering. We don't just provide the map; we navigate the terrain with you through 1:1 strategic adjustments.",
         characteristics: [
-            "Everything in Self-Guided",
-            "Customized training adjustments",
-            "Personalized nutrition targets",
-            "Weekly check-ins",
-            "Direct messaging with coach",
-            "Priority support",
+            "Everything in The Blueprint",
+            "Weekly performance audits",
+            "Biometric-based program tweaks",
+            "Macro & micronutrient optimization",
+            "Direct 1:1 strategic communication",
+            "Priority technical review",
         ],
     },
 ];
@@ -56,10 +57,10 @@ export const Plans = () => {
                 pointer-events-none -z-1"
             />
 
-            <header className="space-y-4 text-center">
-                <h2 className="font-bold text-2xl sm:text-4xl font-heading uppercase">Simple <span className="font-black text-primary">Pricing.</span> Serious Results.
+            <header className="space-y-4 text-center flex flex-col items-center">
+                <h2 className="font-black text-2xl sm:text-4xl xl:text-5xl font-heading uppercase max-w-4xl">Simple <span className="font-black text-primary">Pricing.</span> Serious Results.
                 </h2>
-                <p className="text-text-secondary font-body max-w-md mx-auto">
+                <p className="text-text-secondary font-body max-w-md mx-auto sm:text-lg">
                     No contracts. No hidden fees. Full control at all times.
                 </p>
             </header>

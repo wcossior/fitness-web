@@ -32,14 +32,14 @@ export const PlanCard = ({ title, price, duration, description, characteristics,
 
             ${highlight
                             ? "bg-surface/95 border-primary/60 shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
-                            : "bg-surface/75 border-white/5 opacity-95"
+                            : "bg-surface/75 border-white/5"
                         }
         `}
         >
             <div className="font-heading font-bold relative">
 
                 {highlight && (
-                    <div className="absolute top-0 right-0 text-[10px] uppercase tracking-widest text-primary font-semibold italic">
+                    <div className="absolute -top-6 right-0 text-[10px] uppercase tracking-widest text-primary font-semibold italic">
                         Most Popular
                     </div>
                 )}
@@ -53,15 +53,15 @@ export const PlanCard = ({ title, price, duration, description, characteristics,
                     {price}
                 </h3>
 
-                {highlight && (
-                    <p className="text-xs font-body text-primary font-medium mt-3 italic">
-                        Ideal for consistent transformation
-                    </p>
-                )}
-
                 <p className="text-xs text-text-primary font-medium mt-3 mb-6">
                     per {duration}
                 </p>
+
+                {highlight && (
+                    <p className="text-xs font-body text-primary font-medium my-3 italic">
+                        Ideal for consistent transformation
+                    </p>
+                )}
 
                 <p className="font-body font-light text-sm mb-6 text-text-secondary">
                     {description}

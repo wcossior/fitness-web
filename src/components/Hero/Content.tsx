@@ -22,7 +22,7 @@ export const Content = ({ eyebrow, headline, suportText, className }: contentPro
             <span className="text-xs sm:text-sm uppercase tracking-widest text-primary/80 font-body">
                 {eyebrow}
             </span>
-            <h1 className="uppercase text-[8vw] sm:text-5xl xl:text-6xl leading-tight tracking-wide text-text-primary font-heading sm:max-w-xl xl:max-w-3xl relative -z-7">
+            <h1 className="font-black uppercase text-[8vw] sm:text-5xl xl:text-6xl leading-tight tracking-wide text-text-primary font-heading sm:max-w-xl xl:max-w-3xl relative -z-7">
                 {headline}
             </h1>
             <p className="text-sm sm:text-lg lg:text-xl text-text-secondary font-body max-w-xl relative z-20">

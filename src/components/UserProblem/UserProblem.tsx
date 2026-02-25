@@ -26,8 +26,8 @@ export const UserProblem = () => {
                 <span className="text-primary font-medium tracking-widest uppercase text-xs sm:text-sm italic">
                     The Uncomfortable Truth
                 </span>
-                <h2 className='text-2xl sm:text-4xl uppercase font-bold max-w-3xl'>You’re Not Stuck. You're Just<span className="font-black text-primary/90"> Unstructured. </span></h2>
-                <span className='text-text-secondary font-body max-w-lg sm:w-full mx-auto sm:mx-0'>
+                <h2 className='text-2xl sm:text-4xl xl:text-5xl uppercase font-black max-w-3xl font-bold'>You’re Not Stuck. You're Just<span className="text-primary/90"> Unstructured. </span></h2>
+                <span className='text-text-secondary font-body max-w-lg sm:w-full mx-auto sm:mx-0 sm:text-lg'>
                     You train hard. You show up consistently.
                     But your body has nothing structured to respond to.
                 </span>

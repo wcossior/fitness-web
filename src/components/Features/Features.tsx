@@ -54,10 +54,10 @@ export const Features = () => {
                 pointer-events-none -z-1"
             />
             <header className="space-y-4 text-center flex flex-col items-center px-6 md:px-12">
-                <h2 className="font-bold text-2xl sm:text-4xl font-heading uppercase max-w-xl">
-                    Inside the <span className="font-black text-primary">System</span>
+                <h2 className="font-black text-2xl sm:text-4xl xl:text-5xl font-heading uppercase">
+                    Inside the <span className="text-primary/90">System</span>
                 </h2>
-                <p className="font-body max-w-md text-text-secondary">
+                <p className="font-body max-w-md text-text-secondary sm:text-lg">
                     Engineered components designed to eliminate <span className="text-primary">guesswork</span> and maximize measurable progress.
                 </p>
             </header>

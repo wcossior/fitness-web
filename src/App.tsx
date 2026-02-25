@@ -1,5 +1,5 @@
 import { About } from "./components/About/About"
-import { CallToAction } from "./components/CallToAction"
+import { NotForYou } from "./components/NotForYou/NotForYou"
 import { Footer } from "./components/Footer"
 import { Hero } from "./components/Hero/Hero"
 import { Methodology } from "./components/Methodology/Methodology"
@@ -20,8 +20,8 @@ function App() {
       <Methodology></Methodology>
       <Features></Features>
       <Results></Results>
+      <NotForYou></NotForYou>
       <Plans></Plans>
-      <CallToAction></CallToAction>
       <Footer></Footer>
     </div>
   )
