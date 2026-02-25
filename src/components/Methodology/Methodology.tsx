@@ -50,7 +50,7 @@ export const Methodology = () => {
     ]
     return (
         <section className='lg:min-h-[780px] relative px-6 md:px-12 lg:px-20 py-16 lg:py-32'>
-            <header className='space-y-4 text-end flex flex-col items-end'>
+            <header className='space-y-4 flex flex-col'>
                 <h2 className="font-bold text-text-primary text-2xl sm:text-4xl font-heading uppercase max-w-3xl">The Structured Performance <span className="font-black text-primary/90">System.</span></h2>
                 <p className='max-w-lg sm:w-full font-body text-text-secondary'>A <span className="text-primary/90">100% remote</span> training framework designed for measurable strength and physique development.</p>
             </header>
@@ -61,7 +61,7 @@ export const Methodology = () => {
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"
             />
-                <div className='flex flex-wrap justify-end lg:gap-8 gap-6 mt-12 sm:mt-20'>
+                <div className='flex flex-wrap lg:gap-8 gap-6 mt-12'>
                     {
                         steps.map((step, index) => (
                             <CardMethology numberStep={index + 1} {...step}></CardMethology>

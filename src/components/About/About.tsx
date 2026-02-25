@@ -21,69 +21,66 @@ export const About = () => {
         <section className="relative py-16 lg:py-32 px-6 md:px-12 lg:px-20 h-full overflow-hidden">
 
             <Background />
-            <div className="flex justify-center">
-                <h2 className="font-bold text-2xl sm:text-4xl font-heading uppercase leading-tight relative text-center">The <span className="font-black text-primary">Mind </span>
-                    Behind the Method.
-                </h2>
-            </div>
+            <h2 className="font-bold text-2xl sm:text-4xl font-heading uppercase leading-tight relative">The <span className="font-black text-primary">Mind </span>
+                Behind the Method.
+            </h2>
 
-            <div className='flex justify-center'>
-                <div className="grid lg:grid-cols-3 gap-8 mt-12 max-w-7xl">
-                    <div className="lg:col-span-1 lg:row-span-2 relative flex items-center">
+            <div className="grid lg:grid-cols-3 gap-8 mt-12">
+                <div className="lg:col-span-1 lg:row-span-2 relative flex items-center max-h-[780px]">
+                    <img
+                        src={img}
+                        className="w-full h-full object-cover h-full contrast-110"
+                        alt="img"
+                    />
+                </div>
 
-                        <img
-                            src={img}
-                            className="w-full h-full object-cover max-h-[630px] grayscale contrast-110"
-                            alt="img"
-                        />
+                <div className="lg:col-span-2 lg:row-span-2 bg-surface border border-white/10 p-8 md:p-12">
 
-                    </div>
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl tracking-tight font-heading font-semibold mt-4">
+                        Adrian Vale
+                    </h3>
 
-                    <div className="lg:col-span-2 lg:row-span-2 bg-surface border border-white/10 p-8 md:p-12">
+                    <p className="text-sm text-primary/60 mt-1 mb-8 italic">
+                        Performance Strategist
+                    </p>
 
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl tracking-tight font-heading font-semibold mt-4">
-                            Adrian Vale
-                        </h3>
+                    <div className="space-y-7 text-text-secondary leading-relaxed md:leading-loose max-w-[72ch]">
 
-                        <p className="text-sm text-primary/60 mt-1 mb-8 italic">
-                            Performance Strategist
+                        <p>
+                            Adrian never believed progress was a matter of intensity.
+                            He believed it was a matter of structure.
                         </p>
 
-                        <div className="space-y-7 text-text-secondary leading-relaxed md:leading-loose max-w-[52ch]">
+                        <p>
+                            While others focused on louder motivation,
+                            he focused on quieter variables —
+                            recovery patterns, progression models,
+                            behavioral consistency.
+                        </p>
 
-                            <p>
-                                Adrian never believed progress was a matter of intensity.
-                                He believed it was a matter of structure.
-                            </p>
+                        <p>
+                            To him, performance was never emotional.
+                            It was architectural.
+                        </p>
 
-                            <p>
-                                While others focused on louder motivation,
-                                he focused on quieter variables —
-                                recovery patterns, progression models,
-                                behavioral consistency.
-                            </p>
+                        <p>
+                            The system didn’t begin as a product.
+                            It began as an obsession with predictability.
+                        </p>
 
-                            <p>
-                                To him, performance was never emotional.
-                                It was architectural.
-                            </p>
-
-                            <p>
-                                The system didn’t begin as a product.
-                                It began as an obsession with predictability.
-                            </p>
-
-                        </div>
-
-                        <p className="mt-12 text-sm sm:text-xl font-heading font-semibold tracking-tight">
-                            Precision over noise.
+                        <p>
+                            Today, Adrian helps men and women at intermediate levels break through plateaus and turn structured training into real, measurable results — consistently, predictably, and sustainably.
                         </p>
                     </div>
-                    <div className="lg:col-span-3 border border-white/10 bg-surface p-8 grid w-fit sm:w-full sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {cards.map((card, i) => (
-                            <CardResult key={i} {...card} />
-                        ))}
-                    </div>
+
+                    <p className="mt-12 text-sm sm:text-xl font-heading font-semibold tracking-tight">
+                        Precision over noise.
+                    </p>
+                </div>
+                <div className="lg:col-span-3 border border-white/10 bg-surface p-8 grid w-fit sm:w-full sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {cards.map((card, i) => (
+                        <CardResult key={i} {...card} />
+                    ))}
                 </div>
             </div>
 

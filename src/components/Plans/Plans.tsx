@@ -64,7 +64,7 @@ export const Plans = () => {
                 </p>
             </header>
 
-            <div className="flex justify-center mt-12 sm:mt-20">
+            <div className="flex justify-center mt-12">
                 <div className='grid md:grid-cols-2 w-fit'>
                     {
                         plans.map((plan, index) => (

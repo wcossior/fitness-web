@@ -62,7 +62,7 @@ export const Features = () => {
                 </p>
             </header>
 
-            <div className="flex justify-center items-center mt-12 sm:mt-20 relative px-6 md:px-12">
+            <div className="flex justify-center items-center mt-12 relative px-6 md:px-12">
                 <div className="grid md:grid-cols-2 w-fit gap-8">
                     {
                         features.map((benefit, index) => (
