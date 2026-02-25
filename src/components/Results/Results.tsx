@@ -25,7 +25,7 @@ export const Results = () => {
 
   const testimonials: TestimonialData[] = [
     {
-      name: "Daniel Rivero",
+      name: "Daniel Mendez",
       duration: "16 Week Transformation",
       metrics: ["-8kg Fat Loss", "+60kg Deadlift"],
       quote:
@@ -43,7 +43,7 @@ export const Results = () => {
       photoAfter: womanAfter,
     },
     {
-      name: "Natalia Sahonero",
+      name: "Natalia Rivero",
       duration: "5 Month Progression",
       metrics: ["+25kg Hip Thrust", "-5% Body Fat"],
       quote:
