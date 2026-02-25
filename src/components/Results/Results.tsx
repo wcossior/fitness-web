@@ -20,14 +20,6 @@ export const Results = () => {
     label: string;
   };
 
-  const cards: CardData[] = [
-    { value: "6000", suffix: "+", label: "Coaching Hours", },
-    { value: "90", suffix: "%", label: "Client Retention", },
-    { value: "800", suffix: "+", label: "Clients Coached", },
-    { value: "7", suffix: "+", label: "Years Experience", },
-  ];
-
-
   type TestimonialData = {
     name: string;
     quote: string;
@@ -93,13 +85,6 @@ bg-[radial-gradient(circle_at_50%_0%,rgba(34,229,138,0.06)_0%,rgba(11,15,14,0.95
           </TestimonialSlider>
         }
       </div>
-
-      {/* <div className="bg-white/5 backdrop-blur-sm p-8 grid lg:grid-cols-4 sm:grid-cols-2 w-fit gap-3 mt-8 border border-white/10">
-        {cards.map((card, i) => (
-          <CardResult key={i} {...card} />
-        ))}
-      </div> */}
     </section>
-
   );
 };
