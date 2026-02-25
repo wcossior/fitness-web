@@ -1,9 +1,11 @@
 import bg from "../../assets/backman.jpg"
 import bg2 from "../../assets/manlifting.jpg"
+import { Goal } from "../../assets/assetsComponents/Goal"
+import { Calendar } from "../../assets/assetsComponents/Calendar"
+import { Cpu } from "../../assets/assetsComponents/Cpu"
+import { Diamond } from "../../assets/assetsComponents/Diamond"
+import { Energy } from "../../assets/assetsComponents/Energy"
 import { CardMethology } from "./CardMethology"
-import { Scan } from "./icons/Scan"
-import { CheckList } from "./icons/CheckList"
-import { Up } from "./icons/Up"
 
 export const Methodology = () => {
 
@@ -16,30 +18,41 @@ export const Methodology = () => {
 
     const steps: StepsData[] = [
         {
-            title: "PERFORMANCE AUDIT",
-            description: "We assess your current strength metrics, movement quality, and recovery capacity to establish precise starting points.",
+            title: "SMART START PLACEMENT",
+            description: "A structured onboarding process determines your precise starting point inside the system, whether you're building your foundation or refining advanced performance.",
             isCore: false,
-            icon: Scan
+            icon: Goal
         },
         {
-            title: "STRUCTURED BLOCKS",
-            description: "Training is organized into progressive 4-6 week phases with defined volume, intensity, and strength targets.",
+            title: "PHASE-BASED LONG-TERM PROGRESSION",
+            description: "Training evolves through structured performance blocks designed for sustainable, long-term strength and physique development.",
+            isCore: false,
+            icon: Calendar
+        },
+        {
+            title: "SYSTEMIZED EXECUTION",
+            description: "Every session follows predefined structure, performance targets, and progression logic.",
+            isCore: false,
+            icon: Cpu
+        },
+        {
+            title: "AUTO-REGULATION PROTOCOL",
+            description: "Built-in performance rules dictate when to push, maintain, or strategically deload to prevent plateaus.",
+            isCore: false,
+            icon: Energy
+        },
+        {
+            title: "LIMITED 1:1 COACH ACCESS (COACHED PLAN)",
+            description: "Coached clients receive ongoing 1:1 performance reviews, strategic adjustments, and direct accountability. Availability is limited.",
             isCore: true,
-            icon: CheckList
-        },
-        {
-            title: "DATA-DRIVEN ADJUSTMENTS",
-            description: "Performance is tracked weekly and training variables are adjusted to ensure consistent overload without burnout.",
-            isCore: false,
-            icon: Up
+            icon: Diamond
         }
     ]
-
     return (
-        <section className='lg:min-h-[680px] relative px-6 md:px-12 lg:px-20 py-16 lg:py-32'>
-            <header className='space-y-4 text-end flex flex-col items-center sm:items-end'>
+        <section className='lg:min-h-[780px] relative px-6 md:px-12 lg:px-20 py-16 lg:py-32'>
+            <header className='space-y-4 text-end flex flex-col items-end'>
                 <h2 className="font-bold text-text-primary text-2xl sm:text-4xl font-heading uppercase max-w-3xl">The Structured Performance <span className="font-black text-primary/90">System.</span></h2>
-                <p className='max-w-lg sm:w-full font-body text-text-secondary'>A <span className="text-primary/90">remote</span> training framework designed for measurable strength and physique development.</p>
+                <p className='max-w-lg sm:w-full font-body text-text-secondary'>A <span className="text-primary/90">100% remote</span> training framework designed for measurable strength and physique development.</p>
             </header>
             <img className="hidden sm:block absolute top-0 left-0 -z-3 opacity-20 object-cover w-full h-full object-top" src={bg} alt="bg-gym" />
             <img className="sm:hidden block absolute top-0 left-0 -z-3 opacity-20 object-cover w-full h-full" src={bg2} alt="bg-gym" />
@@ -48,15 +61,13 @@ export const Methodology = () => {
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"
             />
-            <div className="flex justify-end h-full">
-                <div className='grid grid-cols-1 lg:grid-cols-3 lg:gap-8 gap-6 mt-12 sm:mt-20 w-fit'>
+                <div className='flex flex-wrap justify-end lg:gap-8 gap-6 mt-12 sm:mt-20'>
                     {
                         steps.map((step, index) => (
                             <CardMethology numberStep={index + 1} {...step}></CardMethology>
                         ))
                     }
                 </div>
-            </div>
         </section>
     )
 }

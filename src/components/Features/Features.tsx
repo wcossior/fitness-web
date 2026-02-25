@@ -15,23 +15,23 @@ type FeatureData = {
 
 const features: FeatureData[] = [
     {
-        title: "Periodized Training Architecture",
-        description: "Long-term strength and hypertrophy planning structured in performance-driven phases.",
+        title: "Strategic Periodization",
+        description: "A structured long-term progression model designed to build muscle and strength without plateaus.",
         icon: Dumbell
     },
     {
-        title: "Data-Driven Load Optimization",
-        description: "Training variables adjusted through measurable performance indicators.",
+        title: "Precision Load Management",
+        description: "Training intensity and volume adjusted intelligently based on real performance data.",
         icon: Adjustment
     },
     {
-        title: "Nutritional Performance Alignment",
-        description: "Energy intake calibrated to match training demands and recovery cycles.",
+        title: "Performance Nutrition Framework",
+        description: "Calorie and macro alignment that supports muscle growth, recovery, and sustainable results.",
         icon: Cutlery
     },
     {
-        title: "Recovery & Fatigue Regulation",
-        description: "Structured management of workload and recovery to prevent plateaus and burnout.",
+        title: "Recovery Optimization System",
+        description: "Fatigue control and workload balance to maximize gains while preventing burnout.",
         icon: Energy
     }
 ]

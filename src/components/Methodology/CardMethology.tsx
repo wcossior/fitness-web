@@ -23,12 +23,12 @@ export const CardMethology = ({ numberStep, title, description, icon: IconCompon
                         </div>
                         <span className="text-xs tracking-[0.25em] text-text-muted self-center">STEP</span>
                         <div className='ml-auto'>
-                            <IconComponent className="w-7 h-7 text-primary/80 ml-auto" />
+                            <IconComponent className="w-8 h-8 text-primary/80 ml-auto" />
                         </div>
                     </div>
                     <h3
-                        className={`font-heading uppercase text-text-primary 
-                        ${isCore ? "text-sm sm:text-lg" : "text-xs sm:text-sm"}`}
+                        className={`font-heading uppercase text-xs sm:text-sm
+                        ${isCore ? "text-primary/90" : "text-text-primary"}`}
                     >{title}</h3>
                     <div className={`h-px ${isCore ? 'w-28 bg-primary/50' : 'w-12 bg-primary/30'}`} />
                     <p className="text-text-secondary text-xs sm:text-sm leading-relaxed font-body mt-6">
