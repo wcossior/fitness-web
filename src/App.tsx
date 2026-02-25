@@ -17,8 +17,8 @@ function App() {
       <Hero></Hero>
       <UserProblem></UserProblem>
       <Methodology></Methodology>
-      <Results></Results>
       <Features></Features>
+      <Results></Results>
       <Plans></Plans>
       <About></About>
       <CallToAction></CallToAction>

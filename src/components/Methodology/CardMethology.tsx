@@ -15,7 +15,7 @@ export const CardMethology = ({ numberStep, title, description, icon: IconCompon
 
     return (
         <div className={`lg:flex items-stretch ${className}`}>
-            <div className='max-w-[340px]'>
+            <div className='max-w-[380px]'>
                 <div className='space-y-4 w-full'>
                     <div className="flex font-heading gap-3">
                         <div className="w-9 h-9 rounded-md bg-primary/10 border border-primary/20 flex items-center justify-center text-xs font-bold text-primary">
@@ -23,7 +23,7 @@ export const CardMethology = ({ numberStep, title, description, icon: IconCompon
                         </div>
                         <span className="text-xs tracking-[0.25em] text-text-muted self-center">STEP</span>
                         <div className='ml-auto'>
-                            <IconComponent className="w-7 h-7 text-primary/60 ml-auto" />
+                            <IconComponent className="w-7 h-7 text-primary/80 ml-auto" />
                         </div>
                     </div>
                     <h3
@@ -36,12 +36,8 @@ export const CardMethology = ({ numberStep, title, description, icon: IconCompon
                     </p>
                 </div>
             </div>
-            {numberStep !== 3 &&
-                <>
-                    <div className="lg:hidden w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent mt-6" />
-                    <div className="hidden lg:block w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent ml-8" />
-                </>
-            }
+            <div className="lg:hidden w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent mt-6" />
+            <div className="hidden lg:block w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent ml-8" />
         </div>
     )
 }
