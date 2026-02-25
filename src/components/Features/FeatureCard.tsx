@@ -34,7 +34,7 @@ export const FeatureCard = ({ title, description, icon: IconComponent, index }: 
 
                 <div className="mb-6">
                     <div className="flex items-center justify-center w-16 h-16 bg-surface/90 border border-white/5">
-                        <IconComponent className="-rotate-15 h-8 text-primary" />
+                        <IconComponent className="h-8 text-primary" />
                     </div>
                 </div>
 

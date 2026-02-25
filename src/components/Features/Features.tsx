@@ -1,5 +1,5 @@
-import { Compass } from "../../assets/assetsComponents/Compass"
-import { Energy } from "../../assets/assetsComponents/Energy"
+import { Live } from "../../assets/assetsComponents/Live"
+import { Metrics } from "../../assets/assetsComponents/Metrics"
 import { Dumbell } from "../../assets/assetsComponents/Dumbell"
 import { Cutlery } from "../../assets/assetsComponents/Cutlery"
 import { Adjustment } from "../../assets/assetsComponents/Adjustment"
@@ -15,27 +15,31 @@ type FeatureData = {
 
 const features: FeatureData[] = [
     {
-        title: "Strategic Periodization",
-        description: "A structured long-term progression model designed to build muscle and strength without plateaus.",
+        title: "Structured Workout Library",
+        description: "Complete library of guided exercises and phased programs to build strength and muscle efficiently.",
         icon: Dumbell
     },
     {
-        title: "Precision Load Management",
-        description: "Training intensity and volume adjusted intelligently based on real performance data.",
-        icon: Adjustment
-    },
-    {
-        title: "Performance Nutrition Framework",
-        description: "Calorie and macro alignment that supports muscle growth, recovery, and sustainable results.",
+        title: "Nutrition & Meal Guides",
+        description: "Comprehensive meal plans, macro templates, and recipe PDFs to fuel your performance.",
         icon: Cutlery
     },
     {
-        title: "Recovery Optimization System",
-        description: "Fatigue control and workload balance to maximize gains while preventing burnout.",
-        icon: Energy
+        title: "Progress Tracking Tools",
+        description: "Interactive spreadsheets and app-based templates to log workouts, monitor metrics, and visualize gains.",
+        icon: Metrics
+    },
+    {
+        title: "Personalized Program Adjustments",
+        description: "Weekly updates and program tweaks based on your performance and recovery, keeping progression optimal.",
+        icon: Adjustment
+    },
+    {
+        title: "Live Coaching & Technique Review",
+        description: "1:1 video feedback, performance review, and direct guidance to ensure proper execution and results.",
+        icon: Live
     }
-]
-
+];
 
 export const Features = () => {
     return (
