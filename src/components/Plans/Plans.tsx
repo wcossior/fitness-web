@@ -1,6 +1,5 @@
 import { PlanCard } from "./PlanCard";
-import bg from "../../assets/images/lifting.jpg"
-import bg2 from "../../assets/images/lifting2.jpg"
+import bg from "../../assets/images/dumbells5.jpg"
 import { motion } from "framer-motion"
 
 type PlansData = {
@@ -50,8 +49,7 @@ const plans: PlansData[] = [
 export const Plans = () => {
     return (
         <section className='relative py-16 lg:py-32 px-6 md:px-12 lg:px-20'>
-            <img className="hidden md:block absolute top-0 left-0 -z-3 opacity-40 object-cover w-full h-full object-top" src={bg} alt="bg-gym" />
-            <img className="md:hidden block absolute top-0 left-0 -z-3 opacity-50 object-cover w-full h-full" src={bg2} alt="bg-gym" />
+            <img className="absolute top-0 left-0 -z-3 opacity-40 object-cover w-full h-full grayscale object-[38%_center] sm:object-center" src={bg} alt="bg-gym" />
 
             <div className="absolute bottom-0 left-0 w-full h-60 
                 bg-gradient-to-t from-black to-transparent 

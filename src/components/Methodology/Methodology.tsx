@@ -1,5 +1,5 @@
-import bg from "../../assets/images/backman.jpg"
-import bg2 from "../../assets/images/manlifting.jpg"
+import bg from "../../assets/images/backWoman.jpg"
+import bg2 from "../../assets/images/manprogress.jpg"
 import { Goal } from "../../assets/assetsComponents/Goal"
 import { Calendar } from "../../assets/assetsComponents/Calendar"
 import { Cpu } from "../../assets/assetsComponents/Cpu"
@@ -54,8 +54,8 @@ export const Methodology = () => {
                 <h2 className="font-bold text-text-primary text-2xl sm:text-4xl font-heading uppercase max-w-3xl">The Structured Performance <span className="font-black text-primary/90">System.</span></h2>
                 <p className='max-w-lg sm:w-full font-body text-text-secondary'>A <span className="text-primary/90">100% remote</span> training framework designed for measurable strength and physique development.</p>
             </header>
-            <img className="hidden sm:block absolute top-0 left-0 -z-3 opacity-20 object-cover w-full h-full object-top" src={bg} alt="bg-gym" />
-            <img className="sm:hidden block absolute top-0 left-0 -z-3 opacity-20 object-cover w-full h-full" src={bg2} alt="bg-gym" />
+            <img className="grayscale hidden sm:block absolute top-0 left-0 -z-3 opacity-20 object-cover w-full h-full object-top" src={bg} alt="bg-gym" />
+            <img className="grayscale sm:hidden block absolute top-0 left-0 -z-3 opacity-20 object-cover w-full h-full object-[15%_center]" src={bg2} alt="bg-gym" />
 
             <div className="absolute bottom-0 left-0 w-full h-60 
                 bg-gradient-to-t from-black to-transparent 

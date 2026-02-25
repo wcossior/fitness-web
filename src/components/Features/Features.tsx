@@ -4,7 +4,7 @@ import { Dumbell } from "../../assets/assetsComponents/Dumbell"
 import { Cutlery } from "../../assets/assetsComponents/Cutlery"
 import { Adjustment } from "../../assets/assetsComponents/Adjustment"
 import { FeatureCard } from "./FeatureCard"
-import bg from "../../assets/images/dumbells5.jpg"
+import bg from "../../assets/images/dumbells2.jpg"
 
 type FeatureData = {
     title: string,
@@ -40,7 +40,7 @@ const features: FeatureData[] = [
 export const Features = () => {
     return (
         <section className='relative py-16 lg:py-32 px-6 md:px-12 lg:px-20'>
-            <img className="absolute m-0 p-0 top-0 left-0 -z-3 opacity-20 object-cover w-full h-full" src={bg} alt="bg-user-problem" />
+            <img className="absolute m-0 p-0 top-0 left-0 -z-3 opacity-20 object-cover w-full h-full grayscale" src={bg} alt="bg-user-problem" />
             <div className="absolute bottom-0 left-0 w-full h-100 
                 bg-gradient-to-t from-black to-transparent 
                 pointer-events-none -z-1"
