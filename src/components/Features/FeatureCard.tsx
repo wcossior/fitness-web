@@ -11,24 +11,24 @@ export const FeatureCard = ({ title, description, icon: IconComponent, index }: 
     return (
         <div
             className={`
-    group
-    w-full
-    max-w-[380px]
-    h-full
-    py-10
-    px-6 sm:px-8
-    flex flex-col
-    relative
-    border
-    bg-surface/75
-    border-white/5
-    transition-all duration-500 ease-out
+            group
+            w-full
+            max-w-[380px]
+            h-full
+            py-10
+            px-6 sm:px-8
+            flex flex-col
+            relative
+            border
+            bg-surface/75
+            border-white/10
+            transition-all duration-500 ease-out
 
-    hover:-translate-y-1
-    hover:bg-surface/90
-    hover:border-primary/60
-    hover:shadow-[0_10px_40px_rgba(0,0,0,0.35)]
-  `}
+            hover:-translate-y-1
+            hover:bg-surface/90
+            hover:border-primary/60
+            hover:shadow-[0_10px_40px_rgba(0,0,0,0.35)]
+        `}
         >
             <div className="flex flex-col flex-grow">
 

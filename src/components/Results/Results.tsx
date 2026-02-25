@@ -66,7 +66,7 @@ bg-[radial-gradient(circle_at_50%_0%,rgba(34,229,138,0.06)_0%,rgba(11,15,14,0.95
       </header>
 
       <div className="bg-surface mx-6 md:mx-12 lg:mx-20 p-6 md:p-12 lg:p-20 border
-                        border-white/5">
+                        border-white/10">
         <p className="text-sm uppercase tracking-widest text-primary/60 mb-12 font-heading">
           Client Case Studies
         </p>

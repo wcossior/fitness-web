@@ -53,7 +53,7 @@ export const Features = () => {
                 bg-gradient-to-b from-black to-transparent 
                 pointer-events-none -z-1"
             />
-            <header className="space-y-4 text-center flex flex-col items-center px-6 md:px-12">
+            <header className="space-y-4 text-center flex flex-col items-center">
                 <h2 className="font-black text-2xl sm:text-4xl xl:text-5xl font-heading uppercase">
                     Inside the <span className="text-primary/90">System</span>
                 </h2>
@@ -62,7 +62,7 @@ export const Features = () => {
                 </p>
             </header>
 
-            <div className="flex justify-center items-center mt-12 relative px-6 md:px-12">
+            <div className="flex justify-center items-center mt-12">
                 <div className="grid md:grid-cols-2 w-fit gap-8">
                     {
                         features.map((benefit, index) => (

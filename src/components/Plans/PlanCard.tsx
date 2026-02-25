@@ -26,13 +26,13 @@ export const PlanCard = ({ title, price, duration, description, characteristics,
             border
             transition-all duration-500 ease-out
             hover:-translate-y-1
-            hover:bg-surface/90
+            hover:bg-surface/85
             hover:border-primary/60
             hover:shadow-[0_10px_40px_rgba(0,0,0,0.35)]
 
             ${highlight
                             ? "bg-surface/95 border-primary/60 shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
-                            : "bg-surface/75 border-white/5"
+                            : "bg-surface/75 border-white/10"
                         }
         `}
         >

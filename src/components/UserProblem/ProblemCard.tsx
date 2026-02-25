@@ -13,7 +13,7 @@ export const ProblemCard = ({ title, description, image, className, index = 0 }:
     const position = index % 2 === 0 ? "rotate-3" : "-rotate-3 ";
 
     return (
-        <div className={`${className} group max-w-[350px] h-full flex flex-col ${position}`}>
+        <div className={`${className} group max-w-[350px] h-full flex flex-col ${position} border border-white/10`}>
             <div className="overflow-hidden h-60 relative">
                 <div className="absolute z-1 bg-primary/85 right-0 top-0 h-14 w-14 flex justify-center items-center font-heading text-sm font-bold">0{index+1}</div>
                 <img
@@ -23,9 +23,9 @@ export const ProblemCard = ({ title, description, image, className, index = 0 }:
                 />
                 <span className="absolute font-heading text-5xl tracking-widest -left-25 top-25 -rotate-90 text-transparent [-webkit-text-stroke:1px_white] opacity-16">Problem</span>
             </div>
-            <div className="p-6 bg-text-primary/10 flex-grow">
+            <div className="p-6 bg-surface flex-grow">
                 <h3 className={`font-heading uppercase tracking-widest text-xs sm:text-sm text-text-primary mb-4`}>
-                    <span className="text-text-primary font-bold">{title}</span>
+                    <span className="text-text-primary font-black">{title}</span>
                 </h3>
                 <div className={`h-px w-12 bg-primary/30`} />
                 <p className="font-body font-light text-xs sm:text-sm text-text-primary leading-tight mt-6">

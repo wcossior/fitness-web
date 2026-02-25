@@ -43,12 +43,12 @@ export const NotForYou = () => {
                     {filters.map((item, index) => (
                         <div
                             key={index}
-                            className="group p-4 sm:p-8 border border-white/5 bg-surface/30 hover:border-primary/60 transition-all duration-400"
+                            className="group p-4 sm:p-8 border border-white/10 bg-surface/30 hover:border-primary/60 transition-all duration-400"
                         >
                             <div className="flex items-start gap-4">
                                 <div className="mt-1 group-hover:scale-108 transition-transform duration-400">
 
-                                    <div className="sm:flex hidden items-center justify-center w-16 h-16 bg-surface/90 border border-white/5">
+                                    <div className="sm:flex hidden items-center justify-center w-16 h-16 bg-surface/90 border border-white/10">
                                         <Forbidden className="text-red-500/50 group-hover:text-red-500 w-8 h-8"></Forbidden>
                                     </div>
                                 </div>
