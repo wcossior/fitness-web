@@ -1,6 +1,6 @@
 import { PlanCard } from "./PlanCard";
-import bg from "../../assets/lifting.jpg"
-import bg2 from "../../assets/lifting2.jpg"
+import bg from "../../assets/images/lifting.jpg"
+import bg2 from "../../assets/images/lifting2.jpg"
 import { motion } from "framer-motion"
 
 type PlansData = {

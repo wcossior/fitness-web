@@ -1,10 +1,10 @@
-import { Adjustment } from "./icons/Adjustment"
-import { Compass } from "./icons/Compass"
-import { Energy } from "./icons/Energy"
-import { Dumbell } from "./icons/Dumbell"
-import { Cutlery } from "./icons/Cutlery"
+import { Compass } from "../../assets/assetsComponents/Compass"
+import { Energy } from "../../assets/assetsComponents/Energy"
+import { Dumbell } from "../../assets/assetsComponents/Dumbell"
+import { Cutlery } from "../../assets/assetsComponents/Cutlery"
+import { Adjustment } from "../../assets/assetsComponents/Adjustment"
 import { FeatureCard } from "./FeatureCard"
-import bg from "../../assets/dumbells5.jpg"
+import bg from "../../assets/images/dumbells5.jpg"
 
 type FeatureData = {
     title: string,

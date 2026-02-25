@@ -1,5 +1,5 @@
-import bg from "../../assets/backman.jpg"
-import bg2 from "../../assets/manlifting.jpg"
+import bg from "../../assets/images/backman.jpg"
+import bg2 from "../../assets/images/manlifting.jpg"
 import { Goal } from "../../assets/assetsComponents/Goal"
 import { Calendar } from "../../assets/assetsComponents/Calendar"
 import { Cpu } from "../../assets/assetsComponents/Cpu"

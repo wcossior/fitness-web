@@ -1,5 +1,5 @@
 import { Button } from '../Buttons/NormalButton'
-import { Check } from './icons/Check'
+import { Check } from "../../assets/assetsComponents/Check"
 
 type PlanCardProps = {
     title: string,

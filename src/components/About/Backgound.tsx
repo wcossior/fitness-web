@@ -1,4 +1,4 @@
-import { Graph } from '../Hero/icons/Graph';
+import { Graph } from "../../assets/assetsComponents/Graph"
 
 export const Background = () => {
     return (

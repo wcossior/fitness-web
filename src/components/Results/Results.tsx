@@ -2,12 +2,12 @@ import { CardResult } from "./CardResult";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import manBefore from "../../assets2/ManBefore.png"
-import manAfter from "../../assets2/ManAfter.png"
-import womanBefore from "../../assets2/BeforeWoman1.png"
-import womanAfter from "../../assets2/AfterWoman1.png"
-import woman2Before from "../../assets2/Woman2Before.png"
-import woman2After from "../../assets2/Woman2After.png"
+import manBefore from "../../assets/images/ManBefore.png"
+import manAfter from "../../assets/images/manAfter.png"
+import womanBefore from "../../assets/images/BeforeWoman1.png"
+import womanAfter from "../../assets/images/AfterWoman1.png"
+import woman2Before from "../../assets/images/woman2Before.png"
+import woman2After from "../../assets/images/woman2After.png"
 import { Testimonial } from "./Testimonial";
 import { TestimonialSlider } from "./TestimonialSlider";
 

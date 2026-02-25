@@ -1,4 +1,4 @@
-import img from '../../assets/couch4.png'
+import img from '../../assets/images/couch4.png'
 import { CardResult } from '../Results/CardResult'
 import { Background } from './Backgound';
 

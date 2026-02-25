@@ -1,6 +1,6 @@
-import image1 from "../../assets/nochange.png"
-import image2 from "../../assets/stagnant.png"
-import image3 from "../../assets/random.png"
+import image1 from "../../assets/images/nochange.png"
+import image2 from "../../assets/images/stagnant.png"
+import image3 from "../../assets/images/random.png"
 import { ProblemCard } from "./ProblemCard"
 import { motion } from "framer-motion"
 
