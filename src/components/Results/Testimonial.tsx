@@ -1,4 +1,3 @@
-import React from 'react'
 import { PhotoTestimonial } from './PhotoTestimonial'
 import { InfoTestimonial } from './InfoTestimonial'
 

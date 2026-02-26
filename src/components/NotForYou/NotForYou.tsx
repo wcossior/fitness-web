@@ -1,5 +1,6 @@
 import { Forbidden } from '../../assets/assetsComponents/Forbidden';
 import { FilterCard } from './FilterCard';
+import { motion, type Variants } from "framer-motion"
 
 export const NotForYou = () => {
     const filters = [
@@ -29,7 +30,13 @@ export const NotForYou = () => {
         <section className='py-16 lg:py-32 px-6 md:px-12 lg:px-20 bg-[#0B0F0E] 
 bg-[radial-gradient(circle_at_50%_50%,rgba(34,229,138,0.04)_0%,rgba(34,229,138,0.02)_40%,rgba(11,15,14,1)_80%,#0B0F0E_100%)]'>
             <div className="max-w-6xl">
-                <header className="space-y-4 mb-12">
+                <motion.header
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="space-y-4 mb-12"
+                >
                     <span className="text-primary font-medium tracking-widest uppercase text-xs sm:text-sm italic font-heading">
                         The Selection Process
                     </span>
@@ -39,17 +46,23 @@ bg-[radial-gradient(circle_at_50%_50%,rgba(34,229,138,0.04)_0%,rgba(34,229,138,0
                     <p className="text-text-secondary font-body max-w-xl sm:text-lg">
                         To maintain the integrity of our results, we only work with lifters who meet the necessary <span className="text-white font-semibold">technical requirements.</span>
                     </p>
-                </header>
+                </motion.header>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {filters.map((item, index) => (
-                        <FilterCard key={index} {...item}></FilterCard>
+                        <FilterCard key={index} {...item} index={index}></FilterCard>
                     ))}
                 </div>
 
-                <p className="mt-12 font-body sm:text-xl text-text-primary max-w-2xl italic">
+                <motion.p
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.5, duration: 1 }}
+                    viewport={{ once: true }}
+                    className="mt-12 font-body sm:text-xl text-text-primary max-w-2xl italic"
+                >
                     "If you meet these requirements, you are not just a client; you are a <span className="text-primary font-black not-italic tracking-wide">candidate</span> for real, measurable transformation."
-                </p>
+                </motion.p>
             </div>
         </section>
     )

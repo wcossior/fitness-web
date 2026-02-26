@@ -1,14 +1,22 @@
 import { Forbidden } from '../../assets/assetsComponents/Forbidden';
+import { motion, type Variants } from "framer-motion"
+import { filterVariants } from './FramerVariants';
 
 type requirementCardProps = {
     title: string;
     description: string;
+    index:number;
 }
 
 
-export const FilterCard = ({ title, description }: requirementCardProps) => {
+export const FilterCard = ({ title, description, index }: requirementCardProps) => {
     return (
-        <div
+        <motion.div
+            custom={index}
+            variants={filterVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
             className="group p-4 sm:p-8 border border-white/10 bg-surface/30 hover:border-primary/60 transition-all duration-400"
         >
             <div className="flex items-start gap-4">
@@ -27,6 +35,6 @@ export const FilterCard = ({ title, description }: requirementCardProps) => {
                     </p>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

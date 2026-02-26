@@ -6,7 +6,7 @@ import woman2Before from "../../assets/images/woman2Before.png"
 import woman2After from "../../assets/images/woman2After.png"
 import { Testimonial } from "./Testimonial";
 import { TestimonialSlider } from "./TestimonialSlider";
-import { motion, type Variants } from "framer-motion"
+import { motion } from "framer-motion"
 import { containerVariants, itemVariants } from "./FramerVariants"
 
 export const Results = () => {
