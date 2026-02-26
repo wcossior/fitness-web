@@ -1,5 +1,5 @@
 import { Forbidden } from '../../assets/assetsComponents/Forbidden';
-import { motion, type Variants } from "framer-motion"
+import { motion } from "framer-motion"
 import { filterVariants } from './FramerVariants';
 
 type requirementCardProps = {

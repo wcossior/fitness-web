@@ -1,6 +1,6 @@
 import { Forbidden } from '../../assets/assetsComponents/Forbidden';
 import { FilterCard } from './FilterCard';
-import { motion, type Variants } from "framer-motion"
+import { motion } from "framer-motion"
 
 export const NotForYou = () => {
     const filters = [

@@ -57,13 +57,19 @@ export const Plans = () => {
                 pointer-events-none -z-1"
             />
 
-            <header className="space-y-4 text-center flex flex-col items-center">
+            <motion.header
+                initial={{ opacity: 0, y: -40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.8 }}
+                transition={{ duration: 0.8 }}
+                className="space-y-4 text-center flex flex-col items-center"
+            >
                 <h2 className="font-black text-2xl sm:text-4xl xl:text-5xl font-heading uppercase max-w-4xl">Simple <span className="font-black text-primary">Pricing.</span> Serious Results.
                 </h2>
                 <p className="text-text-secondary font-body max-w-md mx-auto sm:text-lg">
                     No contracts. No hidden fees. Full control at all times.
                 </p>
-            </header>
+            </motion.header>
 
             <div className="flex justify-center mt-12">
                 <div className='grid md:grid-cols-2 w-fit'>
@@ -75,9 +81,14 @@ export const Plans = () => {
                 </div>
             </div>
 
-            <p className='text-center font-body text-text-secondary mt-6 px-6 md:px-12'>
+            <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.6 }}
+                className='text-center font-body text-text-secondary mt-6 px-6 md:px-12'
+            >
                 🔒 Secure checkout • Cancel anytime • No hidden fees
-            </p>
+            </motion.p>
         </section>
     )
 }

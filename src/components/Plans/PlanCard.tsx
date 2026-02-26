@@ -1,5 +1,7 @@
 import { Button } from '../Buttons/Button'
 import { Check } from "../../assets/assetsComponents/Check"
+import { motion } from "framer-motion"
+import { planVariants } from './FramerVariants'
 
 type PlanCardProps = {
     title: string,
@@ -13,7 +15,12 @@ type PlanCardProps = {
 
 export const PlanCard = ({ title, price, duration, description, characteristics, highlight }: PlanCardProps) => {
     return (
-        <div
+        <motion.div
+            variants={planVariants}
+            initial="hidden"
+            whileInView="visible"
+            custom={highlight}
+            viewport={{ once: true }}
             className={`
             group
             min-w-[310px]
@@ -31,9 +38,9 @@ export const PlanCard = ({ title, price, duration, description, characteristics,
             hover:shadow-[0_10px_40px_rgba(0,0,0,0.35)]
 
             ${highlight
-                            ? "bg-surface/95 border-primary/60 shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
-                            : "bg-surface/75 border-white/10"
-                        }
+                    ? "bg-surface/95 border-primary/60 shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
+                    : "bg-surface/75 border-white/10"
+                }
         `}
         >
             <div className="font-heading font-bold relative">
@@ -89,6 +96,6 @@ export const PlanCard = ({ title, price, duration, description, characteristics,
                     title="Join now"
                 />
             </div>
-        </div>
+        </motion.div>
     )
 }
