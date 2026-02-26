@@ -1,4 +1,4 @@
-import { CardResult } from "./CardResult";
+import { Metric } from "../About/Metric";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";

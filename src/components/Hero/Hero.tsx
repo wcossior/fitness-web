@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { Content } from "./Content"
 import heroBg from "../../assets/images/couple.png"
-import { Button } from "../Buttons/NormalButton"
+import { Button } from "../Buttons/Button"
 import { Background } from "./Background"
 
 export const Hero = () => {
@@ -19,7 +19,7 @@ export const Hero = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 pt-4 font-body relative z-1 sm:justify-center lg:justify-start sm:relative absolute -bottom-12 sm:bottom-0 -z-12">
                 <Button title="View Coaching Options" icon className="text-sm lg:text-lg" />
-                <Button title="Explore the Method" className="text-sm lg:text-lg" variant="ghost"></Button>
+                <Button title="Explore the Method" className="text-text-primary text-sm lg:text-lg" variant="ghost"></Button>
             </div>
         </section>
 

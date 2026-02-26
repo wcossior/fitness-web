@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 
-type NormalButtonProps = {
+type ButtonProps = {
     title: string
     icon?: boolean
     className?: string
@@ -13,8 +13,8 @@ const baseStyles = "relative overflow-hidden flex justify-center items-center ga
 
 const variants = {
     primary: "bg-primary text-surface px-10 py-4 hover:bg-primary-strong hover:shadow-[0_0_25px_rgba(34,229,138,0.4)]",
-    outline: "border border-white/20 text-text-primary px-10 py-4 hover:bg-white/5 hover:border-primary/50",
-    ghost: "text-text-secondary hover:text-primary px-4 py-2"
+    outline: "border border-white/20 px-10 py-4 hover:bg-white/5 hover:border-primary/50",
+    ghost: " hover:text-primary px-4 py-2"
 }
 
 export const Button = ({
@@ -25,7 +25,7 @@ export const Button = ({
     type = "button",
     disabled = false,
     variant = "primary",
-}: NormalButtonProps) => {
+}: ButtonProps) => {
 
     return (
         <button

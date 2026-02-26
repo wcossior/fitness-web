@@ -8,6 +8,7 @@ import { Features } from "./components/Features/Features"
 import { Results } from "./components/Results/Results"
 import { UserProblem } from "./components/UserProblem/UserProblem"
 import { Navbar } from "./components/Navbar/Navbar"
+import { Faq } from "./components/FAQ/Faq"
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Results></Results>
       <NotForYou></NotForYou>
       <Plans></Plans>
+      <Faq></Faq>
       <Footer></Footer>
     </div>
   )

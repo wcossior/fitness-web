@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "../Buttons/NormalButton";
+import { Button } from "../Buttons/Button";
 
 type SliderProps = {
   children: React.ReactNode[];

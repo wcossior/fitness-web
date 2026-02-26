@@ -1,4 +1,4 @@
-import { Button } from '../Buttons/NormalButton'
+import { Button } from '../Buttons/Button'
 import { Check } from "../../assets/assetsComponents/Check"
 
 type PlanCardProps = {

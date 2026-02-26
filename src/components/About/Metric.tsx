@@ -5,7 +5,7 @@ interface CardResultProps {
   label: string;
 }
 
-export const CardResult = ({ value, suffix, label }: CardResultProps) => {
+export const Metric = ({ value, suffix, label }: CardResultProps) => {
 
   return (
     <div className="flex items-center sm:justify-center py-4 px-6">
