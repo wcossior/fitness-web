@@ -18,7 +18,7 @@ export const ProblemCard = ({ title, description, image, className, index = 0 }:
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount:0.6 }}
+            viewport={{ once: true, amount:0.5 }}
             className={`${className} group max-w-[350px] h-full flex flex-col border border-white/10`}
         >
             <div className="overflow-hidden h-60 relative">

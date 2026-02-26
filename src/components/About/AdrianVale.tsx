@@ -30,7 +30,7 @@ export const AdrianVale = () => {
                     He stopped looking at training as an emotional outlet and started treating it as <span className="text-white font-semibold">Architectural Engineering.</span> While the world chased the next high-intensity trend, Adrian obsessed over the quieter variables: recovery curves, volume titration, and metabolic adaptation.
                 </p>
 
-                <div className={`${!isExpanded ? "hidden sm:block" : "block"}`}>
+                <div className={`${!isExpanded ? "hidden sm:block" : "block"} mb-0`}>
                     <p className="mb-7">
                         The System wasn’t built to be another fitness product; it was engineered to be a <span className="text-primary font-bold uppercase tracking-widest text-xs">Predictability Engine.</span> It is the result of 6,000+ coaching hours focused on one goal: ensuring every drop of sweat translates into a measurable metric of growth.
                     </p>
@@ -45,7 +45,7 @@ export const AdrianVale = () => {
                 )}
             </div>
 
-            <div className='flex justify-center mt-4'>
+            <div className='sm:hidden flex justify-center mt-4'>
                 <Button
                     title={isExpanded ? "Show Less [-]" : "Read Full Bio [+]"}
                     onClick={()=>setIsExpanded(!isExpanded)}
@@ -54,7 +54,7 @@ export const AdrianVale = () => {
                 ></Button>
             </div>
 
-            <p className="mt-12 text-sm sm:text-xl font-heading italic uppercase border-t border-white/5 pt-8">
+            <p className="mt-8 text-sm sm:text-xl font-heading italic uppercase border-t border-white/5 pt-8">
                 Precision over noise.
             </p>
         </div>
