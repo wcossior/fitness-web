@@ -1,6 +1,6 @@
 import { About } from "./components/About/About"
 import { NotForYou } from "./components/NotForYou/NotForYou"
-import { Footer } from "./components/Footer"
+import { Footer } from "./components/Footer/Footer"
 import { Hero } from "./components/Hero/Hero"
 import { Methodology } from "./components/Methodology/Methodology"
 import { Plans } from "./components/Plans/Plans"
@@ -13,22 +13,22 @@ import { FinalCTA } from "./components/FinalCTA/FinalCTA"
 
 function App() {
 
-  return (
-    <div className="relative">
-      <Navbar></Navbar>
-      <Hero></Hero>
-      <UserProblem></UserProblem>
-      <About></About>
-      <Methodology></Methodology>
-      <Features></Features>
-      <Results></Results>
-      <NotForYou></NotForYou>
-      <Plans></Plans>
-      <Faq></Faq>
-      <FinalCTA></FinalCTA>
-      <Footer></Footer>
-    </div>
-  )
+	return (
+		<div className="relative">
+			<Navbar></Navbar>
+			<Hero></Hero>
+			<UserProblem></UserProblem>
+			<About></About>
+			<Methodology></Methodology>
+			<Features></Features>
+			<Results></Results>
+			<NotForYou></NotForYou>
+			<Plans></Plans>
+			<Faq></Faq>
+			<FinalCTA></FinalCTA>
+			<Footer></Footer>
+		</div>
+	)
 }
 
 export default App
