@@ -2,7 +2,7 @@ import img from '../../assets/images/couch4.png'
 import { Metric } from './Metric'
 import { AdrianVale } from './AdrianVale';
 import { Background } from './Backgound';
-import { motion, type Variants } from "framer-motion"
+import { motion } from "framer-motion"
 
 export const About = () => {
 
@@ -24,10 +24,15 @@ export const About = () => {
         <section className="relative py-16 lg:py-32 px-6 md:px-12 lg:px-20 h-full overflow-hidden">
             <Background />
 
-            <h2 className="font-black text-2xl sm:text-4xl xl:text-5xl font-heading uppercase leading-tight relative max-w-4xl">
+            <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }} // Se anima cuando el 50% del título es visible
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="font-black text-2xl sm:text-4xl xl:text-5xl font-heading uppercase leading-tight relative max-w-4xl">
                 The <span className="text-primary/90">Mind </span>
                 Behind the System.
-            </h2>
+            </motion.h2>
 
             <div className="grid xl:grid-cols-3 gap-8 mt-12">
                 <motion.div

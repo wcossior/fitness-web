@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion, type Variants } from "framer-motion"
+import { methodologyVariants } from './FramerVariants'
 
 type cardMethologyProps = {
     numberStep: number,
@@ -14,7 +15,13 @@ export const CardMethology = ({ numberStep, title, description, icon: IconCompon
 
 
     return (
-        <div className={`lg:flex items-stretch ${className}`}>
+        <motion.div
+            custom={numberStep-1}
+            variants={methodologyVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.4 }}
+            className={`lg:flex items-stretch ${className}`}>
             <div className='max-w-[380px]'>
                 <div className='space-y-4 w-full'>
                     <div className="flex font-heading gap-3">
@@ -38,6 +45,6 @@ export const CardMethology = ({ numberStep, title, description, icon: IconCompon
             </div>
             <div className="lg:hidden w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent mt-6" />
             <div className="hidden lg:block w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent ml-8" />
-        </div>
+        </motion.div>
     )
 }

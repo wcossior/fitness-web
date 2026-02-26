@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Button } from '../Buttons/Button';
-import { motion, type Variants } from "framer-motion"
 
 export const AdrianVale = () => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -21,7 +20,7 @@ export const AdrianVale = () => {
             </div>
 
             <div
-                className={`space-y-7 text-text-secondary leading-relaxed md:leading-loose font-body transition-all duration-500 overflow-hidden ${!isExpanded ? "max-h-[300px] sm:max-h-none relative" : "max-h-[2000px]"
+                className={`space-y-7 text-text-secondary leading-relaxed md:leading-loose font-body transition-all duration-600 overflow-hidden ${!isExpanded ? "max-h-[300px] sm:max-h-none relative" : "max-h-[2000px]"
                     }`}
             >
 
