@@ -35,10 +35,10 @@ export const Faq = () => {
     const [expanded, setExpanded] = useState(false)
 
     return (
-        <section className="py-20 py-16 lg:py-32 px-6 md:px-12 lg:px-20 relative overflow-hidden">
+        <section className="py-20 pt-16 lg:pt-32 pb-32 lg:pb-45 px-6 md:px-12 lg:px-20 relative overflow-hidden">
             <Background></Background>
-            <h2 className="text-center font-heading text-3xl uppercase mb-12">
-                Frecuently Asked <span className="text-primary">Questions</span>
+            <h2 className="text-center font-heading font-black text-xl sm:text-2xl md:text-3xl lg:text-4xl uppercase mb-12">
+                Frequently Asked <span className="text-primary">Questions</span>
             </h2>
             <div className={`max-w-3xl mx-auto space-y-4 relative transition-all duration-500 overflow-hidden ${!expanded ? "max-h-[260px]" : "max-h-[2000px]"}`}>
                 {

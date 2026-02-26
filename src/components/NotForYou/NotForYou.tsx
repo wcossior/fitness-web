@@ -47,8 +47,8 @@ bg-[radial-gradient(circle_at_50%_50%,rgba(34,229,138,0.04)_0%,rgba(34,229,138,0
                     ))}
                 </div>
 
-                <p className="mt-12 font-body sm:text-xl text-text-primary max-w-2xl">
-                    "If you meet these requirements, you are not just a client; you are a <span className="text-primary/90">candidate</span> for real, measurable transformation."
+                <p className="mt-12 font-body sm:text-xl text-text-primary max-w-2xl italic">
+                    "If you meet these requirements, you are not just a client; you are a <span className="text-primary font-black not-italic tracking-wide">candidate</span> for real, measurable transformation."
                 </p>
             </div>
         </section>

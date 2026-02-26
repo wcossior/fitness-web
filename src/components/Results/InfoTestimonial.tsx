@@ -34,8 +34,8 @@ export const InfoTestimonial = ({ className, duration, name, metrics, quote }: i
                 ))}
             </div>
 
-            <p className="font-body max-w-3xl text-text-secondary leading-relaxed">
-                {quote}
+            <p className="font-body max-w-3xl text-text-secondary leading-relaxed italic">
+                "{quote}"
             </p>
 
         </div>

@@ -43,8 +43,8 @@ export const UserProblem = () => {
                 </div>
             </div>
 
-            <p className="sm:text-center mt-12 font-body sm:text-xl text-text-primary">
-                "Effort without <span className="text-primary font-bold">structure </span>always leads to plateaus."
+            <p className="sm:text-center mt-12 font-body sm:text-xl text-text-primary italic leading-relaxed">
+                "Effort without <span className="text-primary font-bold not-italic">structure</span> always leads to plateaus."
             </p>
 
         </section>

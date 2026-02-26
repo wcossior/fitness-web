@@ -54,7 +54,7 @@ export const AdrianVale = () => {
                 ></Button>
             </div>
 
-            <p className="mt-12 text-sm sm:text-xl font-heading font-semibold tracking-tight uppercase border-t border-white/5 pt-8">
+            <p className="mt-12 text-sm sm:text-xl font-heading italic uppercase border-t border-white/5 pt-8">
                 Precision over noise.
             </p>
         </div>

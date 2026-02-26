@@ -9,6 +9,7 @@ import { Results } from "./components/Results/Results"
 import { UserProblem } from "./components/UserProblem/UserProblem"
 import { Navbar } from "./components/Navbar/Navbar"
 import { Faq } from "./components/FAQ/Faq"
+import { FinalCTA } from "./components/FinalCTA/FinalCTA"
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
       <NotForYou></NotForYou>
       <Plans></Plans>
       <Faq></Faq>
+      <FinalCTA></FinalCTA>
       <Footer></Footer>
     </div>
   )
