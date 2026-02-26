@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Question } from './Question';
 import { Button } from '../Buttons/Button';
 import { Background } from './Background';
+import { motion, type Variants } from "framer-motion"
 
 const faqs = [
     {
@@ -37,22 +38,32 @@ export const Faq = () => {
     return (
         <section className="py-20 pt-16 lg:pt-32 pb-32 lg:pb-45 px-6 md:px-12 lg:px-20 relative overflow-hidden">
             <Background></Background>
-            <h2 className="text-center font-heading font-black text-xl sm:text-2xl md:text-3xl lg:text-4xl uppercase mb-12">
+            <motion.h2
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="text-center font-heading font-black text-xl sm:text-2xl md:text-3xl lg:text-4xl uppercase mb-12">
                 Frequently Asked <span className="text-primary">Questions</span>
-            </h2>
-            <div className={`max-w-3xl mx-auto space-y-4 relative transition-all duration-500 overflow-hidden ${!expanded ? "max-h-[260px]" : "max-h-[2000px]"}`}>
-                {
+            </motion.h2>
+
+            <motion.div
+                animate={{ height: expanded ? "auto" : 260 }}
+                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                className="max-w-3xl mx-auto space-y-4 relative overflow-hidden"
+            >{
                     faqs.map((faq, i) =>
-                        <Question key={i} {...faq}></Question>
+                        <Question key={i} {...faq} index={i}></Question>
                     )
                 }
-            </div>
-            {!expanded &&
+            </motion.div>
+            {
+                !expanded &&
                 <div className='absolute w-full bg-gradient-to-t from-surface to-transparent h-40 left-0 bottom-0'></div>
             }
             <div className='absolute left-1/2 -translate-x-1/2 mt-4'>
                 <Button onClick={() => setExpanded(!expanded)} className='text-primary text-sm' title={!expanded ? "Read all FAQs [+]" : "Show less [-]"} variant='ghost'></Button>
             </div>
-        </section>
+        </section >
     )
 }
