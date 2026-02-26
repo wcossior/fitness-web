@@ -21,7 +21,7 @@ export const Content = ({ eyebrow, headline, suportText, className }: contentPro
                 {eyebrow}
             </motion.span>
 
-            <motion.h1 variants={contentSection_itemVariants} className="font-black uppercase text-[8vw] sm:text-5xl xl:text-6xl leading-tight tracking-wide text-text-primary font-heading sm:max-w-xl xl:max-w-3xl relative">
+            <motion.h1 variants={contentSection_itemVariants} className="font-black uppercase text-[8vw] sm:text-5xl xl:text-6xl leading-tight tracking-wide text-text-primary font-heading sm:max-w-xl xl:max-w-3xl relative -z-7">
                 {headline}
             </motion.h1>
 
