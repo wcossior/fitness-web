@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Button } from '../Buttons/Button';
+import { motion, type Variants } from "framer-motion"
 
 export const AdrianVale = () => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
-        <div className="xl:col-span-2 xl:row-span-2 bg-surface border border-white/10 p-8 md:p-12">
+        <>
             <h3 className="text-2xl sm:text-3xl md:text-4xl tracking-tight font-heading font-semibold mt-4">
                 Adrian Vale
             </h3>
@@ -19,8 +20,10 @@ export const AdrianVale = () => {
                 </p>
             </div>
 
-            <div className={`space-y-7 text-text-secondary leading-relaxed md:leading-loose font-body transition-all duration-500 overflow-hidden ${!isExpanded ? "max-h-[300px] sm:max-h-none relative" : "max-h-[2000px]"
-                }`}>
+            <div
+                className={`space-y-7 text-text-secondary leading-relaxed md:leading-loose font-body transition-all duration-500 overflow-hidden ${!isExpanded ? "max-h-[300px] sm:max-h-none relative" : "max-h-[2000px]"
+                    }`}
+            >
 
                 <p>
                     Adrian spent years watching the same pattern: intermediate lifters giving 100% effort in the gym but receiving 0% visible return. He realized the industry was addicted to "hard work" as a distraction for a lack of real planning.
@@ -48,7 +51,7 @@ export const AdrianVale = () => {
             <div className='sm:hidden flex justify-center mt-4'>
                 <Button
                     title={isExpanded ? "Show Less [-]" : "Read Full Bio [+]"}
-                    onClick={()=>setIsExpanded(!isExpanded)}
+                    onClick={() => setIsExpanded(!isExpanded)}
                     className='sm:hidden tracking-widest text-xs text-primary font-bold'
                     variant='ghost'
                 ></Button>
@@ -57,6 +60,6 @@ export const AdrianVale = () => {
             <p className="mt-8 text-sm sm:text-xl font-heading italic uppercase border-t border-white/5 pt-8">
                 Precision over noise.
             </p>
-        </div>
+        </>
     );
 };

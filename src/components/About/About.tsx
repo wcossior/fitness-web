@@ -2,20 +2,22 @@ import img from '../../assets/images/couch4.png'
 import { Metric } from './Metric'
 import { AdrianVale } from './AdrianVale';
 import { Background } from './Backgound';
-
+import { motion, type Variants } from "framer-motion"
 
 export const About = () => {
+
+
     type metricsData = {
-        value: string;
+        value: number;
         suffix: string;
         label: string;
     };
 
     const metrics: metricsData[] = [
-        { value: "6000", suffix: "+", label: "Coaching Hours", },
-        { value: "90", suffix: "%", label: "Client Retention", },
-        { value: "800", suffix: "+", label: "Clients Coached", },
-        { value: "7", suffix: "+", label: "Years Experience", },
+        { value: 6000, suffix: "+", label: "Coaching Hours", },
+        { value: 90, suffix: "%", label: "Client Retention", },
+        { value: 800, suffix: "+", label: "Clients Coached", },
+        { value: 7, suffix: "+", label: "Years Experience", },
     ];
 
     return (
@@ -28,16 +30,31 @@ export const About = () => {
             </h2>
 
             <div className="grid xl:grid-cols-3 gap-8 mt-12">
-                <div className="xl:col-span-1 xl:row-span-2 relative flex items-center max-h-[840px]">
+                <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="xl:col-span-1 xl:row-span-2 relative flex items-center max-h-[840px]"
+                >
                     <img
                         src={img}
                         className="w-full h-full object-cover grayscale contrast-125 border border-white/5"
                         alt="Adrian Vale - Performance Strategist"
                     />
 
-                </div>
+                </motion.div>
 
-                <AdrianVale></AdrianVale>
+
+                <motion.div
+                    className="xl:col-span-2 xl:row-span-2 bg-surface border border-white/10 p-8 md:p-12"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                    <AdrianVale></AdrianVale>
+                </motion.div>
 
                 <div className="xl:col-span-3 border border-white/10 bg-surface/50 backdrop-blur-sm p-8 grid w-fit sm:w-full sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {metrics.map((card, i) => (

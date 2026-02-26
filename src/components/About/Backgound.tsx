@@ -1,5 +1,6 @@
 import { Graph } from "../../assets/assetsComponents/Graph"
 
+
 export const Background = () => {
     return (
         <>
