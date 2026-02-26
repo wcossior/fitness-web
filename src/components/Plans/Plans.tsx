@@ -49,7 +49,7 @@ const plans: PlansData[] = [
 
 export const Plans = () => {
     return (
-        <section className='relative py-16 lg:py-32 px-6 md:px-12 lg:px-20'>
+        <section id="plans-section" className='relative py-16 lg:py-32 px-6 md:px-12 lg:px-20'>
             <img className="absolute top-0 left-0 -z-3 opacity-40 object-cover w-full h-full grayscale object-[38%_center] sm:object-center" src={bg} alt="bg-gym" />
 
             <div className="absolute bottom-0 left-0 w-full h-60 
