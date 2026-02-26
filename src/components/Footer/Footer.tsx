@@ -1,11 +1,16 @@
 import { AdrianVale } from "./AdrianVale"
 import { SystemMap } from "./SystemMap"
 import { SystemStatus } from "./SystemStatus"
-
+import { motion } from "framer-motion"
 
 export const Footer = () => {
 	return (
-		<footer className="bg-surface border-t border-white/5 py-16 lg:py-32 px-6 md:px-12 lg:px-20 relative overflow-hidden">
+		<motion.footer
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			viewport={{ once: true }}
+			transition={{ duration: 1 }}
+			className="bg-surface border-t border-white/5 py-16 lg:py-32 px-6 md:px-12 lg:px-20 relative overflow-hidden">
 			<div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
 
 			<div className="max-w-7xl mx-auto">
@@ -17,7 +22,11 @@ export const Footer = () => {
 					<SystemStatus></SystemStatus>
 				</div>
 
-				<div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+				<motion.div
+					initial={{ opacity: 0, y: 10 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ delay: 0.5 }}
+					className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
 					<p className="text-[10px] font-mono text-text-secondary uppercase tracking-widest">
 						© 2026 Adrian Vale // All Rights Reserved
 					</p>
@@ -26,8 +35,8 @@ export const Footer = () => {
 						<a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
 						<a href="#" className="hover:text-white transition-colors">Terms of Service</a>
 					</div>
-				</div>
+				</motion.div>
 			</div>
-		</footer>
+		</motion.footer>
 	)
 }
