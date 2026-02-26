@@ -1,4 +1,4 @@
-import { motion, type Variants } from "framer-motion"
+import { type Variants } from "framer-motion"
 
 export const contentSection_containerVariants: Variants = {
     hidden: { opacity: 0 },

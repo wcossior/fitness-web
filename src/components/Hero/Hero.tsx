@@ -15,7 +15,18 @@ export const Hero = () => {
             />
 
             <div className="lg:hidden flex justify-center relative h-[220px] sm:h-[480px]">
-                <img className="max-h-[430px] max-w-[430px] sm:max-h-[630px] sm:max-w-[630px] object-contain absolute -bottom-55 sm:-bottom-35 -z-6" src={heroBg} alt="elite-img" />
+                <motion.img
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                        duration: 1,
+                        delay: 0.8,
+                        ease: [0.22, 1, 0.36, 1]
+                    }}
+                    className="max-h-[430px] max-w-[430px] sm:max-h-[630px] sm:max-w-[630px] object-contain absolute -bottom-55 sm:-bottom-35 -z-6"
+                    src={heroBg}
+                    alt="hero-img"
+                />
             </div>
             <motion.div
                 className="flex flex-col sm:flex-row gap-4 pt-4 font-body relative z-1 sm:justify-center lg:justify-start sm:relative absolute -bottom-12 sm:bottom-0 -z-12"

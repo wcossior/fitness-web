@@ -1,6 +1,7 @@
+import { motion} from "framer-motion"
+import { nav_containerVariants, nav_itemVariants } from "./FramerVariants";
 
 export const DesktopNav = () => {
-
     const links = [
         { href: "#home", label: "Home" },
         { href: "#results", label: "Results" },
@@ -11,18 +12,22 @@ export const DesktopNav = () => {
         { href: "#about", label: "About us" },
     ];
 
-
-
     return (
-        <ul className="hidden lg:flex gap-8 text-white font-body text-sm">
+        <motion.ul
+            variants={nav_containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="hidden lg:flex gap-8 text-white font-body text-sm"
+        >
             {links.map(link => (
-                <li
+                <motion.li
                     key={link.href}
+                    variants={nav_itemVariants}
                     className="transition duration-300 hover:text-primary hover:scale-110"
                 >
                     <a href={link.href}>{link.label}</a>
-                </li>
+                </motion.li>
             ))}
-        </ul>
+        </motion.ul>
     );
 }
