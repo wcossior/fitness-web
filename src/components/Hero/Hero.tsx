@@ -17,10 +17,15 @@ export const Hero = () => {
             <div className="lg:hidden flex justify-center relative h-[220px] sm:h-[480px]">
                 <img className="max-h-[430px] max-w-[430px] sm:max-h-[630px] sm:max-w-[630px] object-contain absolute -bottom-55 sm:-bottom-35 -z-6" src={heroBg} alt="elite-img" />
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 font-body relative z-1 sm:justify-center lg:justify-start sm:relative absolute -bottom-12 sm:bottom-0 -z-12">
+            <motion.div
+                className="flex flex-col sm:flex-row gap-4 pt-4 font-body relative z-1 sm:justify-center lg:justify-start sm:relative absolute -bottom-12 sm:bottom-0 -z-12"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 1 }}
+            >
                 <Button title="View Coaching Options" icon className="text-sm lg:text-lg" />
                 <Button title="Explore the Method" className="text-text-primary text-sm lg:text-lg" variant="ghost"></Button>
-            </div>
+            </motion.div>
         </section>
 
     )

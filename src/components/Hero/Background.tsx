@@ -1,10 +1,14 @@
 import heroBg from "../../assets/images/couple.png"
 import { Graph } from "../../assets/assetsComponents/Graph"
+import { motion } from "framer-motion"
+import { UseHero } from "./UseHero";
 
 export const Background = () => {
+    const graphRef = UseHero();
+
     return (
         <>
-            <Graph className="absolute inset-0 h-100 w-100 -z-10"></Graph>
+            <Graph ref={graphRef} className="absolute inset-0 h-100 w-100 -z-10"></Graph>
 
             <div className="absolute top-0 left-0 w-full h-20 
                 bg-gradient-to-b from-[#0B0F0E] via-[#0B0F0E]/60 to-transparent 
@@ -29,9 +33,14 @@ export const Background = () => {
             />
 
 
-            <div className="hidden lg:block absolute h-full top-25 -right-30 -z-6">
+            <motion.div
+                className="hidden lg:block absolute h-full top-25 -right-30 -z-6"
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
+            >
                 <img className="lg:h-[730px] object-cover" src={heroBg} alt="elite-img" />
-            </div>
+            </motion.div>
 
             <div className="absolute bottom-0 left-0 w-full h-20 sm:h-40 lg:h-60 
                 bg-gradient-to-t from-[#0B0F0E] via-[#0B0F0E]/60 to-transparent 
