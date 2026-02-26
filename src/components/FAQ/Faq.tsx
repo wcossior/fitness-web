@@ -40,16 +40,16 @@ export const Faq = () => {
             <h2 className="text-center font-heading text-3xl uppercase mb-12">
                 Frecuently Asked <span className="text-primary">Questions</span>
             </h2>
-            <div className={`max-w-3xl mx-auto space-y-4 relative transition-all duration-500 overflow-hidden ${!expanded ? "max-h-[300px]" : "max-h-[2000px]"}`}>
+            <div className={`max-w-3xl mx-auto space-y-4 relative transition-all duration-500 overflow-hidden ${!expanded ? "max-h-[260px]" : "max-h-[2000px]"}`}>
                 {
                     faqs.map((faq, i) =>
                         <Question key={i} {...faq}></Question>
                     )
                 }
-                {!expanded &&
-                    <div className='absolute w-full bg-gradient-to-t from-body-bg to-transparent h-40 bottom-0'></div>
-                }
             </div>
+            {!expanded &&
+                <div className='absolute w-full bg-gradient-to-t from-surface to-transparent h-40 left-0 bottom-0'></div>
+            }
             <div className='absolute left-1/2 -translate-x-1/2 mt-4'>
                 <Button onClick={() => setExpanded(!expanded)} className='text-primary text-sm' title={!expanded ? "Read all FAQs [+]" : "Show less [-]"} variant='ghost'></Button>
             </div>
