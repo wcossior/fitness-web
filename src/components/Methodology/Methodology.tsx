@@ -6,7 +6,7 @@ import { Cpu } from "../../assets/assetsComponents/Cpu"
 import { Diamond } from "../../assets/assetsComponents/Diamond"
 import { Energy } from "../../assets/assetsComponents/Energy"
 import { CardMethology } from "./CardMethology"
-import { motion, type Variants } from "framer-motion"
+import { motion} from "framer-motion"
 
 export const Methodology = () => {
 

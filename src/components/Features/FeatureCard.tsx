@@ -1,4 +1,6 @@
 import React from 'react'
+import { motion } from "framer-motion"
+import { featureVariants } from './FramerVariants'
 
 type featureCardProps = {
     title: string,
@@ -9,7 +11,12 @@ type featureCardProps = {
 
 export const FeatureCard = ({ title, description, icon: IconComponent, index }: featureCardProps) => {
     return (
-        <div
+        <motion.div
+            custom={index}
+            variants={featureVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
             className={`
             group
             w-full
@@ -23,7 +30,6 @@ export const FeatureCard = ({ title, description, icon: IconComponent, index }: 
             bg-surface/75
             border-white/10
             transition-all duration-500 ease-out
-
             hover:-translate-y-1
             hover:bg-surface/90
             hover:border-primary/60
@@ -42,13 +48,13 @@ export const FeatureCard = ({ title, description, icon: IconComponent, index }: 
                     {title}
                 </h3>
 
-                <div className="h-px bg-primary/30 w-12 mb-6" />
+                <div className="h-px bg-primary/30 w-12 mb-6 group-hover:w-full transition-all duration-700" />
 
                 <p className="font-body text-sm text-text-secondary leading-relaxed">
                     {description}
                 </p>
 
             </div>
-        </div>
+        </motion.div>
     )
 }

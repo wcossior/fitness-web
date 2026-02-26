@@ -5,6 +5,7 @@ import { Cutlery } from "../../assets/assetsComponents/Cutlery"
 import { Adjustment } from "../../assets/assetsComponents/Adjustment"
 import { FeatureCard } from "./FeatureCard"
 import bg from "../../assets/images/dumbells2.jpg"
+import { motion, type Variants } from "framer-motion"
 
 type FeatureData = {
     title: string,
@@ -53,14 +54,19 @@ export const Features = () => {
                 bg-gradient-to-b from-black to-transparent 
                 pointer-events-none -z-1"
             />
-            <header className="space-y-4 text-center flex flex-col items-center">
+            <motion.header
+                initial={{ opacity: 0, y: -40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.8 }}
+                transition={{ duration: 0.8 }}
+                className="space-y-4 text-center flex flex-col items-center">
                 <h2 className="font-black text-2xl sm:text-4xl xl:text-5xl font-heading uppercase">
                     Inside the <span className="text-primary/90">System</span>
                 </h2>
                 <p className="font-body max-w-md text-text-secondary sm:text-lg">
                     Engineered components designed to eliminate <span className="text-primary">guesswork</span> and maximize measurable progress.
                 </p>
-            </header>
+            </motion.header>
 
             <div className="flex justify-center items-center mt-12">
                 <div className="grid md:grid-cols-2 w-fit gap-8">
