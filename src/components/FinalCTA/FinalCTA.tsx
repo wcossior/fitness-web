@@ -3,10 +3,12 @@ import { Button } from "../Buttons/Button"
 
 
 export const FinalCTA = () => {
+    
     const scrollToPlans = () => {
         const element = document.getElementById('plans-section');
         if (element) element.scrollIntoView({ behavior: 'smooth' });
     };
+
     return (
         <section className="py-16 lg:py-32 px-6 md:px-12 lg:px-20 text-center relative overflow-hidden">
 
