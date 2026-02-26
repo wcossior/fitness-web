@@ -1,5 +1,3 @@
-import React from 'react'
-
 type photoTestimonialProps = {
     photo: string;
     color: string;

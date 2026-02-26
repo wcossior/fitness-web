@@ -1,7 +1,3 @@
-import { Metric } from "../About/Metric";
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
 import manBefore from "../../assets/images/ManBefore.png"
 import manAfter from "../../assets/images/manAfter.png"
 import womanBefore from "../../assets/images/BeforeWoman1.png"
@@ -10,7 +6,8 @@ import woman2Before from "../../assets/images/woman2Before.png"
 import woman2After from "../../assets/images/woman2After.png"
 import { Testimonial } from "./Testimonial";
 import { TestimonialSlider } from "./TestimonialSlider";
-
+import { motion, type Variants } from "framer-motion"
+import { containerVariants, itemVariants } from "./FramerVariants"
 
 export const Results = () => {
 
@@ -54,18 +51,24 @@ export const Results = () => {
 	];
 
 	return (
-		<section className="bg-[#0B0F0E]
-bg-[radial-gradient(circle_at_50%_0%,rgba(34,229,138,0.06)_0%,rgba(11,15,14,0.95)_55%,#0B0F0E_100%)] overflow-hidden relative py-16 lg:py-32">
-			<header className="mb-12 px-6 md:px-12 lg:px-20">
+		<motion.section
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true, amount: 0.2 }}
+			variants={containerVariants}
+			className="bg-[#0B0F0E]
+bg-[radial-gradient(circle_at_50%_0%,rgba(34,229,138,0.06)_0%,rgba(11,15,14,0.95)_55%,#0B0F0E_100%)] overflow-hidden relative py-16 lg:py-32"
+		>
+			<motion.header variants={itemVariants} className="mb-12 px-6 md:px-12 lg:px-20">
 				<h2 className="font-black font-heading text-2xl sm:text-4xl xl:text-5xl uppercase max-w-5xl">
 					Real <span className="text-primary">Results</span>. Measurable Progress.
 				</h2>
 				<p className="max-w-md text-text-secondary font-body mt-4 sm:text-lg">
 					This isn't theory. It’s data-backed transformation.
 				</p>
-			</header>
+			</motion.header>
 
-			<div className="bg-surface mx-6 md:mx-12 lg:mx-20 p-6 md:p-12 lg:p-20 border
+			<motion.div variants={itemVariants} className="bg-surface mx-6 md:mx-12 lg:mx-20 p-6 md:p-12 lg:p-20 border
                         border-white/10">
 				<p className="text-sm uppercase tracking-widest text-primary/60 mb-12 font-heading">
 					Client Case Studies
@@ -78,7 +81,7 @@ bg-[radial-gradient(circle_at_50%_0%,rgba(34,229,138,0.06)_0%,rgba(11,15,14,0.95
 						))}
 					</TestimonialSlider>
 				}
-			</div>
-		</section>
+			</motion.div>
+		</motion.section>
 	);
 };

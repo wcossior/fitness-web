@@ -23,7 +23,9 @@ export const Testimonial = ({ photoBefore, photoAfter, name, quote, duration, me
                     <p className="font-body text-primary/30 text-[200px]">"</p>
                 </div>
 
-                <div className="col-span-3">
+                <div 
+              
+                className="col-span-3">
                    <PhotoTestimonial photo={photoAfter} color='from-primary/40'></PhotoTestimonial>
                 </div>
 
