@@ -1,5 +1,5 @@
 import { PlanCard } from "./PlanCard";
-import bg from "../../assets/images/dumbells5.jpg"
+import bg from "../../assets/images/dumbells5.webp"
 import { motion } from "framer-motion"
 
 type PlansData = {

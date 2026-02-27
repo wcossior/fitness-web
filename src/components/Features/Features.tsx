@@ -4,7 +4,7 @@ import { Dumbell } from "../../assets/assetsComponents/Dumbell"
 import { Cutlery } from "../../assets/assetsComponents/Cutlery"
 import { Adjustment } from "../../assets/assetsComponents/Adjustment"
 import { FeatureCard } from "./FeatureCard"
-import bg from "../../assets/images/dumbells2.jpg"
+import bg from "../../assets/images/dumbells2.webp"
 import { motion } from "framer-motion"
 
 type FeatureData = {

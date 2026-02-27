@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { Content } from "./Content"
-import heroBg from "../../assets/images/couple.png"
+import heroBg from "../../assets/images/couple.webp"
 import { Button } from "../Buttons/Button"
 import { Background } from "./Background"
 

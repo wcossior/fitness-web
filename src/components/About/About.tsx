@@ -1,4 +1,4 @@
-import img from '../../assets/images/couch4.png'
+import img from '../../assets/images/couch4.webp'
 import { Metric } from './Metric'
 import { AdrianVale } from './AdrianVale';
 import { Background } from './Backgound';

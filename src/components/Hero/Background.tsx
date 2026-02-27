@@ -1,4 +1,4 @@
-import heroBg from "../../assets/images/couple.png"
+import heroBg from "../../assets/images/couple.webp"
 import { Graph } from "../../assets/assetsComponents/Graph"
 import { motion } from "framer-motion"
 import { UseHero } from "./UseHero";

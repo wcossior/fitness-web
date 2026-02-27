@@ -1,9 +1,9 @@
-import manBefore from "../../assets/images/ManBefore.png"
-import manAfter from "../../assets/images/manAfter.png"
-import womanBefore from "../../assets/images/BeforeWoman1.png"
-import womanAfter from "../../assets/images/AfterWoman1.png"
-import woman2Before from "../../assets/images/woman2Before.png"
-import woman2After from "../../assets/images/woman2After.png"
+import manBefore from "../../assets/images/ManBefore.webp"
+import manAfter from "../../assets/images/manAfter.webp"
+import womanBefore from "../../assets/images/BeforeWoman1.webp"
+import womanAfter from "../../assets/images/AfterWoman1.webp"
+import woman2Before from "../../assets/images/woman2Before.webp"
+import woman2After from "../../assets/images/woman2After.webp"
 import { Testimonial } from "./Testimonial";
 import { TestimonialSlider } from "./TestimonialSlider";
 import { motion } from "framer-motion"
