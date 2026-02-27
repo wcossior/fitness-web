@@ -26,7 +26,7 @@ export const MobileMenu = ({ open, onClose }: mobileMenuProps) => {
                 >
                     <div className="h-full overflow-y-auto flex flex-col">
                         <ul className="flex-1 flex flex-col items-center justify-center gap-6 text-2xl font-heading uppercase tracking-widest">
-                            {links.map((link, i) => (
+                            {links.map((link) => (
                                 <motion.li
                                     key={link.href}
                                     variants={linkVariants}
