@@ -11,7 +11,7 @@ export const MobileMenu = ({ open, onClose }: mobileMenuProps) => {
         { margin: "mt-12", textColor: "", href: "#about-section", label: "The Mind" },
         { margin: "", textColor: "", href: "#methodology-section", label: "Protocol" },
         { margin: "", textColor: "", href: "#results-section", label: "Lab" },
-        { margin: "mb-12", textColor: "text-primary font-black", href: "#plans-section", label: "Start training" },
+        { margin: "mb-12", textColor: "text-primary/90 text-glow font-black", href: "#plans-section", label: "Start training" },
     ];
 
     return (
@@ -51,7 +51,6 @@ export const MobileMenu = ({ open, onClose }: mobileMenuProps) => {
                             </svg>
                         </motion.button>
 
-                        {/* Detalle técnico decorativo en el menú mobile */}
                         <div className="p-8 opacity-20 flex justify-center">
                             <span className="font-mono text-[10px] tracking-[0.3em] uppercase">
                                 System Protocol v2.4.0
