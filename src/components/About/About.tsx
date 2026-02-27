@@ -30,7 +30,7 @@ export const About = () => {
                 viewport={{ once: true, amount: 0.5 }} // Se anima cuando el 50% del título es visible
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="font-black text-2xl sm:text-4xl xl:text-5xl font-heading uppercase leading-tight relative max-w-4xl">
-                The <span className="text-primary/90">Mind </span>
+                The <span className="text-primary/90 text-glow">Mind </span>
                 Behind the System.
             </motion.h2>
 

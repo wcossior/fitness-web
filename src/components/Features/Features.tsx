@@ -61,7 +61,7 @@ export const Features = () => {
                 transition={{ duration: 0.8 }}
                 className="space-y-4 text-center flex flex-col items-center">
                 <h2 className="font-black text-2xl sm:text-4xl xl:text-5xl font-heading uppercase">
-                    Inside the <span className="text-primary/90">System</span>
+                    Inside the <span className="text-primary/90 text-glow">System</span>
                 </h2>
                 <p className="font-body max-w-md text-text-secondary sm:text-lg">
                     Engineered components designed to eliminate <span className="text-primary">guesswork</span> and maximize measurable progress.

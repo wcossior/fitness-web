@@ -6,7 +6,7 @@ export const AdrianVale = () => {
     return (
         <div className="lg:col-span-2 space-y-6">
             <h3 className="font-heading font-black text-2xl uppercase">
-                Adrian <span className="text-primary">Vale.</span>
+                Adrian <span className="text-primary/90 text-glow">Vale.</span>
             </h3>
             <p className="text-text-secondary font-body max-w-xs text-sm leading-relaxed">
                 Performance engineering for intermediate lifters.

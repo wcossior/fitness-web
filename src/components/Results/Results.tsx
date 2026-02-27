@@ -62,7 +62,7 @@ bg-[radial-gradient(circle_at_50%_0%,rgba(34,229,138,0.06)_0%,rgba(11,15,14,0.95
 		>
 			<motion.header variants={itemVariants} className="mb-12 px-6 md:px-12 lg:px-20">
 				<h2 className="font-black font-heading text-2xl sm:text-4xl xl:text-5xl uppercase max-w-5xl">
-					Real <span className="text-primary">Results.</span> Measurable Progress.
+					Real <span className="text-primary/90 text-glow">Results.</span> Measurable Progress.
 				</h2>
 				<p className="max-w-md text-text-secondary font-body mt-4 sm:text-lg">
 					This isn't theory. It’s data-backed transformation.

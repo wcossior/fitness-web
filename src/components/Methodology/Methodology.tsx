@@ -57,7 +57,7 @@ export const Methodology = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
                 className='space-y-4 flex flex-col'>
-                <h2 className="font-black text-text-primary text-2xl sm:text-4xl xl:text-5xl font-heading uppercase max-w-4xl">The Structured Performance <span className="text-primary/90">System.</span></h2>
+                <h2 className="font-black text-text-primary text-2xl sm:text-4xl xl:text-5xl font-heading uppercase max-w-4xl">The Structured Performance <span className="text-primary/90 text-glow">System.</span></h2>
                 <p className='max-w-lg sm:w-full font-body text-text-secondary sm:text-lg'>A <span className="text-primary/90">100% remote</span> training framework designed for measurable strength and physique development.</p>
             </motion.header>
             <img className="grayscale hidden sm:block absolute top-0 left-0 -z-3 opacity-20 object-cover w-full h-full object-top" src={bg} alt="bg-gym" />

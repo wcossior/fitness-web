@@ -46,7 +46,7 @@ export const FinalCTA = () => {
                     className="mt-4 mb-6 text-4xl sm:text-5xl md:text-7xl font-heading font-black uppercase italic leading-none"
                 >
                     Build a Physique That <br />
-                    <span className="text-primary">Commands Respect.</span>
+                    <span className="text-primary/90 text-glow">Commands Respect.</span>
                 </motion.h2>
 
 

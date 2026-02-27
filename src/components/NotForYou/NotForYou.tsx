@@ -41,7 +41,7 @@ bg-[radial-gradient(circle_at_50%_50%,rgba(34,229,138,0.04)_0%,rgba(34,229,138,0
                         The Selection Process
                     </span>
                     <h2 className="font-black text-2xl sm:text-4xl xl:text-5xl font-heading uppercase leading-tight">
-                        This system <span className="font-black text-primary/90">isn't</span> for everyone.
+                        This system <span className="font-black text-primary/90 text-glow">isn't</span> for everyone.
                     </h2>
                     <p className="text-text-secondary font-body max-w-xl sm:text-lg">
                         To maintain the integrity of our results, we only work with lifters who meet the necessary <span className="text-white font-semibold">technical requirements.</span>

@@ -44,7 +44,7 @@ export const Faq = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
                 className="text-center font-heading font-black text-xl sm:text-2xl md:text-3xl lg:text-4xl uppercase mb-12">
-                Frequently Asked <span className="text-primary">Questions</span>
+                Frequently Asked <span className="text-primary/90 text-glow">Questions</span>
             </motion.h2>
 
             <motion.div

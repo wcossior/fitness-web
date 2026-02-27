@@ -20,7 +20,7 @@ export const Hero = () => {
             <Background></Background>
             <Content
                 eyebrow="Online Performance Coaching for Intermediate Lifters"
-                headline={<>Build a <span className="text-primary">Physique</span> That Commands Respect.</>}
+                headline={<>Build a <span className="text-primary/90 text-glow">Physique</span> That Commands Respect.</>}
                 suportText={"Personalized programming. Data-driven progression.Build visible muscle and real strength — with a system designed to evolve as you do."}
             />
 
