@@ -34,7 +34,7 @@ export const TestimonialSlider = ({ children }: SliderProps) => {
         </div>
       </div>
 
-      <div className="absolute w-full flex justify-between items-center mt-8 font-body gap-4 text-xs sm:text-sm bottom-1/2 -translate-y-1/2">
+      <div className="lg:absolute w-full flex justify-center lg:justify-between items-center mt-8 font-body gap-4 text-xs sm:text-sm bottom-1/2 -translate-y-1/2">
         <Button onClick={prev} title="← Prev" variant="ghost"></Button>
         <Button onClick={next} title="Next →" variant="ghost"></Button>
       </div>
