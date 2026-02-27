@@ -8,14 +8,10 @@ type mobileMenuProps = {
 
 export const MobileMenu = ({ open, onClose }: mobileMenuProps) => {
     const links = [
-        { margin: "mt-12", textColor: "", href: "#home", label: "Home" },
-        { margin: "", textColor: "", href: "#results", label: "Results" },
-        { margin: "", textColor: "", href: "#pain-points", label: "Pain points" },
-        { margin: "", textColor: "", href: "#our-method", label: "Our method" },
-        { margin: "", textColor: "", href: "#benefits", label: "Benefits" },
-        { margin: "", textColor: "", href: "#plans", label: "Plans" },
-        { margin: "", textColor: "", href: "#about", label: "About us" },
-        { margin: "mb-12", textColor: "text-primary font-black", href: "#cta", label: "Start training" },
+        { margin: "mt-12", textColor: "", href: "#about-section", label: "The Mind" },
+        { margin: "", textColor: "", href: "#methodology-section", label: "Protocol" },
+        { margin: "", textColor: "", href: "#results-section", label: "Lab" },
+        { margin: "mb-12", textColor: "text-primary font-black", href: "#plans-section", label: "Start training" },
     ];
 
     return (

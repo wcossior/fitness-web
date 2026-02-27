@@ -25,7 +25,9 @@ export const Navbar = () => {
 				}}
 			>
 				<div className="flex items-center justify-between py-8">
-					<div className="text-xl font-bold text-primary font-heading">FitBrand</div>
+					<a href="#hero-section">
+						<div className="text-xl font-bold text-primary font-heading">FitBrand</div>
+					</a>
 					<DesktopNav />
 					<button
 						onClick={() => setOpen(true)}

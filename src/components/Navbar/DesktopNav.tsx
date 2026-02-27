@@ -3,13 +3,10 @@ import { nav_containerVariants, nav_itemVariants } from "./FramerVariants";
 
 export const DesktopNav = () => {
     const links = [
-        { href: "#home", label: "Home" },
-        { href: "#results", label: "Results" },
-        { href: "#pain-points", label: "Pain points" },
-        { href: "#our-method", label: "Our method" },
-        { href: "#benefits", label: "Benefits" },
-        { href: "#plans", label: "Plans" },
-        { href: "#about", label: "About us" },
+        { href: "#about-section", label: "About the Mind" },
+        { href: "#methodology-section", label: "Protocol" },
+        { href: "#results-section", label: "Results Lab" },
+        { href: "#plans-section", label: "Access Plans" },
     ];
 
     return (

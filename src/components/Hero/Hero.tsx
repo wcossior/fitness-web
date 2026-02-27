@@ -5,8 +5,18 @@ import { Button } from "../Buttons/Button"
 import { Background } from "./Background"
 
 export const Hero = () => {
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
-        <section className="relative lg:min-h-[768px] overflow-hidden px-6 md:px-12 lg:px-20 py-32 pb-16 lg:py-32">
+        <section id="hero-section" className="relative lg:min-h-[768px] overflow-hidden px-6 md:px-12 lg:px-20 py-32 pb-16 lg:py-32">
             <Background></Background>
             <Content
                 eyebrow="Online Performance Coaching for Intermediate Lifters"
@@ -34,8 +44,8 @@ export const Hero = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1 }}
             >
-                <Button title="View Coaching Options" icon className="text-sm lg:text-lg" />
-                <Button title="Explore the Method" className="text-text-primary text-sm lg:text-lg" variant="ghost"></Button>
+                <Button onClick={() => scrollToSection("plans-section")} title="Start training" icon className="text-sm lg:text-lg" />
+                <Button onClick={() => scrollToSection("methodology-section")} title="Review Protocol" className="text-text-primary text-sm lg:text-lg" variant="ghost"></Button>
             </motion.div>
         </section>
 

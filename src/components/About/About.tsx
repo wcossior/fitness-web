@@ -21,7 +21,7 @@ export const About = () => {
     ];
 
     return (
-        <section className="relative py-16 lg:py-32 px-6 md:px-12 lg:px-20 h-full overflow-hidden">
+        <section id='about-section' className="relative py-16 lg:py-32 px-6 md:px-12 lg:px-20 h-full overflow-hidden">
             <Background />
 
             <motion.h2

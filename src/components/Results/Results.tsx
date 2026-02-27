@@ -56,6 +56,7 @@ export const Results = () => {
 			whileInView="visible"
 			viewport={{ once: true, amount: 0.2 }}
 			variants={containerVariants}
+			id="results-section"
 			className="bg-[#0B0F0E]
 bg-[radial-gradient(circle_at_50%_0%,rgba(34,229,138,0.06)_0%,rgba(11,15,14,0.95)_55%,#0B0F0E_100%)] overflow-hidden relative py-16 lg:py-32"
 		>

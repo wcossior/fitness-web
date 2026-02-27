@@ -50,7 +50,7 @@ export const Methodology = () => {
         }
     ]
     return (
-        <section className='lg:min-h-[780px] relative px-6 md:px-12 lg:px-20 py-16 lg:py-32'>
+        <section id="methodology-section" className='lg:min-h-[780px] relative px-6 md:px-12 lg:px-20 py-16 lg:py-32'>
             <motion.header
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
