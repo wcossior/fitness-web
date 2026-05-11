@@ -1,73 +1,167 @@
-# React + TypeScript + Vite
+# 💪 Fitness Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern fitness landing page built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+Fitness Web is a responsive and visually engaging web application designed to showcase fitness services, workout sections, and modern UI/UX practices using a clean component-based architecture.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+# 🌐 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[https://fitness-web-ts7f.vercel.app/](https://fitness-web-ts7f.vercel.app/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# 🚀 Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Responsive modern landing page
+* Clean and reusable component architecture
+* Fitness-themed UI design
+* Smooth section layouts
+* Mobile-friendly design
+* Fast development environment with Vite
+* Styled with Tailwind CSS
+* TypeScript support
+* Interactive user interface
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# 🛠️ Technologies Used
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* ESLint
+
+---
+
+# 📂 Project Structure
+
+```bash
+fitness-web/
+│
+├── src/
+│   ├── assets/               # Images and static assets
+│   ├── components/           # Reusable UI components
+│   ├── pages/                # Application pages
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+│
+├── public/
+├── package.json
+├── vite.config.ts
+├── tsconfig.json
+├── eslint.config.js
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# ⚙️ Installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 1. Clone the repository
+
+```bash
+git clone https://github.com/wcossior/fitness-web.git
+cd fitness-web
 ```
+
+---
+
+## 2. Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+## 3. Run the development server
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```bash
+http://localhost:5173
+```
+
+---
+
+# 📦 Available Scripts
+
+## Run development server
+
+```bash
+npm run dev
+```
+
+## Build for production
+
+```bash
+npm run build
+```
+
+## Preview production build
+
+```bash
+npm run preview
+```
+
+## Run ESLint
+
+```bash
+npm run lint
+```
+
+---
+
+# 🎨 UI & Design
+
+The project focuses on:
+
+* Modern fitness-inspired design
+* Responsive layouts
+* Reusable UI components
+* Smooth visual hierarchy
+* Mobile-first experience
+
+---
+
+# 📱 Responsive Design
+
+Optimized for:
+
+* Mobile devices
+* Tablets
+* Desktop screens
+
+---
+
+# 🧩 Architecture
+
+The application follows a component-based architecture using React and TypeScript.
+
+Benefits of this approach:
+
+* Better maintainability
+* Reusable components
+* Easier scalability
+* Cleaner code organization
+
+---
+
+# 🚀 Deployment
+
+Frontend deployed with:
+
+* Vercel
+
+Live project:
+
+[https://fitness-web-ts7f.vercel.app/](https://fitness-web-ts7f.vercel.app/)
+
