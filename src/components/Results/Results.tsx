@@ -1,5 +1,5 @@
 import manBefore from "../../assets/images/ManBefore.webp"
-import manAfter from "../../assets/images/manAfter.webp"
+import manAfter from "../../assets/images/ManAfter.webp"
 import womanBefore from "../../assets/images/BeforeWoman1.webp"
 import womanAfter from "../../assets/images/AfterWoman1.webp"
 import woman2Before from "../../assets/images/woman2Before.webp"
