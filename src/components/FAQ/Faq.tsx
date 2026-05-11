@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Question } from './Question';
 import { Button } from '../Buttons/Button';
 import { Background } from './Background';
-import { motion, type Variants } from "framer-motion"
+import { motion} from "framer-motion"
 
 const faqs = [
     {

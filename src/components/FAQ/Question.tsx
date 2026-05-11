@@ -1,4 +1,4 @@
-import { motion, type Variants } from "framer-motion"
+import { motion } from "framer-motion"
 
 type questionProps = {
     question: string;
